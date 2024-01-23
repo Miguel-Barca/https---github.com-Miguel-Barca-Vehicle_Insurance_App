@@ -1,5 +1,6 @@
 *** Settings ***
 Library  SeleniumLibrary
+Resource  ../Resources/DataManager.robot
 
 *** Variables ***
 ${NAV_BAR_AUTOMOBILE_XPATH}   xpath=//*[contains(@id, 'nav_')]
@@ -18,4 +19,3 @@ Click Category
     #Creating the xpath inside Keyword
     ${xpath_variable}=    Set Variable    xpath=//*[contains(@id, 'nav_${Category}')]
     Click Element         ${xpath_variable}
-    Sleep                 5s

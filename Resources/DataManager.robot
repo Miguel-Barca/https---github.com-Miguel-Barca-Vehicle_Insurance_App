@@ -17,3 +17,9 @@ Get List Of Cars
 
 Get Insurant Data
     RETURN  &{INSURANT_DATA}
+
+ Get CSV File Length
+    @{cars_list}=  Get List Of Cars
+    
+    #Setting upper range to use in "for loop"
+    ${CAR_LIST_LENGTH}=  Get Length  ${cars_list}

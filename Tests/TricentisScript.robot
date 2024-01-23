@@ -16,9 +16,13 @@ Categories - Nav Bar - Template Test Cases
     ${CATEGORIES.FOUR}
 
 
-Mapping (in Progress)
+User Should Be Able To Fill Forms - Single Car
     [Documentation]  Fill Vehicle Data and Insurant Data Forms - In Progress
     TricentisApp.Fill Form Pages  ${CATEGORIES.ONE}
+
+User Should Be Able To Fill Forms - Cars CSV File
+    [Documentation]  Reading CSV File With Cars Information And Finalizing Workflow - In Progress
+    TricentisApp.Process All Cars  ${CATEGORIES.ONE}  ${COUNTER}
 
 DATA MANAGER Tests
     ${holder}  DataManager.Get Insurant Data

@@ -13,3 +13,6 @@ ${FORM_TYPE}
 &{INSURANT_DATA}    firstname=John    lastname=Doe    dob=01/01/1984    gender=gendermale    
 ...    streetaddress=123 Main St    country=Portugal    zipcode=12345    city=Lisbon    occupation=Employee    
 ...    hobbies=Speeding,BungeeJumping    website=http://example.com    picture=path/to/picture.jpg
+
+
+ 
