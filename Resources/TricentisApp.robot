@@ -27,12 +27,13 @@ Fill Form Pages
     
 
 Process All Cars
-    [Arguments]   ${Category}  ${COUNTER}
-
+    [Arguments]   ${Category}  
+    
+    #Every Car/Row in the csv file is being selected 
     FOR   ${ROW}   IN RANGE  ${ROW}  ${RANGE}
-        Log Many  ${ROW}     ${RANGE}
+        #Log Many  ${ROW}     ${RANGE}
         Fill Form Pages  ${Category}
-            Log Many  ${COUNTER}  ${CAR_LIST_LENGTH}
+        #Log Many  ${COUNTER}  ${CAR_LIST_LENGTH}
     END
 
 
