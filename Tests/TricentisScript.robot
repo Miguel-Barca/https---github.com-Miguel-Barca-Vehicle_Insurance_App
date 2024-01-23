@@ -15,5 +15,11 @@ Categories - Nav Bar - Template Test Cases
     ${CATEGORIES.THREE}
     ${CATEGORIES.FOUR}
 
-Testing CSV
-    ${results} =  DataManager.Get CSV Data
+
+Mapping (in Progress)
+    [Documentation]  Fill Vehicle Data and Insurant Data Forms - In Progress
+    TricentisApp.Fill Form Pages  ${CATEGORIES.ONE}
+
+DATA MANAGER Tests
+    ${holder}  DataManager.Get Insurant Data
+    Log Many  ${holder}

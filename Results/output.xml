@@ -1,54 +1,281 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.0 (Python 3.12.1 on darwin)" generated="2024-01-22T19:50:43.988666" rpa="false" schemaversion="5">
+<robot generator="Robot 7.0 (Python 3.12.1 on darwin)" generated="2024-01-23T15:45:07.026881" rpa="false" schemaversion="5">
 <suite id="s1" name="Vehicle Insurance App" source="/Users/miguelbarca/TestAutomation/Vehicle_Insurance_App">
 <suite id="s1-s1" name="Tests" source="/Users/miguelbarca/TestAutomation/Vehicle_Insurance_App/Tests">
 <suite id="s1-s1-s1" name="TricentisScript" source="/Users/miguelbarca/TestAutomation/Vehicle_Insurance_App/Tests/TricentisScript.robot">
-<test id="s1-s1-s1-t1" name="Testing CSV" line="18">
+<test id="s1-s1-s1-t1" name="Mapping (in Progress)" line="19">
 <kw name="Begin Web Test" owner="Common" type="SETUP">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2024-01-22T19:50:44.054158" level="INFO">Opening browser 'chrome' to base url 'about:blank'.</msg>
+<msg time="2024-01-23T15:45:07.096547" level="INFO">Opening browser 'chrome' to base url 'about:blank'.</msg>
 <arg>about:blank</arg>
 <arg>${BROWSER}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2024-01-22T19:50:44.054010" elapsed="1.179353"/>
+<status status="PASS" start="2024-01-23T15:45:07.096387" elapsed="1.157568"/>
 </kw>
-<status status="PASS" start="2024-01-22T19:50:44.053523" elapsed="1.180189"/>
+<status status="PASS" start="2024-01-23T15:45:07.095950" elapsed="1.158347"/>
 </kw>
+<kw name="Fill Form Pages" owner="TricentisApp">
+<kw name="Navigate To" owner="Homepage">
+<kw name="Catenate" owner="BuiltIn">
+<msg time="2024-01-23T15:45:08.255757" level="INFO">${SignInUrl} = https://sampleapp.tricentis.com/101/index.php</msg>
+<var>${SignInUrl}</var>
+<arg>SEPARATOR=/</arg>
+<arg>${BASE_URL.${ENVIRONMENT}}</arg>
+<doc>Catenates the given items together and returns the resulted string.</doc>
+<status status="PASS" start="2024-01-23T15:45:08.255421" elapsed="0.000503"/>
+</kw>
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2024-01-23T15:45:08.256118" level="INFO">Opening url 'https://sampleapp.tricentis.com/101/index.php'</msg>
+<arg>${SignInUrl}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2024-01-23T15:45:08.256013" elapsed="1.013915"/>
+</kw>
+<status status="PASS" start="2024-01-23T15:45:08.255266" elapsed="1.014800"/>
+</kw>
+<kw name="Click Category" owner="Homepage">
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-01-23T15:45:09.270705" level="INFO">${xpath_variable} = xpath=//*[contains(@id, 'nav_automobile')]</msg>
+<var>${xpath_variable}</var>
+<arg>xpath=//*[contains(@id, 'nav_${Category}')]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-01-23T15:45:09.270505" elapsed="0.000290"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-01-23T15:45:09.271259" level="INFO">Clicking element 'xpath=//*[contains(@id, 'nav_automobile')]'.</msg>
+<arg>${xpath_variable}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-01-23T15:45:09.270902" elapsed="0.357665"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-01-23T15:45:14.631600" level="INFO">Slept 5 seconds.</msg>
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-01-23T15:45:09.628740" elapsed="5.004080"/>
+</kw>
+<arg>${Category}</arg>
+<status status="PASS" start="2024-01-23T15:45:09.270208" elapsed="5.363372"/>
+</kw>
+<kw name="Validate Correct Form" owner="AutomobilePage">
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-01-23T15:45:14.636431" level="INFO">${FORM_TYPE} = Automobile Insurance</msg>
+<var>${FORM_TYPE}</var>
+<arg>Automobile Insurance</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-01-23T15:45:14.635853" elapsed="0.000783"/>
+</kw>
+<kw name="Element Should Contain" owner="SeleniumLibrary">
+<msg time="2024-01-23T15:45:14.660035" level="INFO">Element 'xpath=//span[@id='selectedinsurance']' contains text 'Automobile Insurance'.</msg>
+<arg>${selectedinsurance_xpath}</arg>
+<arg>${FORM_TYPE}</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<status status="PASS" start="2024-01-23T15:45:14.636889" elapsed="0.023288"/>
+</kw>
+<status status="PASS" start="2024-01-23T15:45:14.634474" elapsed="0.025833"/>
+</kw>
+<kw name="Process Each Car" owner="TricentisApp">
+<kw name="GET Single Car from List" owner="AutomobilePage">
+<kw name="Get List Of Cars" owner="DataManager">
 <kw name="Get CSV Data" owner="DataManager">
 <kw name="Read Csv File" owner="Csv">
-<msg time="2024-01-22T19:50:45.234945" level="INFO">${csv_data} = [['Audi', '120', '02/15/2020', '5', 'Petrol', '25000', 'ABC123', '12000'], ['BMW', '95', '04/21/2019', '4', 'Diesel', '22000', 'XYZ789', '15000'], ['Ford', '150', '10/08/2021', '7', 'Electric Power', ...</msg>
+<msg time="2024-01-23T15:45:14.662117" level="INFO">${csv_data} = [['Audi', '120', '02/15/2020', '5', 'Petrol', '25000', 'ABC123', '12000'], ['BMW', '95', '04/21/2019', '4', 'Diesel', '22000', 'XYZ789', '15000'], ['Ford', '150', '10/08/2021', '7', 'Electric Power', ...</msg>
 <var>${csv_data}</var>
 <arg>${CSV_PATH}</arg>
-<status status="PASS" start="2024-01-22T19:50:45.234515" elapsed="0.000654"/>
-</kw>
-<kw name="Log" owner="BuiltIn">
-<msg time="2024-01-22T19:50:45.235630" level="INFO">[['Audi', '120', '02/15/2020', '5', 'Petrol', '25000', 'ABC123', '12000'], ['BMW', '95', '04/21/2019', '4', 'Diesel', '22000', 'XYZ789', '15000'], ['Ford', '150', '10/08/2021', '7', 'Electric Power', '30000', 'LMN456', '18000'], ['Honda', '110', '08/03/2018', '5', 'Gas', '28000', 'PQR321', '20000'], ['Mazda', '180', '12/12/2022', '4', 'Other', '50000', 'JKL567', '9000'], ['Mercedes Benz', '200', '06/30/2020', '2', 'Petrol', '70000', 'GHI654', '8000'], ['Nissan', '85', '05/17/2017', '5', 'Diesel', '18000', 'DEF987', '22000'], ['Opel', '160', '11/25/2021', '5', 'Diesel', '45000', 'MNO432', '12000'], ['Porsche', '100', '09/14/2019', '5', 'Electric Power', '24000', 'UVW876', '17000'], ['Renault', '130', '03/02/2023', '6', 'Gas', '32000', 'STU543', '15000'], ['Skoda', '145', '08/14/2020', '7', 'Electric Power', '40000', 'WXY321', '25000'], ['Suzuki', '120', '01/08/2022', '5', 'Other', '30000', 'QAZ789', '18000'], ['Toyota', '155', '05/22/2019', '5', 'Petrol', '32000', 'KLM456', '22000'], ['Volkswagen', '90', '07/11/2021', '4', 'Diesel', '27000', 'NML987', '19000'], ['Volvo', '140', '09/30/2022', '6', 'Gas', '35000', 'PLK654', '21000'], ['Audi', '110', '06/18/2019', '5', 'Electric Power', '28000', 'IOP321', '20000'], ['BMW', '130', '12/05/2020', '5', 'Gas', '35000', 'YUI789', '16000'], ['Ford', '95', '02/19/2018', '4', 'Other', '24000', 'TGB654', '23000'], ['Honda', '175', '10/14/2022', '7', 'Petrol', '42000', 'EDC321', '12000'], ['Mazda', '145', '03/22/2021', '6', 'Diesel', '38000', 'RFG654', '20000'], ['Mercedes Benz', '200', '11/01/2019', '4', 'Electric Power', '55000', 'UJK321', '10000'], ['Nissan', '80', '08/27/2020', '5', 'Gas', '26000', 'OLP654', '18000'], ['Opel', '160', '05/10/2018', '5', 'Other', '44000', 'QWE321', '19000'], ['Porsche', '120', '01/25/2023', '6', 'Petrol', '32000', 'ASD654', '16000'], ['Renault', '140', '07/07/2021', '5', 'Diesel', '36000', 'FGH321', '22000'], ['Skoda', '95', '04/18/2022', '4', 'Electric Power', '29000', 'JKL654', '17000'], ['Suzuki', '110', '09/02/2017', '5', 'Gas', '25000', 'ZXC321', '21000'], ['Toyota', '130', '06/30/2021', '6', 'Other', '38000', 'VBN654', '19000'], ['Volkswagen', '150', '03/15/2019', '7', 'Petrol', '40000', 'POI321', '24000'], ['Volvo', '120', '11/08/2022', '4', 'Diesel', '33000', 'MNB654', '20000'], []]</msg>
-<arg>${csv_data}</arg>
-<doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2024-01-22T19:50:45.235312" elapsed="0.000481"/>
+<status status="PASS" start="2024-01-23T15:45:14.661773" elapsed="0.000417"/>
 </kw>
 <return>
 <value>${csv_data}</value>
-<status status="PASS" start="2024-01-22T19:50:45.235858" elapsed="0.000134"/>
+<status status="PASS" start="2024-01-23T15:45:14.662274" elapsed="0.000089"/>
 </return>
-<msg time="2024-01-22T19:50:45.236133" level="INFO">${results} = [['Audi', '120', '02/15/2020', '5', 'Petrol', '25000', 'ABC123', '12000'], ['BMW', '95', '04/21/2019', '4', 'Diesel', '22000', 'XYZ789', '15000'], ['Ford', '150', '10/08/2021', '7', 'Electric Power', ...</msg>
-<var>${results}</var>
-<status status="PASS" start="2024-01-22T19:50:45.234129" elapsed="0.002197"/>
+<msg time="2024-01-23T15:45:14.662514" level="INFO">@{all_cars_list} = [ ['Audi', '120', '02/15/2020', '5', 'Petrol', '25000', 'ABC123', '12000'] | ['BMW', '95', '04/21/2019', '4', 'Diesel', '22000', 'XYZ789', '15000'] | ['Ford', '150', '10/08/2021', '7', 'Electric Power...</msg>
+<var>@{all_cars_list}</var>
+<status status="PASS" start="2024-01-23T15:45:14.661539" elapsed="0.001029"/>
+</kw>
+<return>
+<value>@{all_cars_list}</value>
+<status status="PASS" start="2024-01-23T15:45:14.662632" elapsed="0.000045"/>
+</return>
+<msg time="2024-01-23T15:45:14.662796" level="INFO">@{all_cars_list} = [ ['Audi', '120', '02/15/2020', '5', 'Petrol', '25000', 'ABC123', '12000'] | ['BMW', '95', '04/21/2019', '4', 'Diesel', '22000', 'XYZ789', '15000'] | ['Ford', '150', '10/08/2021', '7', 'Electric Power...</msg>
+<var>@{all_cars_list}</var>
+<status status="PASS" start="2024-01-23T15:45:14.661241" elapsed="0.001616"/>
+</kw>
+<for flavor="IN">
+<iter>
+<kw name="Select From List By Value" owner="SeleniumLibrary">
+<msg time="2024-01-23T15:45:14.663384" level="INFO">Selecting options from selection list 'xpath=//select[@id='make']' by value Audi.</msg>
+<arg>${MAKE_XPATH}</arg>
+<arg>${single_car}[0]</arg>
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<status status="PASS" start="2024-01-23T15:45:14.663197" elapsed="0.039410"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-01-23T15:45:14.703005" level="INFO">Typing text '120' into text field 'xpath=//input[@id='engineperformance']'.</msg>
+<arg>${ENGINE_PERFORMANCE_XPATH}</arg>
+<arg>${single_car}[1]</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-01-23T15:45:14.702773" elapsed="0.093818"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-01-23T15:45:14.797008" level="INFO">Typing text '02/15/2020' into text field 'xpath=//input[@id='dateofmanufacture']'.</msg>
+<arg>${MANUFACTURE_DATE_XPATH}</arg>
+<arg>${single_car}[2]</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-01-23T15:45:14.796772" elapsed="0.060251"/>
+</kw>
+<kw name="Select From List By Value" owner="SeleniumLibrary">
+<msg time="2024-01-23T15:45:14.857443" level="INFO">Selecting options from selection list 'xpath=//select[@id='numberofseats']' by value 5.</msg>
+<arg>${NUMBER_OF_SEATS_XPATH}</arg>
+<arg>${single_car}[3]</arg>
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<status status="PASS" start="2024-01-23T15:45:14.857204" elapsed="0.034696"/>
+</kw>
+<kw name="Select From List By Value" owner="SeleniumLibrary">
+<msg time="2024-01-23T15:45:14.892328" level="INFO">Selecting options from selection list 'xpath=//select[@id='fuel']' by value Petrol.</msg>
+<arg>${FUEL_TYPE_XPATH}</arg>
+<arg>${single_car}[4]</arg>
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<status status="PASS" start="2024-01-23T15:45:14.892070" elapsed="0.034094"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-01-23T15:45:14.926584" level="INFO">Typing text '25000' into text field 'xpath=//input[@id='listprice']'.</msg>
+<arg>${LIST_PRICE_XPATH}</arg>
+<arg>${single_car}[5]</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-01-23T15:45:14.926358" elapsed="0.045541"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-01-23T15:45:14.972384" level="INFO">Typing text 'ABC123' into text field 'xpath=//input[@id='licenseplatenumber']'.</msg>
+<arg>${LICENSE_PLATE_XPATH}</arg>
+<arg>${single_car}[6]</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-01-23T15:45:14.972137" elapsed="0.045450"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-01-23T15:45:15.018016" level="INFO">Typing text '12000' into text field 'xpath=//input[@id='annualmileage']'.</msg>
+<arg>${ANNUAL_MILEAGE_XPATH}</arg>
+<arg>${single_car}[7]</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-01-23T15:45:15.017771" elapsed="0.042638"/>
+</kw>
+<return>
+<value>${single_car}</value>
+<status status="PASS" start="2024-01-23T15:45:15.060547" elapsed="0.000094"/>
+</return>
+<var name="${single_car}">['Audi', '120', '02/15/2020', '5', 'Petrol', '25000', 'ABC123', '12000']</var>
+<status status="PASS" start="2024-01-23T15:45:14.663088" elapsed="0.397585"/>
+</iter>
+<var>${single_car}</var>
+<value>@{all_cars_list}</value>
+<status status="PASS" start="2024-01-23T15:45:14.662943" elapsed="0.397772"/>
+</for>
+<status status="PASS" start="2024-01-23T15:45:14.660913" elapsed="0.399891"/>
+</kw>
+<kw name="Proceed To Next Page" owner="AutomobilePage">
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-01-23T15:45:15.061403" level="INFO">Clicking button 'nextenterinsurantdata'.</msg>
+<arg>${NEXT_BUTTON_ID}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-01-23T15:45:15.061104" elapsed="0.039609"/>
+</kw>
+<status status="PASS" start="2024-01-23T15:45:15.060912" elapsed="0.039920"/>
+</kw>
+<kw name="Fill Form" owner="InsurantForm">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-01-23T15:45:15.101551" level="INFO">Typing text 'John' into text field 'xpath=//input[@id='firstname']'.</msg>
+<arg>${FIRST_NAME_XPATH}</arg>
+<arg>${INSURANT_DATA['firstname']}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-01-23T15:45:15.101165" elapsed="0.047714"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-01-23T15:45:15.149589" level="INFO">Typing text 'Doe' into text field 'xpath=//input[@id='lastname']'.</msg>
+<arg>${LAST_NAME_XPATH}</arg>
+<arg>${INSURANT_DATA['lastname']}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-01-23T15:45:15.149068" elapsed="0.042332"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-01-23T15:45:15.192036" level="INFO">Typing text '01/01/1984' into text field 'xpath=//input[@id='birthdate']'.</msg>
+<arg>${DOB_XPATH}</arg>
+<arg>${INSURANT_DATA['dob']}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-01-23T15:45:15.191570" elapsed="0.054741"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-01-23T15:45:15.246981" level="INFO">Typing text '123 Main St' into text field 'xpath=//input[@id='streetaddress']'.</msg>
+<arg>${STREET_ADDRESS_XPATH}</arg>
+<arg>${INSURANT_DATA['streetaddress']}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-01-23T15:45:15.246486" elapsed="0.047469"/>
+</kw>
+<kw name="Select From List By Value" owner="SeleniumLibrary">
+<msg time="2024-01-23T15:45:15.294668" level="INFO">Selecting options from selection list 'xpath=//select[@id='country']' by value Portugal.</msg>
+<arg>${COUNTRIES_LIST_XPATH}</arg>
+<arg>${INSURANT_DATA['country']}</arg>
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<status status="PASS" start="2024-01-23T15:45:15.294135" elapsed="0.035576"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-01-23T15:45:15.330365" level="INFO">Typing text '12345' into text field 'xpath=//input[@id='zipcode']'.</msg>
+<arg>${ZIP_CODE_XPATH}</arg>
+<arg>${INSURANT_DATA['zipcode']}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-01-23T15:45:15.329880" elapsed="0.047683"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-01-23T15:45:15.378289" level="INFO">Typing text 'Lisbon' into text field 'xpath=//input[@id='city']'.</msg>
+<arg>${CITY_XPATH}</arg>
+<arg>${INSURANT_DATA['city']}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-01-23T15:45:15.377754" elapsed="0.041511"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-01-23T15:45:15.419878" level="INFO">Typing text 'http://example.com' into text field 'xpath=//input[@id='website']'.</msg>
+<arg>${WEBSITE_XPATH}</arg>
+<arg>${INSURANT_DATA['website']}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-01-23T15:45:15.419426" elapsed="0.053896"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-01-23T15:45:15.474015" level="INFO">Typing text 'path/to/picture.jpg' into text field 'xpath=//input[@id='picture']'.</msg>
+<arg>${PICTURE_XPATH}</arg>
+<arg>${INSURANT_DATA['picture']}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-01-23T15:45:15.473507" elapsed="0.040246"/>
+</kw>
+<kw name="Select From List By Value" owner="SeleniumLibrary">
+<msg time="2024-01-23T15:45:15.514381" level="INFO">Selecting options from selection list 'xpath=//select[@id='occupation']' by value Employee.</msg>
+<arg>${OCCUPATION_LIST_XPATH}</arg>
+<arg>${INSURANT_DATA['occupation']}</arg>
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<status status="PASS" start="2024-01-23T15:45:15.513911" elapsed="0.033689"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-01-23T15:45:20.548425" level="INFO">Slept 5 seconds.</msg>
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-01-23T15:45:15.547753" elapsed="5.001944"/>
+</kw>
+<status status="PASS" start="2024-01-23T15:45:15.100957" elapsed="5.449528"/>
+</kw>
+<status status="PASS" start="2024-01-23T15:45:14.660485" elapsed="5.890374"/>
+</kw>
+<arg>${CATEGORIES.ONE}</arg>
+<status status="PASS" start="2024-01-23T15:45:08.254672" elapsed="12.296516"/>
 </kw>
 <kw name="End Web Test" owner="Common" type="TEARDOWN">
 <kw name="Close All Browsers" owner="SeleniumLibrary">
 <doc>Closes all open browsers and resets the browser cache.</doc>
-<status status="PASS" start="2024-01-22T19:50:45.236965" elapsed="0.066114"/>
+<status status="PASS" start="2024-01-23T15:45:20.553870" elapsed="0.078954"/>
 </kw>
-<status status="PASS" start="2024-01-22T19:50:45.236746" elapsed="0.066455"/>
+<status status="PASS" start="2024-01-23T15:45:20.552624" elapsed="0.080382"/>
 </kw>
-<status status="PASS" start="2024-01-22T19:50:44.053175" elapsed="1.250117"/>
+<status status="PASS" start="2024-01-23T15:45:07.095577" elapsed="13.537556"/>
 </test>
-<status status="PASS" start="2024-01-22T19:50:44.005591" elapsed="1.298313"/>
+<status status="PASS" start="2024-01-23T15:45:07.043759" elapsed="13.590099"/>
 </suite>
-<status status="PASS" start="2024-01-22T19:50:44.005086" elapsed="1.299582"/>
+<status status="PASS" start="2024-01-23T15:45:07.042992" elapsed="13.591402"/>
 </suite>
-<status status="PASS" start="2024-01-22T19:50:43.997903" elapsed="1.307207"/>
+<status status="PASS" start="2024-01-23T15:45:07.035358" elapsed="13.599590"/>
 </suite>
 <statistics>
 <total>

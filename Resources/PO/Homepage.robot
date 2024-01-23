@@ -3,7 +3,7 @@ Library  SeleniumLibrary
 
 *** Variables ***
 ${NAV_BAR_AUTOMOBILE_XPATH}   xpath=//*[contains(@id, 'nav_')]
-${NAV_BAR_CATEGORY_XPATH}   xpath=//*[contains(@id, 'nav_')]
+${NAV_BAR_CATEGORY_XPATH}     xpath=//*[contains(@id, 'nav_')]
 
 
 *** Keywords ***
