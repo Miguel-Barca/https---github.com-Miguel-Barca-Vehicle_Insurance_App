@@ -60,7 +60,10 @@ Select Gender
 Select Hobbies
     [Arguments]  ${INSURANT_DATA['hobbies']}
     IF   '${INSURANT_DATA['hobbies']}' == 'Speeding'   Click Element  ${HOBBIES_SPEEDING_CHECKBOX} 
-    ...  ELSE IF  '${INSURANT_DATA['hobbies']}' == 'gendermale'  Click Element  ${GENDERFEMALE_RADIO_BUTTON}
+    ...  ELSE IF  '${INSURANT_DATA['hobbies']}' == 'Bungee Jumping'   Click Element  ${HOBBIES_BUNGEE_CHECKBOX}
+    ...  ELSE IF  '${INSURANT_DATA['hobbies']}' == 'Cliff Diving'   Click Element  ${HOBBIES_CLIFF_DIVING_CHECKBOX}
+    ...  ELSE IF  '${INSURANT_DATA['hobbies']}' == 'Skydiving'   Click Element  ${HOBBIES_SKYDIVING_CHECKBOX}
+    ...  ELSE IF  '${INSURANT_DATA['hobbies']}' == 'Other'   Click Element  ${HOBBIES_OTHER_CHECKBOX}
     ...  ELSE  Log  message=Error with data
 
 Add Profile picture

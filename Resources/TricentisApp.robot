@@ -1,6 +1,5 @@
 *** Settings ***
 Library   SeleniumLibrary
-
 Resource  ../Resources/PO/Homepage.robot
 Resource  ../Resources/PO/AutomobilePage.robot
 Resource  ../Resources/PO/InsurantForm.robot
@@ -46,7 +45,6 @@ Defining Range Value
 
 Process All Cars - With Picture Upload
     [Arguments]   ${Category} 
-    DataManager.Assign Picture Path 
     Defining Range Value
     #Every Car/Row in the csv file is being selected 
     FOR   ${ROW}   IN RANGE  ${ROW}  ${RANGE}
