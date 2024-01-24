@@ -27,3 +27,7 @@ User Should Be Able To Fill Forms - Cars CSV File
 DATA MANAGER Tests
     ${holder}  DataManager.Get Insurant Data
     Log Many  ${holder}
+
+Picture Test
+    [Documentation]  Upload Picture
+    TricentisApp.Process All Cars - With Picture Upload  ${CATEGORIES.ONE}  

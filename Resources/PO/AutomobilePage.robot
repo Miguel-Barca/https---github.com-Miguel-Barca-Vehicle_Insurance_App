@@ -12,9 +12,8 @@ ${FUEL_TYPE_XPATH}           xpath=//select[@id='fuel']
 ${LIST_PRICE_XPATH}          xpath=//input[@id='listprice']
 ${LICENSE_PLATE_XPATH}       xpath=//input[@id='licenseplatenumber']
 ${ANNUAL_MILEAGE_XPATH}      xpath=//input[@id='annualmileage']
-${NEXT_BUTTON_ID}         nextenterinsurantdata  
-${COUNTER}  0
-${CAR_LIST_LENGTH}
+${NEXT_ENTER_INSURANT_ID}            nextenterinsurantdata  
+${COUNTER}                   0
 
 *** Keywords ***
 Validate Correct Form
@@ -50,4 +49,9 @@ Increment Counter
     Set Global Variable    ${COUNTER}
 
 Proceed To Next Page
-    Click Button   ${NEXT_BUTTON_ID}            
+    Click Button   ${NEXT_ENTER_INSURANT_ID}             
+
+Fill With Data and Proceed To Next Page
+    Validate Correct Form
+    GET Single Car from List And Increment Counter   COUNTER=${COUNTER}
+    Proceed To Next Page

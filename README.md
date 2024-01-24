@@ -16,21 +16,23 @@ These test cases serve as a comprehensive demonstration of automated web testing
 
 🚀 Installation Instructions:
 ------------
+Follow these steps to set up and run the project locally.
+
 
 If you already have Python with pip installed,
 you can simply run::
 
     pip install robotframework
 
+    pip install robotframework-autoitlibrary
 
-Follow these steps to set up and run the project locally:
+
 
 Clone the Repository::
 
     git clone https://github.com/Miguel-Barca/Vehicle_Insurance_App.git
 
     
-
 📋 Usage and Examples:
 ------------
 
