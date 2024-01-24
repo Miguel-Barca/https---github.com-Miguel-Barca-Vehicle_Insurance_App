@@ -24,9 +24,6 @@ you can simply run::
 
     pip install robotframework
 
-    pip install robotframework-autoitlibrary
-
-
 
 Clone the Repository::
 

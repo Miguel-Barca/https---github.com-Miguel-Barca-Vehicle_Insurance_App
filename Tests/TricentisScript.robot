@@ -2,7 +2,6 @@
 Resource  ../Data/InputData.robot
 Resource  ../Resources/Common.robot
 Resource  ../Resources/TricentisApp.robot
-Resource  ../Resources/DataManager.robot
 Test Setup     Common.Begin Web Test
 Test Teardown  Common.End Web Test
 
