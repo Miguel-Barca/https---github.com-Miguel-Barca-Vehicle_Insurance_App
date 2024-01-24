@@ -15,7 +15,6 @@ Tests Multiple Categories - Nav Bar
     Homepage.Click Category  ${Category}
 
     
-
 Fill Form Pages
     [Arguments]   ${Category}
     Homepage.Navigate To
@@ -37,11 +36,13 @@ Process All Cars
         #Log Many  ${COUNTER}  ${CAR_LIST_LENGTH}
     END
 
+
 Defining Range Value
     #Defining upper limit 
     ${RANGE}=  DataManager. Get CSV File Length  
     #Log    Counter after increment: ${COUNTER}
     Set Global Variable    ${RANGE}     
+
 
 Process All Cars - With Picture Upload
     [Arguments]   ${Category} 

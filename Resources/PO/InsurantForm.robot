@@ -1,7 +1,6 @@
 *** Settings ***
 Library  SeleniumLibrary
 Library  OperatingSystem
-Resource  ../Resources/DataManager.robot
 
 *** Variables ***
 ${FIRST_NAME_XPATH}                 xpath=//input[@id='firstname']
