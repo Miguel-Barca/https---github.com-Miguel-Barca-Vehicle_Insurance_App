@@ -4,6 +4,8 @@ Resource  ../Resources/PO/Homepage.robot
 Resource  ../Resources/PO/AutomobilePage.robot
 Resource  ../Resources/PO/InsurantForm.robot
 Resource  ../Resources/PO/ProductDataPage.robot
+Resource  ../Resources/PO/SelectPriceOptionPage.robot
+Resource  ../Resources/PO/SendQuotePage.robot
 Resource  ../Resources/DataManager.robot
 
 *** Variables ***
@@ -27,6 +29,8 @@ Fill Form Pages
     AutomobilePage.Proceed To Next Page
     InsurantForm.Fill With Data and Proceed To Next Page
     ProductDataPage.Fill With Data and Proceed To Next Page
+    SelectPriceOptionPage.Select Random Price Option and Proceed To Next Page
+    SendQuotePage.Fill With Data and Finalize
     
 
 Process All Cars
