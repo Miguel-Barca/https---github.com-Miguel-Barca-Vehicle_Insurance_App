@@ -14,5 +14,7 @@ ${FORM_TYPE}
 ...    streetaddress=123 Main St    country=Portugal    zipcode=12345    city=Lisbon    occupation=Employee    
 ...    hobbies=Speeding    website=https://github.com/Miguel-Barca    picture=path/to/picture.jpg
 
-
- 
+#TODO - CREATE A CSV
+&{PRODUCT_DATA}    startdate=01/01/2025   value=20000000   
+...    bonus=Bonus 8    damageinsurance=Full Coverage    optional=Euro Protection  
+...    courtesycar=Yes

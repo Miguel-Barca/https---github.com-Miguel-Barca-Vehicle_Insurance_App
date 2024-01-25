@@ -2,6 +2,7 @@
 Documentation    Use this layer to get data from external files
 Library          ../CustomLibs/Csv.py
 Library          OperatingSystem
+Resource         ../Data/InputData.robot
 
 *** Variables ***
 @{all_cars_list}   # Initialize an empty list to store all cars
@@ -30,3 +31,4 @@ Get CSV File Length
 Assign Picture Path
     ${PICTURE_NORMALIZED_PATH} =  OperatingSystem.Normalize Path     /Users/miguelbarca/TestAutomation/Vehicle_Insurance_App/Data/malePicture.jpeg
     Set Global Variable   ${PICTURE_NORMALIZED_PATH}
+

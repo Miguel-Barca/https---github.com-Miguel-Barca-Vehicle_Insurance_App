@@ -21,7 +21,9 @@ User Should Be Able To Fill Forms - Single Car
 
 
 User Should Be Able To Fill Forms - Cars CSV File
+    [Tags]           all
     [Documentation]  Reading CSV File With Cars Information And Finalizing Workflow - In Progress
+    
     TricentisApp.Process All Cars  ${CATEGORIES.ONE}  
 
 

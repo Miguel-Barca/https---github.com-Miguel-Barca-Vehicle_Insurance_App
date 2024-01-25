@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.0 (Python 3.12.1 on darwin)" generated="2024-01-25T10:34:43.537281" rpa="false" schemaversion="5">
+<robot generator="Robot 7.0 (Python 3.12.1 on darwin)" generated="2024-01-25T18:19:22.669483" rpa="false" schemaversion="5">
 <suite id="s1" name="Vehicle Insurance App" source="/Users/miguelbarca/TestAutomation/Vehicle_Insurance_App">
 <suite id="s1-s1" name="Tests" source="/Users/miguelbarca/TestAutomation/Vehicle_Insurance_App/Tests">
 <suite id="s1-s1-s1" name="TricentisScript" source="/Users/miguelbarca/TestAutomation/Vehicle_Insurance_App/Tests/TricentisScript.robot">
 <test id="s1-s1-s1-t1" name="User Should Be Able To Fill Forms - Cars CSV File" line="23">
 <kw name="Begin Web Test" owner="Common" type="SETUP">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2024-01-25T10:34:43.610518" level="INFO">Opening browser 'chrome' to base url 'about:blank'.</msg>
+<msg time="2024-01-25T18:19:22.748542" level="INFO">Opening browser 'chrome' to base url 'about:blank'.</msg>
 <arg>about:blank</arg>
 <arg>${BROWSER}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2024-01-25T10:34:43.610366" elapsed="1.129793"/>
+<status status="PASS" start="2024-01-25T18:19:22.748297" elapsed="1.143559"/>
 </kw>
-<status status="PASS" start="2024-01-25T10:34:43.609911" elapsed="1.130665"/>
+<status status="PASS" start="2024-01-25T18:19:22.747733" elapsed="1.144502"/>
 </kw>
 <kw name="Process All Cars" owner="TricentisApp">
 <kw name="Defining Range Value" owner="TricentisApp">
@@ -20,1221 +20,1196 @@
 <kw name="Get List Of Cars" owner="DataManager">
 <kw name="Get CSV Data" owner="DataManager">
 <kw name="Read Csv File" owner="Csv">
-<msg time="2024-01-25T10:34:44.743561" level="INFO">${csv_data} = [['Audi', '120', '02/15/2020', '5', 'Petrol', '25000', 'ABC123', '12000'], ['BMW', '95', '04/21/2019', '4', 'Diesel', '22000', 'XYZ789', '15000'], ['Ford', '150', '10/08/2021', '7', 'Electric Power', ...</msg>
+<msg time="2024-01-25T18:19:23.894745" level="INFO">${csv_data} = [['Audi', '120', '02/15/2020', '5', 'Petrol', '25000', 'ABC123', '12000'], ['BMW', '95', '04/21/2019', '4', 'Diesel', '22000', 'XYZ789', '15000'], ['Ford', '150', '10/08/2021', '7', 'Electric Power', ...</msg>
 <var>${csv_data}</var>
 <arg>${CSV_PATH}</arg>
-<status status="PASS" start="2024-01-25T10:34:44.742665" elapsed="0.001094"/>
+<status status="PASS" start="2024-01-25T18:19:23.894477" elapsed="0.000460"/>
 </kw>
 <return>
 <value>${csv_data}</value>
-<status status="PASS" start="2024-01-25T10:34:44.743948" elapsed="0.000198"/>
+<status status="PASS" start="2024-01-25T18:19:23.895008" elapsed="0.000241"/>
 </return>
-<msg time="2024-01-25T10:34:44.744312" level="INFO">@{all_cars_list} = [ ['Audi', '120', '02/15/2020', '5', 'Petrol', '25000', 'ABC123', '12000'] | ['BMW', '95', '04/21/2019', '4', 'Diesel', '22000', 'XYZ789', '15000'] | ['Ford', '150', '10/08/2021', '7', 'Electric Power...</msg>
+<msg time="2024-01-25T18:19:23.895367" level="INFO">@{all_cars_list} = [ ['Audi', '120', '02/15/2020', '5', 'Petrol', '25000', 'ABC123', '12000'] | ['BMW', '95', '04/21/2019', '4', 'Diesel', '22000', 'XYZ789', '15000'] | ['Ford', '150', '10/08/2021', '7', 'Electric Power...</msg>
 <var>@{all_cars_list}</var>
-<status status="PASS" start="2024-01-25T10:34:44.742529" elapsed="0.001849"/>
+<status status="PASS" start="2024-01-25T18:19:23.894338" elapsed="0.001080"/>
 </kw>
 <return>
 <value>@{all_cars_list}</value>
-<status status="PASS" start="2024-01-25T10:34:44.744543" elapsed="0.000058"/>
+<status status="PASS" start="2024-01-25T18:19:23.895468" elapsed="0.000038"/>
 </return>
-<msg time="2024-01-25T10:34:44.744720" level="INFO">@{cars_list} = [ ['Audi', '120', '02/15/2020', '5', 'Petrol', '25000', 'ABC123', '12000'] | ['BMW', '95', '04/21/2019', '4', 'Diesel', '22000', 'XYZ789', '15000'] | ['Ford', '150', '10/08/2021', '7', 'Electric Power...</msg>
+<msg time="2024-01-25T18:19:23.895597" level="INFO">@{cars_list} = [ ['Audi', '120', '02/15/2020', '5', 'Petrol', '25000', 'ABC123', '12000'] | ['BMW', '95', '04/21/2019', '4', 'Diesel', '22000', 'XYZ789', '15000'] | ['Ford', '150', '10/08/2021', '7', 'Electric Power...</msg>
 <var>@{cars_list}</var>
-<status status="PASS" start="2024-01-25T10:34:44.742227" elapsed="0.002548"/>
+<status status="PASS" start="2024-01-25T18:19:23.893968" elapsed="0.001673"/>
 </kw>
 <kw name="Get Length" owner="BuiltIn">
-<msg time="2024-01-25T10:34:44.745002" level="INFO">Length is 30.</msg>
-<msg time="2024-01-25T10:34:44.745066" level="INFO">${file_length} = 30</msg>
+<msg time="2024-01-25T18:19:23.895983" level="INFO">Length is 30.</msg>
+<msg time="2024-01-25T18:19:23.896065" level="INFO">${file_length} = 30</msg>
 <var>${file_length}</var>
 <arg>${cars_list}</arg>
 <doc>Returns and logs the length of the given item as an integer.</doc>
-<status status="PASS" start="2024-01-25T10:34:44.744879" elapsed="0.000220"/>
+<status status="PASS" start="2024-01-25T18:19:23.895731" elapsed="0.000371"/>
 </kw>
 <return>
 <value>${file_length}</value>
-<status status="PASS" start="2024-01-25T10:34:44.745149" elapsed="0.000038"/>
+<status status="PASS" start="2024-01-25T18:19:23.896167" elapsed="0.000231"/>
 </return>
-<msg time="2024-01-25T10:34:44.745247" level="INFO">${RANGE} = 30</msg>
+<msg time="2024-01-25T18:19:23.896598" level="INFO">${RANGE} = 30</msg>
 <var>${RANGE}</var>
-<status status="PASS" start="2024-01-25T10:34:44.742089" elapsed="0.003193"/>
+<status status="PASS" start="2024-01-25T18:19:23.893834" elapsed="0.002921"/>
 </kw>
 <kw name="Set Global Variable" owner="BuiltIn">
-<msg time="2024-01-25T10:34:44.745516" level="INFO">${RANGE} = 30</msg>
+<msg time="2024-01-25T18:19:23.897171" level="INFO">${RANGE} = 30</msg>
 <arg>${RANGE}</arg>
 <doc>Makes a variable available globally in all tests and suites.</doc>
-<status status="PASS" start="2024-01-25T10:34:44.745369" elapsed="0.000190"/>
+<status status="PASS" start="2024-01-25T18:19:23.896892" elapsed="0.000357"/>
 </kw>
-<status status="PASS" start="2024-01-25T10:34:44.741889" elapsed="0.003720"/>
+<status status="PASS" start="2024-01-25T18:19:23.893644" elapsed="0.003679"/>
 </kw>
 <for flavor="IN RANGE">
 <iter>
 <kw name="Fill Form Pages" owner="TricentisApp">
 <kw name="Navigate To" owner="Homepage">
 <kw name="Catenate" owner="BuiltIn">
-<msg time="2024-01-25T10:34:44.747476" level="INFO">${SignInUrl} = https://sampleapp.tricentis.com/101/index.php</msg>
+<msg time="2024-01-25T18:19:23.899689" level="INFO">${SignInUrl} = https://sampleapp.tricentis.com/101/index.php</msg>
 <var>${SignInUrl}</var>
 <arg>SEPARATOR=/</arg>
 <arg>${BASE_URL.${ENVIRONMENT}}</arg>
 <doc>Catenates the given items together and returns the resulted string.</doc>
-<status status="PASS" start="2024-01-25T10:34:44.746919" elapsed="0.000629"/>
+<status status="PASS" start="2024-01-25T18:19:23.899163" elapsed="0.000592"/>
 </kw>
 <kw name="Go To" owner="SeleniumLibrary">
-<msg time="2024-01-25T10:34:44.747914" level="INFO">Opening url 'https://sampleapp.tricentis.com/101/index.php'</msg>
+<msg time="2024-01-25T18:19:23.900095" level="INFO">Opening url 'https://sampleapp.tricentis.com/101/index.php'</msg>
 <arg>${SignInUrl}</arg>
 <doc>Navigates the current browser window to the provided ``url``.</doc>
-<status status="PASS" start="2024-01-25T10:34:44.747673" elapsed="1.294463"/>
+<status status="PASS" start="2024-01-25T18:19:23.899878" elapsed="0.811499"/>
 </kw>
-<status status="PASS" start="2024-01-25T10:34:44.746705" elapsed="1.295852"/>
+<status status="PASS" start="2024-01-25T18:19:23.898770" elapsed="0.812748"/>
 </kw>
 <kw name="Click Category" owner="Homepage">
 <kw name="Set Variable" owner="BuiltIn">
-<msg time="2024-01-25T10:34:46.044273" level="INFO">${xpath_variable} = xpath=//*[contains(@id, 'nav_automobile')]</msg>
+<msg time="2024-01-25T18:19:24.712125" level="INFO">${xpath_variable} = xpath=//*[contains(@id, 'nav_automobile')]</msg>
 <var>${xpath_variable}</var>
 <arg>xpath=//*[contains(@id, 'nav_${Category}')]</arg>
 <doc>Returns the given values which can then be assigned to a variables.</doc>
-<status status="PASS" start="2024-01-25T10:34:46.043692" elapsed="0.000791"/>
+<status status="PASS" start="2024-01-25T18:19:24.711974" elapsed="0.000230"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${xpath_variable}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-01-25T18:19:24.712299" elapsed="0.013156"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-01-25T10:34:46.045730" level="INFO">Clicking element 'xpath=//*[contains(@id, 'nav_automobile')]'.</msg>
+<msg time="2024-01-25T18:19:24.725866" level="INFO">Clicking element 'xpath=//*[contains(@id, 'nav_automobile')]'.</msg>
 <arg>${xpath_variable}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-01-25T10:34:46.044765" elapsed="0.333588"/>
+<status status="PASS" start="2024-01-25T18:19:24.725644" elapsed="0.292794"/>
 </kw>
 <arg>${Category}</arg>
-<status status="PASS" start="2024-01-25T10:34:46.042943" elapsed="0.335547"/>
+<status status="PASS" start="2024-01-25T18:19:24.711668" elapsed="0.306895"/>
 </kw>
 <kw name="Validate Correct Form" owner="AutomobilePage">
 <kw name="Set Variable" owner="BuiltIn">
-<msg time="2024-01-25T10:34:46.379014" level="INFO">${FORM_TYPE} = Automobile Insurance</msg>
+<msg time="2024-01-25T18:19:25.019002" level="INFO">${FORM_TYPE} = Automobile Insurance</msg>
 <var>${FORM_TYPE}</var>
 <arg>Automobile Insurance</arg>
 <doc>Returns the given values which can then be assigned to a variables.</doc>
-<status status="PASS" start="2024-01-25T10:34:46.378879" elapsed="0.000206"/>
+<status status="PASS" start="2024-01-25T18:19:25.018899" elapsed="0.000181"/>
 </kw>
 <kw name="Element Should Contain" owner="SeleniumLibrary">
-<msg time="2024-01-25T10:34:46.392107" level="INFO">Element 'xpath=//span[@id='selectedinsurance']' contains text 'Automobile Insurance'.</msg>
+<msg time="2024-01-25T18:19:25.031558" level="INFO">Element 'xpath=//span[@id='selectedinsurance']' contains text 'Automobile Insurance'.</msg>
 <arg>${selectedinsurance_xpath}</arg>
 <arg>${FORM_TYPE}</arg>
 <doc>Verifies that element ``locator`` contains text ``expected``.</doc>
-<status status="PASS" start="2024-01-25T10:34:46.379165" elapsed="0.013078"/>
+<status status="PASS" start="2024-01-25T18:19:25.019164" elapsed="0.012531"/>
 </kw>
-<status status="PASS" start="2024-01-25T10:34:46.378637" elapsed="0.013718"/>
+<status status="PASS" start="2024-01-25T18:19:25.018682" elapsed="0.013134"/>
 </kw>
 <kw name="Get CSV File Length" owner="DataManager">
 <kw name="Get List Of Cars" owner="DataManager">
 <kw name="Get CSV Data" owner="DataManager">
 <kw name="Read Csv File" owner="Csv">
-<msg time="2024-01-25T10:34:46.393580" level="INFO">${csv_data} = [['Audi', '120', '02/15/2020', '5', 'Petrol', '25000', 'ABC123', '12000'], ['BMW', '95', '04/21/2019', '4', 'Diesel', '22000', 'XYZ789', '15000'], ['Ford', '150', '10/08/2021', '7', 'Electric Power', ...</msg>
+<msg time="2024-01-25T18:19:25.033024" level="INFO">${csv_data} = [['Audi', '120', '02/15/2020', '5', 'Petrol', '25000', 'ABC123', '12000'], ['BMW', '95', '04/21/2019', '4', 'Diesel', '22000', 'XYZ789', '15000'], ['Ford', '150', '10/08/2021', '7', 'Electric Power', ...</msg>
 <var>${csv_data}</var>
 <arg>${CSV_PATH}</arg>
-<status status="PASS" start="2024-01-25T10:34:46.393099" elapsed="0.000579"/>
+<status status="PASS" start="2024-01-25T18:19:25.032481" elapsed="0.000603"/>
 </kw>
 <return>
 <value>${csv_data}</value>
-<status status="PASS" start="2024-01-25T10:34:46.393895" elapsed="0.000135"/>
+<status status="PASS" start="2024-01-25T18:19:25.033257" elapsed="0.000066"/>
 </return>
-<msg time="2024-01-25T10:34:46.394194" level="INFO">@{all_cars_list} = [ ['Audi', '120', '02/15/2020', '5', 'Petrol', '25000', 'ABC123', '12000'] | ['BMW', '95', '04/21/2019', '4', 'Diesel', '22000', 'XYZ789', '15000'] | ['Ford', '150', '10/08/2021', '7', 'Electric Power...</msg>
+<msg time="2024-01-25T18:19:25.033440" level="INFO">@{all_cars_list} = [ ['Audi', '120', '02/15/2020', '5', 'Petrol', '25000', 'ABC123', '12000'] | ['BMW', '95', '04/21/2019', '4', 'Diesel', '22000', 'XYZ789', '15000'] | ['Ford', '150', '10/08/2021', '7', 'Electric Power...</msg>
 <var>@{all_cars_list}</var>
-<status status="PASS" start="2024-01-25T10:34:46.392915" elapsed="0.001352"/>
+<status status="PASS" start="2024-01-25T18:19:25.032341" elapsed="0.001144"/>
 </kw>
 <return>
 <value>@{all_cars_list}</value>
-<status status="PASS" start="2024-01-25T10:34:46.394340" elapsed="0.000057"/>
+<status status="PASS" start="2024-01-25T18:19:25.033530" elapsed="0.000041"/>
 </return>
-<msg time="2024-01-25T10:34:46.394499" level="INFO">@{cars_list} = [ ['Audi', '120', '02/15/2020', '5', 'Petrol', '25000', 'ABC123', '12000'] | ['BMW', '95', '04/21/2019', '4', 'Diesel', '22000', 'XYZ789', '15000'] | ['Ford', '150', '10/08/2021', '7', 'Electric Power...</msg>
+<msg time="2024-01-25T18:19:25.033660" level="INFO">@{cars_list} = [ ['Audi', '120', '02/15/2020', '5', 'Petrol', '25000', 'ABC123', '12000'] | ['BMW', '95', '04/21/2019', '4', 'Diesel', '22000', 'XYZ789', '15000'] | ['Ford', '150', '10/08/2021', '7', 'Electric Power...</msg>
 <var>@{cars_list}</var>
-<status status="PASS" start="2024-01-25T10:34:46.392752" elapsed="0.001846"/>
+<status status="PASS" start="2024-01-25T18:19:25.032196" elapsed="0.001623"/>
 </kw>
 <kw name="Get Length" owner="BuiltIn">
-<msg time="2024-01-25T10:34:46.395009" level="INFO">Length is 30.</msg>
-<msg time="2024-01-25T10:34:46.395110" level="INFO">${file_length} = 30</msg>
+<msg time="2024-01-25T18:19:25.034011" level="INFO">Length is 30.</msg>
+<msg time="2024-01-25T18:19:25.034066" level="INFO">${file_length} = 30</msg>
 <var>${file_length}</var>
 <arg>${cars_list}</arg>
 <doc>Returns and logs the length of the given item as an integer.</doc>
-<status status="PASS" start="2024-01-25T10:34:46.394816" elapsed="0.000330"/>
+<status status="PASS" start="2024-01-25T18:19:25.033907" elapsed="0.000190"/>
 </kw>
 <return>
 <value>${file_length}</value>
-<status status="PASS" start="2024-01-25T10:34:46.395213" elapsed="0.000077"/>
+<status status="PASS" start="2024-01-25T18:19:25.034143" elapsed="0.000032"/>
 </return>
-<status status="PASS" start="2024-01-25T10:34:46.392490" elapsed="0.002896"/>
+<status status="PASS" start="2024-01-25T18:19:25.031961" elapsed="0.002263"/>
 </kw>
 <kw name="GET Single Car from List And Increment Counter" owner="AutomobilePage">
 <kw name="Get List Of Cars" owner="DataManager">
 <kw name="Get CSV Data" owner="DataManager">
 <kw name="Read Csv File" owner="Csv">
-<msg time="2024-01-25T10:34:46.396495" level="INFO">${csv_data} = [['Audi', '120', '02/15/2020', '5', 'Petrol', '25000', 'ABC123', '12000'], ['BMW', '95', '04/21/2019', '4', 'Diesel', '22000', 'XYZ789', '15000'], ['Ford', '150', '10/08/2021', '7', 'Electric Power', ...</msg>
+<msg time="2024-01-25T18:19:25.035553" level="INFO">${csv_data} = [['Audi', '120', '02/15/2020', '5', 'Petrol', '25000', 'ABC123', '12000'], ['BMW', '95', '04/21/2019', '4', 'Diesel', '22000', 'XYZ789', '15000'], ['Ford', '150', '10/08/2021', '7', 'Electric Power', ...</msg>
 <var>${csv_data}</var>
 <arg>${CSV_PATH}</arg>
-<status status="PASS" start="2024-01-25T10:34:46.396075" elapsed="0.000498"/>
+<status status="PASS" start="2024-01-25T18:19:25.035064" elapsed="0.000559"/>
 </kw>
 <return>
 <value>${csv_data}</value>
-<status status="PASS" start="2024-01-25T10:34:46.396732" elapsed="0.000079"/>
+<status status="PASS" start="2024-01-25T18:19:25.035818" elapsed="0.000213"/>
 </return>
-<msg time="2024-01-25T10:34:46.396931" level="INFO">@{all_cars_list} = [ ['Audi', '120', '02/15/2020', '5', 'Petrol', '25000', 'ABC123', '12000'] | ['BMW', '95', '04/21/2019', '4', 'Diesel', '22000', 'XYZ789', '15000'] | ['Ford', '150', '10/08/2021', '7', 'Electric Power...</msg>
+<msg time="2024-01-25T18:19:25.036144" level="INFO">@{all_cars_list} = [ ['Audi', '120', '02/15/2020', '5', 'Petrol', '25000', 'ABC123', '12000'] | ['BMW', '95', '04/21/2019', '4', 'Diesel', '22000', 'XYZ789', '15000'] | ['Ford', '150', '10/08/2021', '7', 'Electric Power...</msg>
 <var>@{all_cars_list}</var>
-<status status="PASS" start="2024-01-25T10:34:46.395956" elapsed="0.001196"/>
+<status status="PASS" start="2024-01-25T18:19:25.034900" elapsed="0.001291"/>
 </kw>
 <return>
 <value>@{all_cars_list}</value>
-<status status="PASS" start="2024-01-25T10:34:46.397205" elapsed="0.000067"/>
+<status status="PASS" start="2024-01-25T18:19:25.036244" elapsed="0.000119"/>
 </return>
-<msg time="2024-01-25T10:34:46.397369" level="INFO">@{cars_list} = [ ['Audi', '120', '02/15/2020', '5', 'Petrol', '25000', 'ABC123', '12000'] | ['BMW', '95', '04/21/2019', '4', 'Diesel', '22000', 'XYZ789', '15000'] | ['Ford', '150', '10/08/2021', '7', 'Electric Power...</msg>
+<msg time="2024-01-25T18:19:25.036476" level="INFO">@{cars_list} = [ ['Audi', '120', '02/15/2020', '5', 'Petrol', '25000', 'ABC123', '12000'] | ['BMW', '95', '04/21/2019', '4', 'Diesel', '22000', 'XYZ789', '15000'] | ['Ford', '150', '10/08/2021', '7', 'Electric Power...</msg>
 <var>@{cars_list}</var>
-<status status="PASS" start="2024-01-25T10:34:46.395783" elapsed="0.001628"/>
+<status status="PASS" start="2024-01-25T18:19:25.034518" elapsed="0.002009"/>
 </kw>
 <kw name="Set Variable" owner="BuiltIn">
-<msg time="2024-01-25T10:34:46.397684" level="INFO">${single_car} = ['Audi', '120', '02/15/2020', '5', 'Petrol', '25000', 'ABC123', '12000']</msg>
+<msg time="2024-01-25T18:19:25.036753" level="INFO">${single_car} = ['Audi', '120', '02/15/2020', '5', 'Petrol', '25000', 'ABC123', '12000']</msg>
 <var>${single_car}</var>
 <arg>${cars_list}[${COUNTER}]</arg>
 <doc>Returns the given values which can then be assigned to a variables.</doc>
-<status status="PASS" start="2024-01-25T10:34:46.397494" elapsed="0.000238"/>
+<status status="PASS" start="2024-01-25T18:19:25.036623" elapsed="0.000171"/>
 </kw>
 <kw name="Select From List By Value" owner="SeleniumLibrary">
-<msg time="2024-01-25T10:34:46.398016" level="INFO">Selecting options from selection list 'xpath=//select[@id='make']' by value Audi.</msg>
+<msg time="2024-01-25T18:19:25.037026" level="INFO">Selecting options from selection list 'xpath=//select[@id='make']' by value Audi.</msg>
 <arg>${MAKE_XPATH}</arg>
 <arg>${single_car}[0]</arg>
 <doc>Selects options from selection list ``locator`` by ``values``.</doc>
-<status status="PASS" start="2024-01-25T10:34:46.397824" elapsed="0.036899"/>
+<status status="PASS" start="2024-01-25T18:19:25.036881" elapsed="0.040144"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-01-25T10:34:46.435118" level="INFO">Typing text '120' into text field 'xpath=//input[@id='engineperformance']'.</msg>
+<msg time="2024-01-25T18:19:25.077454" level="INFO">Typing text '120' into text field 'xpath=//input[@id='engineperformance']'.</msg>
 <arg>${ENGINE_PERFORMANCE_XPATH}</arg>
 <arg>${single_car}[1]</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-01-25T10:34:46.434893" elapsed="0.107599"/>
+<status status="PASS" start="2024-01-25T18:19:25.077213" elapsed="0.102283"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-01-25T10:34:46.542904" level="INFO">Typing text '02/15/2020' into text field 'xpath=//input[@id='dateofmanufacture']'.</msg>
+<msg time="2024-01-25T18:19:25.179970" level="INFO">Typing text '02/15/2020' into text field 'xpath=//input[@id='dateofmanufacture']'.</msg>
 <arg>${MANUFACTURE_DATE_XPATH}</arg>
 <arg>${single_car}[2]</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-01-25T10:34:46.542664" elapsed="0.059079"/>
+<status status="PASS" start="2024-01-25T18:19:25.179689" elapsed="0.063223"/>
 </kw>
 <kw name="Select From List By Value" owner="SeleniumLibrary">
-<msg time="2024-01-25T10:34:46.602308" level="INFO">Selecting options from selection list 'xpath=//select[@id='numberofseats']' by value 5.</msg>
+<msg time="2024-01-25T18:19:25.243440" level="INFO">Selecting options from selection list 'xpath=//select[@id='numberofseats']' by value 5.</msg>
 <arg>${NUMBER_OF_SEATS_XPATH}</arg>
 <arg>${single_car}[3]</arg>
 <doc>Selects options from selection list ``locator`` by ``values``.</doc>
-<status status="PASS" start="2024-01-25T10:34:46.601948" elapsed="0.032317"/>
+<status status="PASS" start="2024-01-25T18:19:25.243107" elapsed="0.034815"/>
 </kw>
 <kw name="Select From List By Value" owner="SeleniumLibrary">
-<msg time="2024-01-25T10:34:46.634662" level="INFO">Selecting options from selection list 'xpath=//select[@id='fuel']' by value Petrol.</msg>
+<msg time="2024-01-25T18:19:25.278315" level="INFO">Selecting options from selection list 'xpath=//select[@id='fuel']' by value Petrol.</msg>
 <arg>${FUEL_TYPE_XPATH}</arg>
 <arg>${single_car}[4]</arg>
 <doc>Selects options from selection list ``locator`` by ``values``.</doc>
-<status status="PASS" start="2024-01-25T10:34:46.634431" elapsed="0.031063"/>
+<status status="PASS" start="2024-01-25T18:19:25.278090" elapsed="0.033911"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-01-25T10:34:46.665905" level="INFO">Typing text '25000' into text field 'xpath=//input[@id='listprice']'.</msg>
+<msg time="2024-01-25T18:19:25.312376" level="INFO">Typing text '25000' into text field 'xpath=//input[@id='listprice']'.</msg>
 <arg>${LIST_PRICE_XPATH}</arg>
 <arg>${single_car}[5]</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-01-25T10:34:46.665674" elapsed="0.042610"/>
+<status status="PASS" start="2024-01-25T18:19:25.312162" elapsed="0.042099"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-01-25T10:34:46.708718" level="INFO">Typing text 'ABC123' into text field 'xpath=//input[@id='licenseplatenumber']'.</msg>
+<msg time="2024-01-25T18:19:25.354729" level="INFO">Typing text 'ABC123' into text field 'xpath=//input[@id='licenseplatenumber']'.</msg>
 <arg>${LICENSE_PLATE_XPATH}</arg>
 <arg>${single_car}[6]</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-01-25T10:34:46.708462" elapsed="0.040838"/>
+<status status="PASS" start="2024-01-25T18:19:25.354475" elapsed="0.039947"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-01-25T10:34:46.749761" level="INFO">Typing text '12000' into text field 'xpath=//input[@id='annualmileage']'.</msg>
+<msg time="2024-01-25T18:19:25.394801" level="INFO">Typing text '12000' into text field 'xpath=//input[@id='annualmileage']'.</msg>
 <arg>${ANNUAL_MILEAGE_XPATH}</arg>
 <arg>${single_car}[7]</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-01-25T10:34:46.749509" elapsed="0.041666"/>
+<status status="PASS" start="2024-01-25T18:19:25.394585" elapsed="0.040277"/>
 </kw>
 <kw name="Increment Counter" owner="AutomobilePage">
 <kw name="Evaluate" owner="BuiltIn">
-<msg time="2024-01-25T10:34:46.791823" level="INFO">${COUNTER} = 1</msg>
+<msg time="2024-01-25T18:19:25.435457" level="INFO">${COUNTER} = 1</msg>
 <var>${COUNTER}</var>
 <arg>${COUNTER} + 1</arg>
 <doc>Evaluates the given expression in Python and returns the result.</doc>
-<status status="PASS" start="2024-01-25T10:34:46.791646" elapsed="0.000245"/>
+<status status="PASS" start="2024-01-25T18:19:25.435282" elapsed="0.000260"/>
 </kw>
 <kw name="Set Global Variable" owner="BuiltIn">
-<msg time="2024-01-25T10:34:46.792150" level="INFO">${COUNTER} = 1</msg>
+<msg time="2024-01-25T18:19:25.435762" level="INFO">${COUNTER} = 1</msg>
 <arg>${COUNTER}</arg>
 <doc>Makes a variable available globally in all tests and suites.</doc>
-<status status="PASS" start="2024-01-25T10:34:46.791975" elapsed="0.000222"/>
+<status status="PASS" start="2024-01-25T18:19:25.435626" elapsed="0.000183"/>
 </kw>
-<status status="PASS" start="2024-01-25T10:34:46.791401" elapsed="0.000849"/>
+<status status="PASS" start="2024-01-25T18:19:25.435047" elapsed="0.000814"/>
 </kw>
 <arg>COUNTER=${COUNTER}</arg>
-<status status="PASS" start="2024-01-25T10:34:46.395519" elapsed="0.396774"/>
+<status status="PASS" start="2024-01-25T18:19:25.034326" elapsed="0.401576"/>
 </kw>
 <kw name="Proceed To Next Page" owner="AutomobilePage">
 <kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2024-01-25T10:34:46.792622" level="INFO">Clicking button 'nextenterinsurantdata'.</msg>
+<msg time="2024-01-25T18:19:25.436239" level="INFO">Clicking button 'nextenterinsurantdata'.</msg>
 <arg>${NEXT_ENTER_INSURANT_ID}</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2024-01-25T10:34:46.792504" elapsed="0.048791"/>
+<status status="PASS" start="2024-01-25T18:19:25.436126" elapsed="0.041882"/>
 </kw>
-<status status="PASS" start="2024-01-25T10:34:46.792373" elapsed="0.049062"/>
+<status status="PASS" start="2024-01-25T18:19:25.435997" elapsed="0.042147"/>
 </kw>
 <kw name="Fill With Data and Proceed To Next Page" owner="InsurantForm">
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-01-25T10:34:46.842382" level="INFO">Typing text 'John' into text field 'xpath=//input[@id='firstname']'.</msg>
+<msg time="2024-01-25T18:19:25.479056" level="INFO">Typing text 'John' into text field 'xpath=//input[@id='firstname']'.</msg>
 <arg>${FIRST_NAME_XPATH}</arg>
 <arg>${INSURANT_DATA['firstname']}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-01-25T10:34:46.841873" elapsed="0.042305"/>
+<status status="PASS" start="2024-01-25T18:19:25.478530" elapsed="0.041996"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-01-25T10:34:46.884857" level="INFO">Typing text 'Doe' into text field 'xpath=//input[@id='lastname']'.</msg>
+<msg time="2024-01-25T18:19:25.521427" level="INFO">Typing text 'Doe' into text field 'xpath=//input[@id='lastname']'.</msg>
 <arg>${LAST_NAME_XPATH}</arg>
 <arg>${INSURANT_DATA['lastname']}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-01-25T10:34:46.884343" elapsed="0.039437"/>
+<status status="PASS" start="2024-01-25T18:19:25.520764" elapsed="0.038863"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-01-25T10:34:46.924482" level="INFO">Typing text '01/01/1984' into text field 'xpath=//input[@id='birthdate']'.</msg>
+<msg time="2024-01-25T18:19:25.560361" level="INFO">Typing text '01/01/1984' into text field 'xpath=//input[@id='birthdate']'.</msg>
 <arg>${DOB_XPATH}</arg>
 <arg>${INSURANT_DATA['dob']}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-01-25T10:34:46.923999" elapsed="0.052278"/>
+<status status="PASS" start="2024-01-25T18:19:25.559789" elapsed="0.052973"/>
 </kw>
 <kw name="Select Gender" owner="InsurantForm">
 <if>
 <branch type="IF" condition="'${INSURANT_DATA['gender']}' == 'gendermale'">
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-01-25T10:34:46.977304" level="INFO">Clicking element '//form[@id="insurance-form"]//div[4]/p/label[1]/span'.</msg>
+<msg time="2024-01-25T18:19:25.614003" level="INFO">Clicking element '//form[@id="insurance-form"]//div[4]/p/label[1]/span'.</msg>
 <arg>${GENDERMALE_RADIO_BUTTON}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-01-25T10:34:46.977144" elapsed="0.028497"/>
+<status status="PASS" start="2024-01-25T18:19:25.613806" elapsed="0.022947"/>
 </kw>
-<status status="PASS" start="2024-01-25T10:34:46.977011" elapsed="0.028744"/>
+<status status="PASS" start="2024-01-25T18:19:25.613666" elapsed="0.023200"/>
 </branch>
 <branch type="ELSE IF" condition="'${INSURANT_DATA['gender']}' == 'genderfemale'">
 <kw name="Click Element" owner="SeleniumLibrary">
 <arg>${GENDERFEMALE_RADIO_BUTTON}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="NOT RUN" start="2024-01-25T10:34:47.005935" elapsed="0.000062"/>
+<status status="NOT RUN" start="2024-01-25T18:19:25.637049" elapsed="0.000064"/>
 </kw>
-<status status="NOT RUN" start="2024-01-25T10:34:47.005793" elapsed="0.000247"/>
+<status status="NOT RUN" start="2024-01-25T18:19:25.636904" elapsed="0.000254"/>
 </branch>
 <branch type="ELSE">
 <kw name="Log" owner="BuiltIn">
 <arg>message=Error with data</arg>
 <doc>Logs the given message with the given level.</doc>
-<status status="NOT RUN" start="2024-01-25T10:34:47.006124" elapsed="0.000051"/>
+<status status="NOT RUN" start="2024-01-25T18:19:25.637243" elapsed="0.000051"/>
 </kw>
-<status status="NOT RUN" start="2024-01-25T10:34:47.006061" elapsed="0.000157"/>
+<status status="NOT RUN" start="2024-01-25T18:19:25.637179" elapsed="0.000159"/>
 </branch>
-<status status="PASS" start="2024-01-25T10:34:46.976995" elapsed="0.029243"/>
+<status status="PASS" start="2024-01-25T18:19:25.613648" elapsed="0.023709"/>
 </if>
 <arg>${INSURANT_DATA['gender']}</arg>
-<status status="PASS" start="2024-01-25T10:34:46.976499" elapsed="0.029769"/>
+<status status="PASS" start="2024-01-25T18:19:25.613040" elapsed="0.024346"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-01-25T10:34:47.006739" level="INFO">Typing text '123 Main St' into text field 'xpath=//input[@id='streetaddress']'.</msg>
+<msg time="2024-01-25T18:19:25.637969" level="INFO">Typing text '123 Main St' into text field 'xpath=//input[@id='streetaddress']'.</msg>
 <arg>${STREET_ADDRESS_XPATH}</arg>
 <arg>${INSURANT_DATA['streetaddress']}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-01-25T10:34:47.006342" elapsed="0.050745"/>
+<status status="PASS" start="2024-01-25T18:19:25.637459" elapsed="0.046141"/>
 </kw>
 <kw name="Select From List By Value" owner="SeleniumLibrary">
-<msg time="2024-01-25T10:34:47.057745" level="INFO">Selecting options from selection list 'xpath=//select[@id='country']' by value Portugal.</msg>
+<msg time="2024-01-25T18:19:25.684277" level="INFO">Selecting options from selection list 'xpath=//select[@id='country']' by value Portugal.</msg>
 <arg>${COUNTRIES_LIST_XPATH}</arg>
 <arg>${INSURANT_DATA['country']}</arg>
 <doc>Selects options from selection list ``locator`` by ``values``.</doc>
-<status status="PASS" start="2024-01-25T10:34:47.057254" elapsed="0.033050"/>
+<status status="PASS" start="2024-01-25T18:19:25.683763" elapsed="0.033540"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-01-25T10:34:47.090952" level="INFO">Typing text '12345' into text field 'xpath=//input[@id='zipcode']'.</msg>
+<msg time="2024-01-25T18:19:25.718000" level="INFO">Typing text '12345' into text field 'xpath=//input[@id='zipcode']'.</msg>
 <arg>${ZIP_CODE_XPATH}</arg>
 <arg>${INSURANT_DATA['zipcode']}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-01-25T10:34:47.090471" elapsed="0.043102"/>
+<status status="PASS" start="2024-01-25T18:19:25.717472" elapsed="0.041210"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-01-25T10:34:47.134241" level="INFO">Typing text 'Lisbon' into text field 'xpath=//input[@id='city']'.</msg>
+<msg time="2024-01-25T18:19:25.759352" level="INFO">Typing text 'Lisbon' into text field 'xpath=//input[@id='city']'.</msg>
 <arg>${CITY_XPATH}</arg>
 <arg>${INSURANT_DATA['city']}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-01-25T10:34:47.133739" elapsed="0.037207"/>
+<status status="PASS" start="2024-01-25T18:19:25.758845" elapsed="0.038272"/>
 </kw>
 <kw name="Select From List By Value" owner="SeleniumLibrary">
-<msg time="2024-01-25T10:34:47.171630" level="INFO">Selecting options from selection list 'xpath=//select[@id='occupation']' by value Employee.</msg>
+<msg time="2024-01-25T18:19:25.797891" level="INFO">Selecting options from selection list 'xpath=//select[@id='occupation']' by value Employee.</msg>
 <arg>${OCCUPATION_LIST_XPATH}</arg>
 <arg>${INSURANT_DATA['occupation']}</arg>
 <doc>Selects options from selection list ``locator`` by ``values``.</doc>
-<status status="PASS" start="2024-01-25T10:34:47.171122" elapsed="0.032867"/>
+<status status="PASS" start="2024-01-25T18:19:25.797314" elapsed="0.033735"/>
 </kw>
 <kw name="Select Hobbies" owner="InsurantForm">
 <if>
 <branch type="IF" condition="'${INSURANT_DATA['hobbies']}' == 'Speeding'">
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-01-25T10:34:47.205708" level="INFO">Clicking element '//form[@id="insurance-form"]//div[10]/p/label[1]/span'.</msg>
+<msg time="2024-01-25T18:19:25.832261" level="INFO">Clicking element '//form[@id="insurance-form"]//div[10]/p/label[1]/span'.</msg>
 <arg>${HOBBIES_SPEEDING_CHECKBOX}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-01-25T10:34:47.205529" elapsed="0.021509"/>
+<status status="PASS" start="2024-01-25T18:19:25.832079" elapsed="0.023007"/>
 </kw>
-<status status="PASS" start="2024-01-25T10:34:47.205399" elapsed="0.021754"/>
+<status status="PASS" start="2024-01-25T18:19:25.831927" elapsed="0.023271"/>
 </branch>
 <branch type="ELSE IF" condition="'${INSURANT_DATA['hobbies']}' == 'Bungee Jumping'">
 <kw name="Click Element" owner="SeleniumLibrary">
 <arg>${HOBBIES_BUNGEE_CHECKBOX}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="NOT RUN" start="2024-01-25T10:34:47.227344" elapsed="0.000106"/>
+<status status="NOT RUN" start="2024-01-25T18:19:25.855397" elapsed="0.000081"/>
 </kw>
-<status status="NOT RUN" start="2024-01-25T10:34:47.227189" elapsed="0.000329"/>
+<status status="NOT RUN" start="2024-01-25T18:19:25.855247" elapsed="0.000277"/>
 </branch>
 <branch type="ELSE IF" condition="'${INSURANT_DATA['hobbies']}' == 'Cliff Diving'">
 <kw name="Click Element" owner="SeleniumLibrary">
 <arg>${HOBBIES_CLIFF_DIVING_CHECKBOX}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="NOT RUN" start="2024-01-25T10:34:47.227636" elapsed="0.000061"/>
+<status status="NOT RUN" start="2024-01-25T18:19:25.855603" elapsed="0.000049"/>
 </kw>
-<status status="NOT RUN" start="2024-01-25T10:34:47.227548" elapsed="0.000200"/>
+<status status="NOT RUN" start="2024-01-25T18:19:25.855544" elapsed="0.000148"/>
 </branch>
 <branch type="ELSE IF" condition="'${INSURANT_DATA['hobbies']}' == 'Skydiving'">
 <kw name="Click Element" owner="SeleniumLibrary">
 <arg>${HOBBIES_SKYDIVING_CHECKBOX}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="NOT RUN" start="2024-01-25T10:34:47.227838" elapsed="0.000055"/>
+<status status="NOT RUN" start="2024-01-25T18:19:25.855764" elapsed="0.000049"/>
 </kw>
-<status status="NOT RUN" start="2024-01-25T10:34:47.227771" elapsed="0.000167"/>
+<status status="NOT RUN" start="2024-01-25T18:19:25.855710" elapsed="0.000145"/>
 </branch>
 <branch type="ELSE IF" condition="'${INSURANT_DATA['hobbies']}' == 'Other'">
 <kw name="Click Element" owner="SeleniumLibrary">
 <arg>${HOBBIES_OTHER_CHECKBOX}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="NOT RUN" start="2024-01-25T10:34:47.228020" elapsed="0.000047"/>
+<status status="NOT RUN" start="2024-01-25T18:19:25.855937" elapsed="0.000057"/>
 </kw>
-<status status="NOT RUN" start="2024-01-25T10:34:47.227958" elapsed="0.000152"/>
+<status status="NOT RUN" start="2024-01-25T18:19:25.855872" elapsed="0.000163"/>
 </branch>
 <branch type="ELSE">
 <kw name="Log" owner="BuiltIn">
 <arg>message=Error with data</arg>
 <doc>Logs the given message with the given level.</doc>
-<status status="NOT RUN" start="2024-01-25T10:34:47.228194" elapsed="0.000050"/>
+<status status="NOT RUN" start="2024-01-25T18:19:25.856112" elapsed="0.000045"/>
 </kw>
-<status status="NOT RUN" start="2024-01-25T10:34:47.228129" elapsed="0.000153"/>
+<status status="NOT RUN" start="2024-01-25T18:19:25.856053" elapsed="0.000146"/>
 </branch>
-<status status="PASS" start="2024-01-25T10:34:47.204755" elapsed="0.023547"/>
+<status status="PASS" start="2024-01-25T18:19:25.831912" elapsed="0.024306"/>
 </if>
 <arg>${INSURANT_DATA['hobbies']}</arg>
-<status status="PASS" start="2024-01-25T10:34:47.204239" elapsed="0.024102"/>
+<status status="PASS" start="2024-01-25T18:19:25.831305" elapsed="0.024943"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-01-25T10:34:47.228898" level="INFO">Typing text 'https://github.com/Miguel-Barca' into text field 'xpath=//input[@id='website']'.</msg>
+<msg time="2024-01-25T18:19:25.856803" level="INFO">Typing text 'https://github.com/Miguel-Barca' into text field 'xpath=//input[@id='website']'.</msg>
 <arg>${WEBSITE_XPATH}</arg>
 <arg>${INSURANT_DATA['website']}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-01-25T10:34:47.228415" elapsed="0.063348"/>
+<status status="PASS" start="2024-01-25T18:19:25.856316" elapsed="0.063005"/>
 </kw>
 <kw name="Proceed To Next Page" owner="InsurantForm">
 <kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2024-01-25T10:34:47.292400" level="INFO">Clicking button 'nextenterproductdata'.</msg>
+<msg time="2024-01-25T18:19:25.919920" level="INFO">Clicking button 'nextenterproductdata'.</msg>
 <arg>${NEXT_ENTER_PRODUCT_ID}</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2024-01-25T10:34:47.292221" elapsed="0.033847"/>
+<status status="PASS" start="2024-01-25T18:19:25.919756" elapsed="0.032212"/>
 </kw>
-<status status="PASS" start="2024-01-25T10:34:47.291972" elapsed="0.034216"/>
+<status status="PASS" start="2024-01-25T18:19:25.919530" elapsed="0.032568"/>
 </kw>
-<status status="PASS" start="2024-01-25T10:34:46.841607" elapsed="0.484630"/>
+<status status="PASS" start="2024-01-25T18:19:25.478296" elapsed="0.473856"/>
+</kw>
+<kw name="Fill With Data and Proceed To Next Page" owner="ProductDataPage">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-01-25T18:19:25.953044" level="INFO">Typing text '01/01/2025' into text field 'xpath=//input[@id='startdate']'.</msg>
+<arg>${START_DATE_XPATH}</arg>
+<arg>${PRODUCT_DATA['startdate']}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-01-25T18:19:25.952576" elapsed="0.050946"/>
+</kw>
+<kw name="Select Sum Dropdown" owner="ProductDataPage">
+<kw name="Select From List By Value" owner="SeleniumLibrary">
+<msg time="2024-01-25T18:19:26.004424" level="INFO">Selecting options from selection list 'xpath=//select[@id='insurancesum']' by value 20000000.</msg>
+<arg>${INSURANCE_SUM_LIST_XPATH}</arg>
+<arg>${PRODUCT_DATA['value']}</arg>
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<status status="PASS" start="2024-01-25T18:19:26.004268" elapsed="0.033233"/>
+</kw>
+<arg>${PRODUCT_DATA['value']}</arg>
+<status status="PASS" start="2024-01-25T18:19:26.003703" elapsed="0.033927"/>
+</kw>
+<kw name="Select Merit Rating" owner="ProductDataPage">
+<kw name="Select From List By Value" owner="SeleniumLibrary">
+<msg time="2024-01-25T18:19:26.038489" level="INFO">Selecting options from selection list 'xpath=//select[@id='meritrating']' by value Bonus 8.</msg>
+<arg>${MERIT_RATING_LIST_XPATH}</arg>
+<arg>${PRODUCT_DATA['bonus']}</arg>
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<status status="PASS" start="2024-01-25T18:19:26.038333" elapsed="0.032113"/>
+</kw>
+<arg>${PRODUCT_DATA['bonus']}</arg>
+<status status="PASS" start="2024-01-25T18:19:26.037749" elapsed="0.032816"/>
+</kw>
+<kw name="Select Damage Insurance" owner="ProductDataPage">
+<kw name="Select From List By Value" owner="SeleniumLibrary">
+<msg time="2024-01-25T18:19:26.071371" level="INFO">Selecting options from selection list 'xpath=//select[@id='damageinsurance']' by value Full Coverage.</msg>
+<arg>${DAMAGE_INSURANCE_LIST_XPATH}</arg>
+<arg>${PRODUCT_DATA['damageinsurance']}</arg>
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<status status="PASS" start="2024-01-25T18:19:26.071210" elapsed="0.032634"/>
+</kw>
+<arg>${PRODUCT_DATA['damageinsurance']}</arg>
+<status status="PASS" start="2024-01-25T18:19:26.070677" elapsed="0.033291"/>
+</kw>
+<kw name="Select Optionals" owner="ProductDataPage">
+<if>
+<branch type="IF" condition="'${PRODUCT_DATA['optional']}' == 'Euro Protection'">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-01-25T18:19:26.104976" level="INFO">Clicking element 'xpath=//form[@id="insurance-form"]//div[5]/p/label[1]/span'.</msg>
+<arg>${EURO_PROTECTION_CHECKBOX_XPATH}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-01-25T18:19:26.104796" elapsed="0.024711"/>
+</kw>
+<status status="PASS" start="2024-01-25T18:19:26.104666" elapsed="0.024966"/>
+</branch>
+<branch type="ELSE IF" condition="'${PRODUCT_DATA['optional']}' == 'Legal Defense Insurance'">
+<kw name="Click Element" owner="SeleniumLibrary">
+<arg>${LEGAL_DEFENSE_CHECKBOX_XPATH}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2024-01-25T18:19:26.129824" elapsed="0.000074"/>
+</kw>
+<status status="NOT RUN" start="2024-01-25T18:19:26.129671" elapsed="0.000278"/>
+</branch>
+<branch type="ELSE">
+<kw name="Log" owner="BuiltIn">
+<arg>message=No data</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" start="2024-01-25T18:19:26.130044" elapsed="0.000072"/>
+</kw>
+<status status="NOT RUN" start="2024-01-25T18:19:26.129972" elapsed="0.000188"/>
+</branch>
+<status status="PASS" start="2024-01-25T18:19:26.104652" elapsed="0.025529"/>
+</if>
+<arg>${PRODUCT_DATA['optional']}</arg>
+<status status="PASS" start="2024-01-25T18:19:26.104119" elapsed="0.026094"/>
+</kw>
+<kw name="Select Courtesy Car" owner="ProductDataPage">
+<kw name="Select From List By Value" owner="SeleniumLibrary">
+<msg time="2024-01-25T18:19:26.131220" level="INFO">Selecting options from selection list 'xpath=//select[@id='courtesycar']' by value Yes.</msg>
+<arg>${COURTESY_CAR_LIST_XPATH}</arg>
+<arg>${PRODUCT_DATA['courtesycar']}</arg>
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<status status="PASS" start="2024-01-25T18:19:26.130826" elapsed="0.035328"/>
+</kw>
+<arg>${PRODUCT_DATA['courtesycar']}</arg>
+<status status="PASS" start="2024-01-25T18:19:26.130320" elapsed="0.035986"/>
+</kw>
+<kw name="Proceed To Next Page" owner="ProductDataPage">
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-01-25T18:19:26.166839" level="INFO">Clicking button 'nextselectpriceoption'.</msg>
+<arg>${NEXT_SELECT_PRICE_ID}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-01-25T18:19:26.166688" elapsed="0.036404"/>
+</kw>
+<status status="PASS" start="2024-01-25T18:19:26.166443" elapsed="0.036770"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-01-25T18:19:31.204752" level="INFO">Slept 5 seconds.</msg>
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-01-25T18:19:26.203310" elapsed="5.001882"/>
+</kw>
+<status status="PASS" start="2024-01-25T18:19:25.952285" elapsed="5.253206"/>
 </kw>
 <arg>${Category}</arg>
-<status status="PASS" start="2024-01-25T10:34:44.746247" elapsed="2.580037"/>
+<status status="PASS" start="2024-01-25T18:19:23.898335" elapsed="7.307293"/>
 </kw>
 <var name="${ROW}">0</var>
-<status status="PASS" start="2024-01-25T10:34:44.745816" elapsed="2.580505"/>
+<status status="PASS" start="2024-01-25T18:19:23.897870" elapsed="7.307858"/>
 </iter>
 <iter>
 <kw name="Fill Form Pages" owner="TricentisApp">
 <kw name="Navigate To" owner="Homepage">
 <kw name="Catenate" owner="BuiltIn">
-<msg time="2024-01-25T10:34:47.327275" level="INFO">${SignInUrl} = https://sampleapp.tricentis.com/101/index.php</msg>
+<msg time="2024-01-25T18:19:31.208057" level="INFO">${SignInUrl} = https://sampleapp.tricentis.com/101/index.php</msg>
 <var>${SignInUrl}</var>
 <arg>SEPARATOR=/</arg>
 <arg>${BASE_URL.${ENVIRONMENT}}</arg>
 <doc>Catenates the given items together and returns the resulted string.</doc>
-<status status="PASS" start="2024-01-25T10:34:47.326904" elapsed="0.000444"/>
+<status status="PASS" start="2024-01-25T18:19:31.207180" elapsed="0.000976"/>
 </kw>
 <kw name="Go To" owner="SeleniumLibrary">
-<msg time="2024-01-25T10:34:47.327590" level="INFO">Opening url 'https://sampleapp.tricentis.com/101/index.php'</msg>
+<msg time="2024-01-25T18:19:31.208520" level="INFO">Opening url 'https://sampleapp.tricentis.com/101/index.php'</msg>
 <arg>${SignInUrl}</arg>
 <doc>Navigates the current browser window to the provided ``url``.</doc>
-<status status="PASS" start="2024-01-25T10:34:47.327433" elapsed="0.099469"/>
+<status status="PASS" start="2024-01-25T18:19:31.208328" elapsed="0.107927"/>
 </kw>
-<status status="PASS" start="2024-01-25T10:34:47.326721" elapsed="0.100305"/>
+<status status="PASS" start="2024-01-25T18:19:31.206892" elapsed="0.109512"/>
 </kw>
 <kw name="Click Category" owner="Homepage">
 <kw name="Set Variable" owner="BuiltIn">
-<msg time="2024-01-25T10:34:47.427504" level="INFO">${xpath_variable} = xpath=//*[contains(@id, 'nav_automobile')]</msg>
+<msg time="2024-01-25T18:19:31.317033" level="INFO">${xpath_variable} = xpath=//*[contains(@id, 'nav_automobile')]</msg>
 <var>${xpath_variable}</var>
 <arg>xpath=//*[contains(@id, 'nav_${Category}')]</arg>
 <doc>Returns the given values which can then be assigned to a variables.</doc>
-<status status="PASS" start="2024-01-25T10:34:47.427375" elapsed="0.000269"/>
+<status status="PASS" start="2024-01-25T18:19:31.316866" elapsed="0.000259"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${xpath_variable}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-01-25T18:19:31.317242" elapsed="0.012592"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-01-25T10:34:47.428050" level="INFO">Clicking element 'xpath=//*[contains(@id, 'nav_automobile')]'.</msg>
+<msg time="2024-01-25T18:19:31.330229" level="INFO">Clicking element 'xpath=//*[contains(@id, 'nav_automobile')]'.</msg>
 <arg>${xpath_variable}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-01-25T10:34:47.427799" elapsed="0.178795"/>
+<status status="PASS" start="2024-01-25T18:19:31.330012" elapsed="0.170352"/>
 </kw>
 <arg>${Category}</arg>
-<status status="PASS" start="2024-01-25T10:34:47.427140" elapsed="0.179584"/>
+<status status="PASS" start="2024-01-25T18:19:31.316559" elapsed="0.183931"/>
 </kw>
 <kw name="Validate Correct Form" owner="AutomobilePage">
 <kw name="Set Variable" owner="BuiltIn">
-<msg time="2024-01-25T10:34:47.607160" level="INFO">${FORM_TYPE} = Automobile Insurance</msg>
+<msg time="2024-01-25T18:19:31.501051" level="INFO">${FORM_TYPE} = Automobile Insurance</msg>
 <var>${FORM_TYPE}</var>
 <arg>Automobile Insurance</arg>
 <doc>Returns the given values which can then be assigned to a variables.</doc>
-<status status="PASS" start="2024-01-25T10:34:47.607059" elapsed="0.000168"/>
+<status status="PASS" start="2024-01-25T18:19:31.500843" elapsed="0.000307"/>
 </kw>
 <kw name="Element Should Contain" owner="SeleniumLibrary">
-<msg time="2024-01-25T10:34:47.616262" level="INFO">Element 'xpath=//span[@id='selectedinsurance']' contains text 'Automobile Insurance'.</msg>
+<msg time="2024-01-25T18:19:31.510090" level="INFO">Element 'xpath=//span[@id='selectedinsurance']' contains text 'Automobile Insurance'.</msg>
 <arg>${selectedinsurance_xpath}</arg>
 <arg>${FORM_TYPE}</arg>
 <doc>Verifies that element ``locator`` contains text ``expected``.</doc>
-<status status="PASS" start="2024-01-25T10:34:47.607309" elapsed="0.009081"/>
+<status status="PASS" start="2024-01-25T18:19:31.501289" elapsed="0.009033"/>
 </kw>
-<status status="PASS" start="2024-01-25T10:34:47.606847" elapsed="0.009643"/>
+<status status="PASS" start="2024-01-25T18:19:31.500620" elapsed="0.009814"/>
 </kw>
 <kw name="Get CSV File Length" owner="DataManager">
 <kw name="Get List Of Cars" owner="DataManager">
 <kw name="Get CSV Data" owner="DataManager">
 <kw name="Read Csv File" owner="Csv">
-<msg time="2024-01-25T10:34:47.617517" level="INFO">${csv_data} = [['Audi', '120', '02/15/2020', '5', 'Petrol', '25000', 'ABC123', '12000'], ['BMW', '95', '04/21/2019', '4', 'Diesel', '22000', 'XYZ789', '15000'], ['Ford', '150', '10/08/2021', '7', 'Electric Power', ...</msg>
+<msg time="2024-01-25T18:19:31.511458" level="INFO">${csv_data} = [['Audi', '120', '02/15/2020', '5', 'Petrol', '25000', 'ABC123', '12000'], ['BMW', '95', '04/21/2019', '4', 'Diesel', '22000', 'XYZ789', '15000'], ['Ford', '150', '10/08/2021', '7', 'Electric Power', ...</msg>
 <var>${csv_data}</var>
 <arg>${CSV_PATH}</arg>
-<status status="PASS" start="2024-01-25T10:34:47.617056" elapsed="0.000515"/>
+<status status="PASS" start="2024-01-25T18:19:31.511011" elapsed="0.000510"/>
 </kw>
 <return>
 <value>${csv_data}</value>
-<status status="PASS" start="2024-01-25T10:34:47.617731" elapsed="0.000054"/>
+<status status="PASS" start="2024-01-25T18:19:31.511692" elapsed="0.000077"/>
 </return>
-<msg time="2024-01-25T10:34:47.617879" level="INFO">@{all_cars_list} = [ ['Audi', '120', '02/15/2020', '5', 'Petrol', '25000', 'ABC123', '12000'] | ['BMW', '95', '04/21/2019', '4', 'Diesel', '22000', 'XYZ789', '15000'] | ['Ford', '150', '10/08/2021', '7', 'Electric Power...</msg>
+<msg time="2024-01-25T18:19:31.511864" level="INFO">@{all_cars_list} = [ ['Audi', '120', '02/15/2020', '5', 'Petrol', '25000', 'ABC123', '12000'] | ['BMW', '95', '04/21/2019', '4', 'Diesel', '22000', 'XYZ789', '15000'] | ['Ford', '150', '10/08/2021', '7', 'Electric Power...</msg>
 <var>@{all_cars_list}</var>
-<status status="PASS" start="2024-01-25T10:34:47.616938" elapsed="0.000981"/>
+<status status="PASS" start="2024-01-25T18:19:31.510895" elapsed="0.001012"/>
 </kw>
 <return>
 <value>@{all_cars_list}</value>
-<status status="PASS" start="2024-01-25T10:34:47.617966" elapsed="0.000032"/>
+<status status="PASS" start="2024-01-25T18:19:31.511955" elapsed="0.000032"/>
 </return>
-<msg time="2024-01-25T10:34:47.618078" level="INFO">@{cars_list} = [ ['Audi', '120', '02/15/2020', '5', 'Petrol', '25000', 'ABC123', '12000'] | ['BMW', '95', '04/21/2019', '4', 'Diesel', '22000', 'XYZ789', '15000'] | ['Ford', '150', '10/08/2021', '7', 'Electric Power...</msg>
+<msg time="2024-01-25T18:19:31.512071" level="INFO">@{cars_list} = [ ['Audi', '120', '02/15/2020', '5', 'Petrol', '25000', 'ABC123', '12000'] | ['BMW', '95', '04/21/2019', '4', 'Diesel', '22000', 'XYZ789', '15000'] | ['Ford', '150', '10/08/2021', '7', 'Electric Power...</msg>
 <var>@{cars_list}</var>
-<status status="PASS" start="2024-01-25T10:34:47.616809" elapsed="0.001308"/>
+<status status="PASS" start="2024-01-25T18:19:31.510770" elapsed="0.001338"/>
 </kw>
 <kw name="Get Length" owner="BuiltIn">
-<msg time="2024-01-25T10:34:47.618293" level="INFO">Length is 30.</msg>
-<msg time="2024-01-25T10:34:47.618348" level="INFO">${file_length} = 30</msg>
+<msg time="2024-01-25T18:19:31.512261" level="INFO">Length is 30.</msg>
+<msg time="2024-01-25T18:19:31.512309" level="INFO">${file_length} = 30</msg>
 <var>${file_length}</var>
 <arg>${cars_list}</arg>
 <doc>Returns and logs the length of the given item as an integer.</doc>
-<status status="PASS" start="2024-01-25T10:34:47.618194" elapsed="0.000181"/>
+<status status="PASS" start="2024-01-25T18:19:31.512180" elapsed="0.000155"/>
 </kw>
 <return>
 <value>${file_length}</value>
-<status status="PASS" start="2024-01-25T10:34:47.618416" elapsed="0.000029"/>
+<status status="PASS" start="2024-01-25T18:19:31.512377" elapsed="0.000031"/>
 </return>
-<status status="PASS" start="2024-01-25T10:34:47.616610" elapsed="0.001878"/>
+<status status="PASS" start="2024-01-25T18:19:31.510559" elapsed="0.001891"/>
 </kw>
 <kw name="GET Single Car from List And Increment Counter" owner="AutomobilePage">
 <kw name="Get List Of Cars" owner="DataManager">
 <kw name="Get CSV Data" owner="DataManager">
 <kw name="Read Csv File" owner="Csv">
-<msg time="2024-01-25T10:34:47.619666" level="INFO">${csv_data} = [['Audi', '120', '02/15/2020', '5', 'Petrol', '25000', 'ABC123', '12000'], ['BMW', '95', '04/21/2019', '4', 'Diesel', '22000', 'XYZ789', '15000'], ['Ford', '150', '10/08/2021', '7', 'Electric Power', ...</msg>
+<msg time="2024-01-25T18:19:31.513331" level="INFO">${csv_data} = [['Audi', '120', '02/15/2020', '5', 'Petrol', '25000', 'ABC123', '12000'], ['BMW', '95', '04/21/2019', '4', 'Diesel', '22000', 'XYZ789', '15000'], ['Ford', '150', '10/08/2021', '7', 'Electric Power', ...</msg>
 <var>${csv_data}</var>
 <arg>${CSV_PATH}</arg>
-<status status="PASS" start="2024-01-25T10:34:47.619152" elapsed="0.000605"/>
+<status status="PASS" start="2024-01-25T18:19:31.513040" elapsed="0.000331"/>
 </kw>
 <return>
 <value>${csv_data}</value>
-<status status="PASS" start="2024-01-25T10:34:47.619932" elapsed="0.000065"/>
+<status status="PASS" start="2024-01-25T18:19:31.513520" elapsed="0.000032"/>
 </return>
-<msg time="2024-01-25T10:34:47.620109" level="INFO">@{all_cars_list} = [ ['Audi', '120', '02/15/2020', '5', 'Petrol', '25000', 'ABC123', '12000'] | ['BMW', '95', '04/21/2019', '4', 'Diesel', '22000', 'XYZ789', '15000'] | ['Ford', '150', '10/08/2021', '7', 'Electric Power...</msg>
+<msg time="2024-01-25T18:19:31.513629" level="INFO">@{all_cars_list} = [ ['Audi', '120', '02/15/2020', '5', 'Petrol', '25000', 'ABC123', '12000'] | ['BMW', '95', '04/21/2019', '4', 'Diesel', '22000', 'XYZ789', '15000'] | ['Ford', '150', '10/08/2021', '7', 'Electric Power...</msg>
 <var>@{all_cars_list}</var>
-<status status="PASS" start="2024-01-25T10:34:47.619040" elapsed="0.001120"/>
+<status status="PASS" start="2024-01-25T18:19:31.512934" elapsed="0.000726"/>
 </kw>
 <return>
 <value>@{all_cars_list}</value>
-<status status="PASS" start="2024-01-25T10:34:47.620214" elapsed="0.000041"/>
+<status status="PASS" start="2024-01-25T18:19:31.513700" elapsed="0.000028"/>
 </return>
-<msg time="2024-01-25T10:34:47.620339" level="INFO">@{cars_list} = [ ['Audi', '120', '02/15/2020', '5', 'Petrol', '25000', 'ABC123', '12000'] | ['BMW', '95', '04/21/2019', '4', 'Diesel', '22000', 'XYZ789', '15000'] | ['Ford', '150', '10/08/2021', '7', 'Electric Power...</msg>
+<msg time="2024-01-25T18:19:31.513804" level="INFO">@{cars_list} = [ ['Audi', '120', '02/15/2020', '5', 'Petrol', '25000', 'ABC123', '12000'] | ['BMW', '95', '04/21/2019', '4', 'Diesel', '22000', 'XYZ789', '15000'] | ['Ford', '150', '10/08/2021', '7', 'Electric Power...</msg>
 <var>@{cars_list}</var>
-<status status="PASS" start="2024-01-25T10:34:47.618913" elapsed="0.001465"/>
+<status status="PASS" start="2024-01-25T18:19:31.512706" elapsed="0.001129"/>
 </kw>
 <kw name="Set Variable" owner="BuiltIn">
-<msg time="2024-01-25T10:34:47.620580" level="INFO">${single_car} = ['BMW', '95', '04/21/2019', '4', 'Diesel', '22000', 'XYZ789', '15000']</msg>
+<msg time="2024-01-25T18:19:31.513996" level="INFO">${single_car} = ['BMW', '95', '04/21/2019', '4', 'Diesel', '22000', 'XYZ789', '15000']</msg>
 <var>${single_car}</var>
 <arg>${cars_list}[${COUNTER}]</arg>
 <doc>Returns the given values which can then be assigned to a variables.</doc>
-<status status="PASS" start="2024-01-25T10:34:47.620460" elapsed="0.000164"/>
+<status status="PASS" start="2024-01-25T18:19:31.513902" elapsed="0.000122"/>
 </kw>
 <kw name="Select From List By Value" owner="SeleniumLibrary">
-<msg time="2024-01-25T10:34:47.620835" level="INFO">Selecting options from selection list 'xpath=//select[@id='make']' by value BMW.</msg>
+<msg time="2024-01-25T18:19:31.514222" level="INFO">Selecting options from selection list 'xpath=//select[@id='make']' by value BMW.</msg>
 <arg>${MAKE_XPATH}</arg>
 <arg>${single_car}[0]</arg>
 <doc>Selects options from selection list ``locator`` by ``values``.</doc>
-<status status="PASS" start="2024-01-25T10:34:47.620702" elapsed="0.032571"/>
+<status status="PASS" start="2024-01-25T18:19:31.514099" elapsed="0.030316"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-01-25T10:34:47.653673" level="INFO">Typing text '95' into text field 'xpath=//input[@id='engineperformance']'.</msg>
+<msg time="2024-01-25T18:19:31.544860" level="INFO">Typing text '95' into text field 'xpath=//input[@id='engineperformance']'.</msg>
 <arg>${ENGINE_PERFORMANCE_XPATH}</arg>
 <arg>${single_car}[1]</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-01-25T10:34:47.653437" elapsed="0.036830"/>
+<status status="PASS" start="2024-01-25T18:19:31.544614" elapsed="0.035253"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-01-25T10:34:47.690656" level="INFO">Typing text '04/21/2019' into text field 'xpath=//input[@id='dateofmanufacture']'.</msg>
+<msg time="2024-01-25T18:19:31.580262" level="INFO">Typing text '04/21/2019' into text field 'xpath=//input[@id='dateofmanufacture']'.</msg>
 <arg>${MANUFACTURE_DATE_XPATH}</arg>
 <arg>${single_car}[2]</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-01-25T10:34:47.690435" elapsed="0.064155"/>
+<status status="PASS" start="2024-01-25T18:19:31.580038" elapsed="0.053706"/>
 </kw>
 <kw name="Select From List By Value" owner="SeleniumLibrary">
-<msg time="2024-01-25T10:34:47.755050" level="INFO">Selecting options from selection list 'xpath=//select[@id='numberofseats']' by value 4.</msg>
+<msg time="2024-01-25T18:19:31.634162" level="INFO">Selecting options from selection list 'xpath=//select[@id='numberofseats']' by value 4.</msg>
 <arg>${NUMBER_OF_SEATS_XPATH}</arg>
 <arg>${single_car}[3]</arg>
 <doc>Selects options from selection list ``locator`` by ``values``.</doc>
-<status status="PASS" start="2024-01-25T10:34:47.754823" elapsed="0.034381"/>
+<status status="PASS" start="2024-01-25T18:19:31.633920" elapsed="0.031806"/>
 </kw>
 <kw name="Select From List By Value" owner="SeleniumLibrary">
-<msg time="2024-01-25T10:34:47.789616" level="INFO">Selecting options from selection list 'xpath=//select[@id='fuel']' by value Diesel.</msg>
+<msg time="2024-01-25T18:19:31.666132" level="INFO">Selecting options from selection list 'xpath=//select[@id='fuel']' by value Diesel.</msg>
 <arg>${FUEL_TYPE_XPATH}</arg>
 <arg>${single_car}[4]</arg>
 <doc>Selects options from selection list ``locator`` by ``values``.</doc>
-<status status="PASS" start="2024-01-25T10:34:47.789396" elapsed="0.035137"/>
+<status status="PASS" start="2024-01-25T18:19:31.665899" elapsed="0.032682"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-01-25T10:34:47.825028" level="INFO">Typing text '22000' into text field 'xpath=//input[@id='listprice']'.</msg>
+<msg time="2024-01-25T18:19:31.698986" level="INFO">Typing text '22000' into text field 'xpath=//input[@id='listprice']'.</msg>
 <arg>${LIST_PRICE_XPATH}</arg>
 <arg>${single_car}[5]</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-01-25T10:34:47.824775" elapsed="0.042163"/>
+<status status="PASS" start="2024-01-25T18:19:31.698769" elapsed="0.038621"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-01-25T10:34:47.867319" level="INFO">Typing text 'XYZ789' into text field 'xpath=//input[@id='licenseplatenumber']'.</msg>
+<msg time="2024-01-25T18:19:31.737764" level="INFO">Typing text 'XYZ789' into text field 'xpath=//input[@id='licenseplatenumber']'.</msg>
 <arg>${LICENSE_PLATE_XPATH}</arg>
 <arg>${single_car}[6]</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-01-25T10:34:47.867103" elapsed="0.045025"/>
+<status status="PASS" start="2024-01-25T18:19:31.737551" elapsed="0.038668"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-01-25T10:34:47.912513" level="INFO">Typing text '15000' into text field 'xpath=//input[@id='annualmileage']'.</msg>
+<msg time="2024-01-25T18:19:31.776652" level="INFO">Typing text '15000' into text field 'xpath=//input[@id='annualmileage']'.</msg>
 <arg>${ANNUAL_MILEAGE_XPATH}</arg>
 <arg>${single_car}[7]</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-01-25T10:34:47.912293" elapsed="0.041042"/>
+<status status="PASS" start="2024-01-25T18:19:31.776400" elapsed="0.041709"/>
 </kw>
 <kw name="Increment Counter" owner="AutomobilePage">
 <kw name="Evaluate" owner="BuiltIn">
-<msg time="2024-01-25T10:34:47.953933" level="INFO">${COUNTER} = 2</msg>
+<msg time="2024-01-25T18:19:31.818718" level="INFO">${COUNTER} = 2</msg>
 <var>${COUNTER}</var>
 <arg>${COUNTER} + 1</arg>
 <doc>Evaluates the given expression in Python and returns the result.</doc>
-<status status="PASS" start="2024-01-25T10:34:47.953752" elapsed="0.000257"/>
+<status status="PASS" start="2024-01-25T18:19:31.818553" elapsed="0.000237"/>
 </kw>
 <kw name="Set Global Variable" owner="BuiltIn">
-<msg time="2024-01-25T10:34:47.954227" level="INFO">${COUNTER} = 2</msg>
+<msg time="2024-01-25T18:19:31.819181" level="INFO">${COUNTER} = 2</msg>
 <arg>${COUNTER}</arg>
 <doc>Makes a variable available globally in all tests and suites.</doc>
-<status status="PASS" start="2024-01-25T10:34:47.954090" elapsed="0.000194"/>
+<status status="PASS" start="2024-01-25T18:19:31.818999" elapsed="0.000237"/>
 </kw>
-<status status="PASS" start="2024-01-25T10:34:47.953539" elapsed="0.000798"/>
+<status status="PASS" start="2024-01-25T18:19:31.818319" elapsed="0.000979"/>
 </kw>
 <arg>COUNTER=${COUNTER}</arg>
-<status status="PASS" start="2024-01-25T10:34:47.618723" elapsed="0.335655"/>
+<status status="PASS" start="2024-01-25T18:19:31.512542" elapsed="0.306801"/>
 </kw>
 <kw name="Proceed To Next Page" owner="AutomobilePage">
 <kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2024-01-25T10:34:47.954729" level="INFO">Clicking button 'nextenterinsurantdata'.</msg>
+<msg time="2024-01-25T18:19:31.819716" level="INFO">Clicking button 'nextenterinsurantdata'.</msg>
 <arg>${NEXT_ENTER_INSURANT_ID}</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2024-01-25T10:34:47.954573" elapsed="0.033431"/>
+<status status="PASS" start="2024-01-25T18:19:31.819592" elapsed="0.041237"/>
 </kw>
-<status status="PASS" start="2024-01-25T10:34:47.954454" elapsed="0.033689"/>
+<status status="PASS" start="2024-01-25T18:19:31.819432" elapsed="0.041524"/>
 </kw>
 <kw name="Fill With Data and Proceed To Next Page" owner="InsurantForm">
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-01-25T10:34:47.988973" level="INFO">Typing text 'John' into text field 'xpath=//input[@id='firstname']'.</msg>
+<msg time="2024-01-25T18:19:31.861762" level="INFO">Typing text 'John' into text field 'xpath=//input[@id='firstname']'.</msg>
 <arg>${FIRST_NAME_XPATH}</arg>
 <arg>${INSURANT_DATA['firstname']}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-01-25T10:34:47.988522" elapsed="0.050880"/>
+<status status="PASS" start="2024-01-25T18:19:31.861297" elapsed="0.040503"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-01-25T10:34:48.040084" level="INFO">Typing text 'Doe' into text field 'xpath=//input[@id='lastname']'.</msg>
+<msg time="2024-01-25T18:19:31.902510" level="INFO">Typing text 'Doe' into text field 'xpath=//input[@id='lastname']'.</msg>
 <arg>${LAST_NAME_XPATH}</arg>
 <arg>${INSURANT_DATA['lastname']}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-01-25T10:34:48.039576" elapsed="0.042218"/>
+<status status="PASS" start="2024-01-25T18:19:31.901980" elapsed="0.037675"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-01-25T10:34:48.082518" level="INFO">Typing text '01/01/1984' into text field 'xpath=//input[@id='birthdate']'.</msg>
+<msg time="2024-01-25T18:19:31.940328" level="INFO">Typing text '01/01/1984' into text field 'xpath=//input[@id='birthdate']'.</msg>
 <arg>${DOB_XPATH}</arg>
 <arg>${INSURANT_DATA['dob']}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-01-25T10:34:48.081978" elapsed="0.049919"/>
+<status status="PASS" start="2024-01-25T18:19:31.939819" elapsed="0.050775"/>
 </kw>
 <kw name="Select Gender" owner="InsurantForm">
 <if>
 <branch type="IF" condition="'${INSURANT_DATA['gender']}' == 'gendermale'">
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-01-25T10:34:48.132880" level="INFO">Clicking element '//form[@id="insurance-form"]//div[4]/p/label[1]/span'.</msg>
+<msg time="2024-01-25T18:19:31.991614" level="INFO">Clicking element '//form[@id="insurance-form"]//div[4]/p/label[1]/span'.</msg>
 <arg>${GENDERMALE_RADIO_BUTTON}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-01-25T10:34:48.132724" elapsed="0.020414"/>
+<status status="PASS" start="2024-01-25T18:19:31.991453" elapsed="0.018705"/>
 </kw>
-<status status="PASS" start="2024-01-25T10:34:48.132606" elapsed="0.020645"/>
+<status status="PASS" start="2024-01-25T18:19:31.991335" elapsed="0.018940"/>
 </branch>
 <branch type="ELSE IF" condition="'${INSURANT_DATA['gender']}' == 'genderfemale'">
 <kw name="Click Element" owner="SeleniumLibrary">
 <arg>${GENDERFEMALE_RADIO_BUTTON}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="NOT RUN" start="2024-01-25T10:34:48.153443" elapsed="0.000067"/>
+<status status="NOT RUN" start="2024-01-25T18:19:32.010451" elapsed="0.000071"/>
 </kw>
-<status status="NOT RUN" start="2024-01-25T10:34:48.153285" elapsed="0.000281"/>
+<status status="NOT RUN" start="2024-01-25T18:19:32.010310" elapsed="0.000261"/>
 </branch>
 <branch type="ELSE">
 <kw name="Log" owner="BuiltIn">
 <arg>message=Error with data</arg>
 <doc>Logs the given message with the given level.</doc>
-<status status="NOT RUN" start="2024-01-25T10:34:48.153665" elapsed="0.000053"/>
+<status status="NOT RUN" start="2024-01-25T18:19:32.010667" elapsed="0.000055"/>
 </kw>
-<status status="NOT RUN" start="2024-01-25T10:34:48.153595" elapsed="0.000167"/>
+<status status="NOT RUN" start="2024-01-25T18:19:32.010593" elapsed="0.000172"/>
 </branch>
-<status status="PASS" start="2024-01-25T10:34:48.132594" elapsed="0.021189"/>
+<status status="PASS" start="2024-01-25T18:19:31.991322" elapsed="0.019462"/>
 </if>
 <arg>${INSURANT_DATA['gender']}</arg>
-<status status="PASS" start="2024-01-25T10:34:48.132111" elapsed="0.021702"/>
+<status status="PASS" start="2024-01-25T18:19:31.990810" elapsed="0.020006"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-01-25T10:34:48.154349" level="INFO">Typing text '123 Main St' into text field 'xpath=//input[@id='streetaddress']'.</msg>
+<msg time="2024-01-25T18:19:32.011378" level="INFO">Typing text '123 Main St' into text field 'xpath=//input[@id='streetaddress']'.</msg>
 <arg>${STREET_ADDRESS_XPATH}</arg>
 <arg>${INSURANT_DATA['streetaddress']}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-01-25T10:34:48.153902" elapsed="0.047060"/>
+<status status="PASS" start="2024-01-25T18:19:32.010914" elapsed="0.043055"/>
 </kw>
 <kw name="Select From List By Value" owner="SeleniumLibrary">
-<msg time="2024-01-25T10:34:48.201802" level="INFO">Selecting options from selection list 'xpath=//select[@id='country']' by value Portugal.</msg>
+<msg time="2024-01-25T18:19:32.054709" level="INFO">Selecting options from selection list 'xpath=//select[@id='country']' by value Portugal.</msg>
 <arg>${COUNTRIES_LIST_XPATH}</arg>
 <arg>${INSURANT_DATA['country']}</arg>
 <doc>Selects options from selection list ``locator`` by ``values``.</doc>
-<status status="PASS" start="2024-01-25T10:34:48.201158" elapsed="0.030872"/>
+<status status="PASS" start="2024-01-25T18:19:32.054156" elapsed="0.030525"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-01-25T10:34:48.232788" level="INFO">Typing text '12345' into text field 'xpath=//input[@id='zipcode']'.</msg>
+<msg time="2024-01-25T18:19:32.085407" level="INFO">Typing text '12345' into text field 'xpath=//input[@id='zipcode']'.</msg>
 <arg>${ZIP_CODE_XPATH}</arg>
 <arg>${INSURANT_DATA['zipcode']}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-01-25T10:34:48.232224" elapsed="0.042033"/>
+<status status="PASS" start="2024-01-25T18:19:32.084852" elapsed="0.039523"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-01-25T10:34:48.274935" level="INFO">Typing text 'Lisbon' into text field 'xpath=//input[@id='city']'.</msg>
+<msg time="2024-01-25T18:19:32.125164" level="INFO">Typing text 'Lisbon' into text field 'xpath=//input[@id='city']'.</msg>
 <arg>${CITY_XPATH}</arg>
 <arg>${INSURANT_DATA['city']}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-01-25T10:34:48.274435" elapsed="0.042076"/>
+<status status="PASS" start="2024-01-25T18:19:32.124568" elapsed="0.036298"/>
 </kw>
 <kw name="Select From List By Value" owner="SeleniumLibrary">
-<msg time="2024-01-25T10:34:48.317169" level="INFO">Selecting options from selection list 'xpath=//select[@id='occupation']' by value Employee.</msg>
+<msg time="2024-01-25T18:19:32.161608" level="INFO">Selecting options from selection list 'xpath=//select[@id='occupation']' by value Employee.</msg>
 <arg>${OCCUPATION_LIST_XPATH}</arg>
 <arg>${INSURANT_DATA['occupation']}</arg>
 <doc>Selects options from selection list ``locator`` by ``values``.</doc>
-<status status="PASS" start="2024-01-25T10:34:48.316676" elapsed="0.031973"/>
+<status status="PASS" start="2024-01-25T18:19:32.161055" elapsed="0.029014"/>
 </kw>
 <kw name="Select Hobbies" owner="InsurantForm">
 <if>
 <branch type="IF" condition="'${INSURANT_DATA['hobbies']}' == 'Speeding'">
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-01-25T10:34:48.349863" level="INFO">Clicking element '//form[@id="insurance-form"]//div[10]/p/label[1]/span'.</msg>
+<msg time="2024-01-25T18:19:32.191079" level="INFO">Clicking element '//form[@id="insurance-form"]//div[10]/p/label[1]/span'.</msg>
 <arg>${HOBBIES_SPEEDING_CHECKBOX}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-01-25T10:34:48.349672" elapsed="0.022227"/>
+<status status="PASS" start="2024-01-25T18:19:32.190924" elapsed="0.019388"/>
 </kw>
-<status status="PASS" start="2024-01-25T10:34:48.349525" elapsed="0.022511"/>
+<status status="PASS" start="2024-01-25T18:19:32.190810" elapsed="0.019628"/>
 </branch>
 <branch type="ELSE IF" condition="'${INSURANT_DATA['hobbies']}' == 'Bungee Jumping'">
 <kw name="Click Element" owner="SeleniumLibrary">
 <arg>${HOBBIES_BUNGEE_CHECKBOX}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="NOT RUN" start="2024-01-25T10:34:48.372232" elapsed="0.000085"/>
+<status status="NOT RUN" start="2024-01-25T18:19:32.210621" elapsed="0.000071"/>
 </kw>
-<status status="NOT RUN" start="2024-01-25T10:34:48.372072" elapsed="0.000293"/>
+<status status="NOT RUN" start="2024-01-25T18:19:32.210472" elapsed="0.000271"/>
 </branch>
 <branch type="ELSE IF" condition="'${INSURANT_DATA['hobbies']}' == 'Cliff Diving'">
 <kw name="Click Element" owner="SeleniumLibrary">
 <arg>${HOBBIES_CLIFF_DIVING_CHECKBOX}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="NOT RUN" start="2024-01-25T10:34:48.372452" elapsed="0.000059"/>
+<status status="NOT RUN" start="2024-01-25T18:19:32.210829" elapsed="0.000053"/>
 </kw>
-<status status="NOT RUN" start="2024-01-25T10:34:48.372388" elapsed="0.000167"/>
+<status status="NOT RUN" start="2024-01-25T18:19:32.210765" elapsed="0.000160"/>
 </branch>
 <branch type="ELSE IF" condition="'${INSURANT_DATA['hobbies']}' == 'Skydiving'">
 <kw name="Click Element" owner="SeleniumLibrary">
 <arg>${HOBBIES_SKYDIVING_CHECKBOX}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="NOT RUN" start="2024-01-25T10:34:48.372631" elapsed="0.000051"/>
+<status status="NOT RUN" start="2024-01-25T18:19:32.211003" elapsed="0.000051"/>
 </kw>
-<status status="NOT RUN" start="2024-01-25T10:34:48.372575" elapsed="0.000149"/>
+<status status="NOT RUN" start="2024-01-25T18:19:32.210945" elapsed="0.000151"/>
 </branch>
 <branch type="ELSE IF" condition="'${INSURANT_DATA['hobbies']}' == 'Other'">
 <kw name="Click Element" owner="SeleniumLibrary">
 <arg>${HOBBIES_OTHER_CHECKBOX}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="NOT RUN" start="2024-01-25T10:34:48.372813" elapsed="0.000057"/>
+<status status="NOT RUN" start="2024-01-25T18:19:32.211194" elapsed="0.000051"/>
 </kw>
-<status status="NOT RUN" start="2024-01-25T10:34:48.372742" elapsed="0.000176"/>
+<status status="NOT RUN" start="2024-01-25T18:19:32.211134" elapsed="0.000208"/>
 </branch>
 <branch type="ELSE">
 <kw name="Log" owner="BuiltIn">
 <arg>message=Error with data</arg>
 <doc>Logs the given message with the given level.</doc>
-<status status="NOT RUN" start="2024-01-25T10:34:48.373012" elapsed="0.000051"/>
+<status status="NOT RUN" start="2024-01-25T18:19:32.211451" elapsed="0.000048"/>
 </kw>
-<status status="NOT RUN" start="2024-01-25T10:34:48.372937" elapsed="0.000166"/>
+<status status="NOT RUN" start="2024-01-25T18:19:32.211362" elapsed="0.000177"/>
 </branch>
-<status status="PASS" start="2024-01-25T10:34:48.349510" elapsed="0.023613"/>
+<status status="PASS" start="2024-01-25T18:19:32.190798" elapsed="0.020759"/>
 </if>
 <arg>${INSURANT_DATA['hobbies']}</arg>
-<status status="PASS" start="2024-01-25T10:34:48.348920" elapsed="0.024241"/>
+<status status="PASS" start="2024-01-25T18:19:32.190289" elapsed="0.021300"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-01-25T10:34:48.373850" level="INFO">Typing text 'https://github.com/Miguel-Barca' into text field 'xpath=//input[@id='website']'.</msg>
+<msg time="2024-01-25T18:19:32.212189" level="INFO">Typing text 'https://github.com/Miguel-Barca' into text field 'xpath=//input[@id='website']'.</msg>
 <arg>${WEBSITE_XPATH}</arg>
 <arg>${INSURANT_DATA['website']}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-01-25T10:34:48.373236" elapsed="0.062569"/>
+<status status="PASS" start="2024-01-25T18:19:32.211676" elapsed="0.065011"/>
 </kw>
 <kw name="Proceed To Next Page" owner="InsurantForm">
 <kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2024-01-25T10:34:48.436496" level="INFO">Clicking button 'nextenterproductdata'.</msg>
+<msg time="2024-01-25T18:19:32.277321" level="INFO">Clicking button 'nextenterproductdata'.</msg>
 <arg>${NEXT_ENTER_PRODUCT_ID}</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2024-01-25T10:34:48.436331" elapsed="0.029563"/>
+<status status="PASS" start="2024-01-25T18:19:32.277159" elapsed="0.028284"/>
 </kw>
-<status status="PASS" start="2024-01-25T10:34:48.436028" elapsed="0.029999"/>
+<status status="PASS" start="2024-01-25T18:19:32.276902" elapsed="0.028659"/>
 </kw>
-<status status="PASS" start="2024-01-25T10:34:47.988286" elapsed="0.477794"/>
+<status status="PASS" start="2024-01-25T18:19:31.861088" elapsed="0.444524"/>
+</kw>
+<kw name="Fill With Data and Proceed To Next Page" owner="ProductDataPage">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-01-25T18:19:32.306370" level="INFO">Typing text '01/01/2025' into text field 'xpath=//input[@id='startdate']'.</msg>
+<arg>${START_DATE_XPATH}</arg>
+<arg>${PRODUCT_DATA['startdate']}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-01-25T18:19:32.305933" elapsed="0.050568"/>
+</kw>
+<kw name="Select Sum Dropdown" owner="ProductDataPage">
+<kw name="Select From List By Value" owner="SeleniumLibrary">
+<msg time="2024-01-25T18:19:32.357375" level="INFO">Selecting options from selection list 'xpath=//select[@id='insurancesum']' by value 20000000.</msg>
+<arg>${INSURANCE_SUM_LIST_XPATH}</arg>
+<arg>${PRODUCT_DATA['value']}</arg>
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<status status="PASS" start="2024-01-25T18:19:32.357229" elapsed="0.029596"/>
+</kw>
+<arg>${PRODUCT_DATA['value']}</arg>
+<status status="PASS" start="2024-01-25T18:19:32.356683" elapsed="0.030262"/>
+</kw>
+<kw name="Select Merit Rating" owner="ProductDataPage">
+<kw name="Select From List By Value" owner="SeleniumLibrary">
+<msg time="2024-01-25T18:19:32.387747" level="INFO">Selecting options from selection list 'xpath=//select[@id='meritrating']' by value Bonus 8.</msg>
+<arg>${MERIT_RATING_LIST_XPATH}</arg>
+<arg>${PRODUCT_DATA['bonus']}</arg>
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<status status="PASS" start="2024-01-25T18:19:32.387606" elapsed="0.027713"/>
+</kw>
+<arg>${PRODUCT_DATA['bonus']}</arg>
+<status status="PASS" start="2024-01-25T18:19:32.387059" elapsed="0.028377"/>
+</kw>
+<kw name="Select Damage Insurance" owner="ProductDataPage">
+<kw name="Select From List By Value" owner="SeleniumLibrary">
+<msg time="2024-01-25T18:19:32.416181" level="INFO">Selecting options from selection list 'xpath=//select[@id='damageinsurance']' by value Full Coverage.</msg>
+<arg>${DAMAGE_INSURANCE_LIST_XPATH}</arg>
+<arg>${PRODUCT_DATA['damageinsurance']}</arg>
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<status status="PASS" start="2024-01-25T18:19:32.416040" elapsed="0.029440"/>
+</kw>
+<arg>${PRODUCT_DATA['damageinsurance']}</arg>
+<status status="PASS" start="2024-01-25T18:19:32.415548" elapsed="0.030055"/>
+</kw>
+<kw name="Select Optionals" owner="ProductDataPage">
+<if>
+<branch type="IF" condition="'${PRODUCT_DATA['optional']}' == 'Euro Protection'">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-01-25T18:19:32.446535" level="INFO">Clicking element 'xpath=//form[@id="insurance-form"]//div[5]/p/label[1]/span'.</msg>
+<arg>${EURO_PROTECTION_CHECKBOX_XPATH}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-01-25T18:19:32.446382" elapsed="0.019021"/>
+</kw>
+<status status="PASS" start="2024-01-25T18:19:32.446269" elapsed="0.019249"/>
+</branch>
+<branch type="ELSE IF" condition="'${PRODUCT_DATA['optional']}' == 'Legal Defense Insurance'">
+<kw name="Click Element" owner="SeleniumLibrary">
+<arg>${LEGAL_DEFENSE_CHECKBOX_XPATH}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2024-01-25T18:19:32.465693" elapsed="0.000064"/>
+</kw>
+<status status="NOT RUN" start="2024-01-25T18:19:32.465553" elapsed="0.000249"/>
+</branch>
+<branch type="ELSE">
+<kw name="Log" owner="BuiltIn">
+<arg>message=No data</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" start="2024-01-25T18:19:32.465885" elapsed="0.000046"/>
+</kw>
+<status status="NOT RUN" start="2024-01-25T18:19:32.465822" elapsed="0.000155"/>
+</branch>
+<status status="PASS" start="2024-01-25T18:19:32.446257" elapsed="0.019738"/>
+</if>
+<arg>${PRODUCT_DATA['optional']}</arg>
+<status status="PASS" start="2024-01-25T18:19:32.445745" elapsed="0.020277"/>
+</kw>
+<kw name="Select Courtesy Car" owner="ProductDataPage">
+<kw name="Select From List By Value" owner="SeleniumLibrary">
+<msg time="2024-01-25T18:19:32.467057" level="INFO">Selecting options from selection list 'xpath=//select[@id='courtesycar']' by value Yes.</msg>
+<arg>${COURTESY_CAR_LIST_XPATH}</arg>
+<arg>${PRODUCT_DATA['courtesycar']}</arg>
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<status status="PASS" start="2024-01-25T18:19:32.466643" elapsed="0.032453"/>
+</kw>
+<arg>${PRODUCT_DATA['courtesycar']}</arg>
+<status status="PASS" start="2024-01-25T18:19:32.466112" elapsed="0.033103"/>
+</kw>
+<kw name="Proceed To Next Page" owner="ProductDataPage">
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-01-25T18:19:32.499664" level="INFO">Clicking button 'nextselectpriceoption'.</msg>
+<arg>${NEXT_SELECT_PRICE_ID}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-01-25T18:19:32.499533" elapsed="0.031493"/>
+</kw>
+<status status="PASS" start="2024-01-25T18:19:32.499333" elapsed="0.031833"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-01-25T18:19:37.533431" level="INFO">Slept 5 seconds.</msg>
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-01-25T18:19:32.531272" elapsed="5.002634"/>
+</kw>
+<status status="PASS" start="2024-01-25T18:19:32.305730" elapsed="5.228426"/>
 </kw>
 <arg>${Category}</arg>
-<status status="PASS" start="2024-01-25T10:34:47.326543" elapsed="1.139583"/>
+<status status="PASS" start="2024-01-25T18:19:31.206402" elapsed="6.327840"/>
 </kw>
 <var name="${ROW}">1</var>
-<status status="PASS" start="2024-01-25T10:34:47.326409" elapsed="1.139760"/>
+<status status="PASS" start="2024-01-25T18:19:31.205984" elapsed="6.328313"/>
 </iter>
 <iter>
 <kw name="Fill Form Pages" owner="TricentisApp">
 <kw name="Navigate To" owner="Homepage">
 <kw name="Catenate" owner="BuiltIn">
-<msg time="2024-01-25T10:34:48.467232" level="INFO">${SignInUrl} = https://sampleapp.tricentis.com/101/index.php</msg>
+<msg time="2024-01-25T18:19:37.536036" level="INFO">${SignInUrl} = https://sampleapp.tricentis.com/101/index.php</msg>
 <var>${SignInUrl}</var>
 <arg>SEPARATOR=/</arg>
 <arg>${BASE_URL.${ENVIRONMENT}}</arg>
 <doc>Catenates the given items together and returns the resulted string.</doc>
-<status status="PASS" start="2024-01-25T10:34:48.466841" elapsed="0.000466"/>
+<status status="PASS" start="2024-01-25T18:19:37.535432" elapsed="0.000756"/>
 </kw>
 <kw name="Go To" owner="SeleniumLibrary">
-<msg time="2024-01-25T10:34:48.467497" level="INFO">Opening url 'https://sampleapp.tricentis.com/101/index.php'</msg>
+<msg time="2024-01-25T18:19:37.536666" level="INFO">Opening url 'https://sampleapp.tricentis.com/101/index.php'</msg>
+<msg time="2024-01-25T18:19:37.538268" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=121.0.6167.85)
+Stacktrace:
+0   chromedriver                        0x000000010472a7dc chromedriver + 4040668
+1   chromedriver                        0x00000001047229e0 chromedriver + 4008416
+2   chromedriver                        0x0000000104395870 chromedriver + 284784
+3   chromedriver                        0x0000000104370064 chromedriver + 131172
+4   chromedriver                        0x00000001043ff2b0 chromedriver + 717488
+5   chromedriver                        0x000000010441275c chromedriver + 796508
+6   chromedriver                        0x00000001043cd74c chromedriver + 513868
+7   chromedriver                        0x00000001043ce044 chromedriver + 516164
+8   chromedriver                        0x00000001046efa04 chromedriver + 3799556
+9   chromedriver                        0x00000001046f3ee4 chromedriver + 3817188
+10  chromedriver                        0x00000001046d8260 chromedriver + 3703392
+11  chromedriver                        0x00000001046f4a2c chromedriver + 3820076
+12  chromedriver                        0x00000001046cb01c chromedriver + 3649564
+13  chromedriver                        0x0000000104711e3c chromedriver + 3939900
+14  chromedriver                        0x0000000104711fb4 chromedriver + 3940276
+15  chromedriver                        0x0000000104722660 chromedriver + 4007520
+16  libsystem_pthread.dylib             0x000000018d3db034 _pthread_start + 136
+17  libsystem_pthread.dylib             0x000000018d3d5e3c thread_start + 8
+</msg>
+<msg time="2024-01-25T18:19:37.539285" level="FAIL">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=121.0.6167.85)
+Stacktrace:
+0   chromedriver                        0x000000010472a7dc chromedriver + 4040668
+1   chromedriver                        0x00000001047229e0 chromedriver + 4008416
+2   chromedriver                        0x0000000104395870 chromedriver + 284784
+3   chromedriver                        0x0000000104370064 chromedriver + 131172
+4   chromedriver                        0x00000001043ff2b0 chromedriver + 717488
+5   chromedriver                        0x000000010441275c chromedriver + 796508
+6   chromedriver                        0x00000001043cd74c chromedriver + 513868
+7   chromedriver                        0x00000001043ce044 chromedriver + 516164
+8   chromedriver                        0x00000001046efa04 chromedriver + 3799556
+9   chromedriver                        0x00000001046f3ee4 chromedriver + 3817188
+10  chromedriver                        0x00000001046d8260 chromedriver + 3703392
+11  chromedriver                        0x00000001046f4a2c chromedriver + 3820076
+12  chromedriver                        0x00000001046cb01c chromedriver + 3649564
+13  chromedriver                        0x0000000104711e3c chromedriver + 3939900
+14  chromedriver                        0x0000000104711fb4 chromedriver + 3940276
+15  chromedriver                        0x0000000104722660 chromedriver + 4007520
+16  libsystem_pthread.dylib             0x000000018d3db034 _pthread_start + 136
+17  libsystem_pthread.dylib             0x000000018d3d5e3c thread_start + 8
+</msg>
 <arg>${SignInUrl}</arg>
 <doc>Navigates the current browser window to the provided ``url``.</doc>
-<status status="PASS" start="2024-01-25T10:34:48.467392" elapsed="0.107997"/>
+<status status="FAIL" start="2024-01-25T18:19:37.536339" elapsed="0.006009">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=121.0.6167.85)
+Stacktrace:
+0   chromedriver                        0x000000010472a7dc chromedriver + 4040668
+1   chromedriver                        0x00000001047229e0 chromedriver + 4008416
+2   chromedriver                        0x0000000104395870 chromedriver + 284784
+3   chromedriver                        0x0000000104370064 chromedriver + 131172
+4   chromedriver                        0x00000001043ff2b0 chromedriver + 717488
+5   chromedriver                        0x000000010441275c chromedriver + 796508
+6   chromedriver                        0x00000001043cd74c chromedriver + 513868
+7   chromedriver                        0x00000001043ce044 chromedriver + 516164
+8   chromedriver                        0x00000001046efa04 chromedriver + 3799556
+9   chromedriver                        0x00000001046f3ee4 chromedriver + 3817188
+10  chromedriver                        0x00000001046d8260 chromedriver + 3703392
+11  chromedriver                        0x00000001046f4a2c chromedriver + 3820076
+12  chromedriver                        0x00000001046cb01c chromedriver + 3649564
+13  chromedriver                        0x0000000104711e3c chromedriver + 3939900
+14  chromedriver                        0x0000000104711fb4 chromedriver + 3940276
+15  chromedriver                        0x0000000104722660 chromedriver + 4007520
+16  libsystem_pthread.dylib             0x000000018d3db034 _pthread_start + 136
+17  libsystem_pthread.dylib             0x000000018d3d5e3c thread_start + 8
+</status>
 </kw>
-<status status="PASS" start="2024-01-25T10:34:48.466688" elapsed="0.108842"/>
+<status status="FAIL" start="2024-01-25T18:19:37.535032" elapsed="0.007499">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=121.0.6167.85)
+Stacktrace:
+0   chromedriver                        0x000000010472a7dc chromedriver + 4040668
+1   chromedriver                        0x00000001047229e0 chromedriver + 4008416
+2   chromedriver                        0x0000000104395870 chromedriver + 284784
+3   chromedriver                        0x0000000104370064 chromedriver + 131172
+4   chromedriver                        0x00000001043ff2b0 chromedriver + 717488
+5   chromedriver                        0x000000010441275c chromedriver + 796508
+6   chromedriver                        0x00000001043cd74c chromedriver + 513868
+7   chromedriver                        0x00000001043ce044 chromedriver + 516164
+8   chromedriver                        0x00000001046efa04 chromedriver + 3799556
+9   chromedriver                        0x00000001046f3ee4 chromedriver + 3817188
+10  chromedriver                        0x00000001046d8260 chromedriver + 3703392
+11  chromedriver                        0x00000001046f4a2c chromedriver + 3820076
+12  chromedriver                        0x00000001046cb01c chromedriver + 3649564
+13  chromedriver                        0x0000000104711e3c chromedriver + 3939900
+14  chromedriver                        0x0000000104711fb4 chromedriver + 3940276
+15  chromedriver                        0x0000000104722660 chromedriver + 4007520
+16  libsystem_pthread.dylib             0x000000018d3db034 _pthread_start + 136
+17  libsystem_pthread.dylib             0x000000018d3d5e3c thread_start + 8
+</status>
 </kw>
 <kw name="Click Category" owner="Homepage">
-<kw name="Set Variable" owner="BuiltIn">
-<msg time="2024-01-25T10:34:48.576051" level="INFO">${xpath_variable} = xpath=//*[contains(@id, 'nav_automobile')]</msg>
-<var>${xpath_variable}</var>
-<arg>xpath=//*[contains(@id, 'nav_${Category}')]</arg>
-<doc>Returns the given values which can then be assigned to a variables.</doc>
-<status status="PASS" start="2024-01-25T10:34:48.575916" elapsed="0.000208"/>
-</kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-01-25T10:34:48.576343" level="INFO">Clicking element 'xpath=//*[contains(@id, 'nav_automobile')]'.</msg>
-<arg>${xpath_variable}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-01-25T10:34:48.576209" elapsed="0.156218"/>
-</kw>
 <arg>${Category}</arg>
-<status status="PASS" start="2024-01-25T10:34:48.575657" elapsed="0.156919"/>
+<status status="NOT RUN" start="2024-01-25T18:19:37.542660" elapsed="0.000073"/>
 </kw>
 <kw name="Validate Correct Form" owner="AutomobilePage">
-<kw name="Set Variable" owner="BuiltIn">
-<msg time="2024-01-25T10:34:48.733059" level="INFO">${FORM_TYPE} = Automobile Insurance</msg>
-<var>${FORM_TYPE}</var>
-<arg>Automobile Insurance</arg>
-<doc>Returns the given values which can then be assigned to a variables.</doc>
-<status status="PASS" start="2024-01-25T10:34:48.732947" elapsed="0.000188"/>
-</kw>
-<kw name="Element Should Contain" owner="SeleniumLibrary">
-<msg time="2024-01-25T10:34:48.744918" level="INFO">Element 'xpath=//span[@id='selectedinsurance']' contains text 'Automobile Insurance'.</msg>
-<arg>${selectedinsurance_xpath}</arg>
-<arg>${FORM_TYPE}</arg>
-<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
-<status status="PASS" start="2024-01-25T10:34:48.733251" elapsed="0.011818"/>
-</kw>
-<status status="PASS" start="2024-01-25T10:34:48.732706" elapsed="0.012477"/>
+<status status="NOT RUN" start="2024-01-25T18:19:37.542811" elapsed="0.000040"/>
 </kw>
 <kw name="Get CSV File Length" owner="DataManager">
-<kw name="Get List Of Cars" owner="DataManager">
-<kw name="Get CSV Data" owner="DataManager">
-<kw name="Read Csv File" owner="Csv">
-<msg time="2024-01-25T10:34:48.746369" level="INFO">${csv_data} = [['Audi', '120', '02/15/2020', '5', 'Petrol', '25000', 'ABC123', '12000'], ['BMW', '95', '04/21/2019', '4', 'Diesel', '22000', 'XYZ789', '15000'], ['Ford', '150', '10/08/2021', '7', 'Electric Power', ...</msg>
-<var>${csv_data}</var>
-<arg>${CSV_PATH}</arg>
-<status status="PASS" start="2024-01-25T10:34:48.745945" elapsed="0.000479"/>
-</kw>
-<return>
-<value>${csv_data}</value>
-<status status="PASS" start="2024-01-25T10:34:48.746574" elapsed="0.000050"/>
-</return>
-<msg time="2024-01-25T10:34:48.746715" level="INFO">@{all_cars_list} = [ ['Audi', '120', '02/15/2020', '5', 'Petrol', '25000', 'ABC123', '12000'] | ['BMW', '95', '04/21/2019', '4', 'Diesel', '22000', 'XYZ789', '15000'] | ['Ford', '150', '10/08/2021', '7', 'Electric Power...</msg>
-<var>@{all_cars_list}</var>
-<status status="PASS" start="2024-01-25T10:34:48.745668" elapsed="0.001088"/>
-</kw>
-<return>
-<value>@{all_cars_list}</value>
-<status status="PASS" start="2024-01-25T10:34:48.746800" elapsed="0.000030"/>
-</return>
-<msg time="2024-01-25T10:34:48.746915" level="INFO">@{cars_list} = [ ['Audi', '120', '02/15/2020', '5', 'Petrol', '25000', 'ABC123', '12000'] | ['BMW', '95', '04/21/2019', '4', 'Diesel', '22000', 'XYZ789', '15000'] | ['Ford', '150', '10/08/2021', '7', 'Electric Power...</msg>
-<var>@{cars_list}</var>
-<status status="PASS" start="2024-01-25T10:34:48.745519" elapsed="0.001650"/>
-</kw>
-<kw name="Get Length" owner="BuiltIn">
-<msg time="2024-01-25T10:34:48.747352" level="INFO">Length is 30.</msg>
-<msg time="2024-01-25T10:34:48.747408" level="INFO">${file_length} = 30</msg>
-<var>${file_length}</var>
-<arg>${cars_list}</arg>
-<doc>Returns and logs the length of the given item as an integer.</doc>
-<status status="PASS" start="2024-01-25T10:34:48.747256" elapsed="0.000181"/>
-</kw>
-<return>
-<value>${file_length}</value>
-<status status="PASS" start="2024-01-25T10:34:48.747485" elapsed="0.000034"/>
-</return>
-<status status="PASS" start="2024-01-25T10:34:48.745313" elapsed="0.002284"/>
+<status status="NOT RUN" start="2024-01-25T18:19:37.542924" elapsed="0.000040"/>
 </kw>
 <kw name="GET Single Car from List And Increment Counter" owner="AutomobilePage">
-<kw name="Get List Of Cars" owner="DataManager">
-<kw name="Get CSV Data" owner="DataManager">
-<kw name="Read Csv File" owner="Csv">
-<msg time="2024-01-25T10:34:48.748687" level="INFO">${csv_data} = [['Audi', '120', '02/15/2020', '5', 'Petrol', '25000', 'ABC123', '12000'], ['BMW', '95', '04/21/2019', '4', 'Diesel', '22000', 'XYZ789', '15000'], ['Ford', '150', '10/08/2021', '7', 'Electric Power', ...</msg>
-<var>${csv_data}</var>
-<arg>${CSV_PATH}</arg>
-<status status="PASS" start="2024-01-25T10:34:48.748231" elapsed="0.000520"/>
-</kw>
-<return>
-<value>${csv_data}</value>
-<status status="PASS" start="2024-01-25T10:34:48.748925" elapsed="0.000050"/>
-</return>
-<msg time="2024-01-25T10:34:48.749073" level="INFO">@{all_cars_list} = [ ['Audi', '120', '02/15/2020', '5', 'Petrol', '25000', 'ABC123', '12000'] | ['BMW', '95', '04/21/2019', '4', 'Diesel', '22000', 'XYZ789', '15000'] | ['Ford', '150', '10/08/2021', '7', 'Electric Power...</msg>
-<var>@{all_cars_list}</var>
-<status status="PASS" start="2024-01-25T10:34:48.748107" elapsed="0.001083"/>
-</kw>
-<return>
-<value>@{all_cars_list}</value>
-<status status="PASS" start="2024-01-25T10:34:48.749292" elapsed="0.000104"/>
-</return>
-<msg time="2024-01-25T10:34:48.749528" level="INFO">@{cars_list} = [ ['Audi', '120', '02/15/2020', '5', 'Petrol', '25000', 'ABC123', '12000'] | ['BMW', '95', '04/21/2019', '4', 'Diesel', '22000', 'XYZ789', '15000'] | ['Ford', '150', '10/08/2021', '7', 'Electric Power...</msg>
-<var>@{cars_list}</var>
-<status status="PASS" start="2024-01-25T10:34:48.747962" elapsed="0.001626"/>
-</kw>
-<kw name="Set Variable" owner="BuiltIn">
-<msg time="2024-01-25T10:34:48.749858" level="INFO">${single_car} = ['Ford', '150', '10/08/2021', '7', 'Electric Power', '30000', 'LMN456', '18000']</msg>
-<var>${single_car}</var>
-<arg>${cars_list}[${COUNTER}]</arg>
-<doc>Returns the given values which can then be assigned to a variables.</doc>
-<status status="PASS" start="2024-01-25T10:34:48.749715" elapsed="0.000190"/>
-</kw>
-<kw name="Select From List By Value" owner="SeleniumLibrary">
-<msg time="2024-01-25T10:34:48.750167" level="INFO">Selecting options from selection list 'xpath=//select[@id='make']' by value Ford.</msg>
-<arg>${MAKE_XPATH}</arg>
-<arg>${single_car}[0]</arg>
-<doc>Selects options from selection list ``locator`` by ``values``.</doc>
-<status status="PASS" start="2024-01-25T10:34:48.750001" elapsed="0.030322"/>
-</kw>
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-01-25T10:34:48.780729" level="INFO">Typing text '150' into text field 'xpath=//input[@id='engineperformance']'.</msg>
-<arg>${ENGINE_PERFORMANCE_XPATH}</arg>
-<arg>${single_car}[1]</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-01-25T10:34:48.780498" elapsed="0.039551"/>
-</kw>
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-01-25T10:34:48.820443" level="INFO">Typing text '10/08/2021' into text field 'xpath=//input[@id='dateofmanufacture']'.</msg>
-<arg>${MANUFACTURE_DATE_XPATH}</arg>
-<arg>${single_car}[2]</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-01-25T10:34:48.820221" elapsed="0.056221"/>
-</kw>
-<kw name="Select From List By Value" owner="SeleniumLibrary">
-<msg time="2024-01-25T10:34:48.876932" level="INFO">Selecting options from selection list 'xpath=//select[@id='numberofseats']' by value 7.</msg>
-<arg>${NUMBER_OF_SEATS_XPATH}</arg>
-<arg>${single_car}[3]</arg>
-<doc>Selects options from selection list ``locator`` by ``values``.</doc>
-<status status="PASS" start="2024-01-25T10:34:48.876633" elapsed="0.034383"/>
-</kw>
-<kw name="Select From List By Value" owner="SeleniumLibrary">
-<msg time="2024-01-25T10:34:48.911412" level="INFO">Selecting options from selection list 'xpath=//select[@id='fuel']' by value Electric Power.</msg>
-<arg>${FUEL_TYPE_XPATH}</arg>
-<arg>${single_car}[4]</arg>
-<doc>Selects options from selection list ``locator`` by ``values``.</doc>
-<status status="PASS" start="2024-01-25T10:34:48.911180" elapsed="0.035136"/>
-</kw>
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-01-25T10:34:48.946730" level="INFO">Typing text '30000' into text field 'xpath=//input[@id='listprice']'.</msg>
-<arg>${LIST_PRICE_XPATH}</arg>
-<arg>${single_car}[5]</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-01-25T10:34:48.946492" elapsed="0.039374"/>
-</kw>
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-01-25T10:34:48.986271" level="INFO">Typing text 'LMN456' into text field 'xpath=//input[@id='licenseplatenumber']'.</msg>
-<arg>${LICENSE_PLATE_XPATH}</arg>
-<arg>${single_car}[6]</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-01-25T10:34:48.986043" elapsed="0.042413"/>
-</kw>
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-01-25T10:34:49.028832" level="INFO">Typing text '18000' into text field 'xpath=//input[@id='annualmileage']'.</msg>
-<arg>${ANNUAL_MILEAGE_XPATH}</arg>
-<arg>${single_car}[7]</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-01-25T10:34:49.028621" elapsed="0.044782"/>
-</kw>
-<kw name="Increment Counter" owner="AutomobilePage">
-<kw name="Evaluate" owner="BuiltIn">
-<msg time="2024-01-25T10:34:49.073997" level="INFO">${COUNTER} = 3</msg>
-<var>${COUNTER}</var>
-<arg>${COUNTER} + 1</arg>
-<doc>Evaluates the given expression in Python and returns the result.</doc>
-<status status="PASS" start="2024-01-25T10:34:49.073835" elapsed="0.000232"/>
-</kw>
-<kw name="Set Global Variable" owner="BuiltIn">
-<msg time="2024-01-25T10:34:49.074288" level="INFO">${COUNTER} = 3</msg>
-<arg>${COUNTER}</arg>
-<doc>Makes a variable available globally in all tests and suites.</doc>
-<status status="PASS" start="2024-01-25T10:34:49.074148" elapsed="0.000191"/>
-</kw>
-<status status="PASS" start="2024-01-25T10:34:49.073595" elapsed="0.000798"/>
-</kw>
 <arg>COUNTER=${COUNTER}</arg>
-<status status="PASS" start="2024-01-25T10:34:48.747735" elapsed="0.326698"/>
+<status status="NOT RUN" start="2024-01-25T18:19:37.543042" elapsed="0.000036"/>
 </kw>
 <kw name="Proceed To Next Page" owner="AutomobilePage">
-<kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2024-01-25T10:34:49.074873" level="INFO">Clicking button 'nextenterinsurantdata'.</msg>
-<arg>${NEXT_ENTER_INSURANT_ID}</arg>
-<doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2024-01-25T10:34:49.074730" elapsed="0.035006"/>
-</kw>
-<status status="PASS" start="2024-01-25T10:34:49.074512" elapsed="0.035372"/>
+<status status="NOT RUN" start="2024-01-25T18:19:37.543140" elapsed="0.000035"/>
 </kw>
 <kw name="Fill With Data and Proceed To Next Page" owner="InsurantForm">
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-01-25T10:34:49.110753" level="INFO">Typing text 'John' into text field 'xpath=//input[@id='firstname']'.</msg>
-<arg>${FIRST_NAME_XPATH}</arg>
-<arg>${INSURANT_DATA['firstname']}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-01-25T10:34:49.110275" elapsed="0.041001"/>
+<status status="NOT RUN" start="2024-01-25T18:19:37.543250" elapsed="0.000035"/>
 </kw>
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-01-25T10:34:49.152018" level="INFO">Typing text 'Doe' into text field 'xpath=//input[@id='lastname']'.</msg>
-<arg>${LAST_NAME_XPATH}</arg>
-<arg>${INSURANT_DATA['lastname']}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-01-25T10:34:49.151524" elapsed="0.045438"/>
-</kw>
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-01-25T10:34:49.197730" level="INFO">Typing text '01/01/1984' into text field 'xpath=//input[@id='birthdate']'.</msg>
-<msg time="2024-01-25T10:34:49.199354" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: no such window: target window already closed
-from unknown error: web view not found
-  (Session info: chrome=121.0.6167.85)
-Stacktrace:
-0   chromedriver                        0x0000000102e5e7dc chromedriver + 4040668
-1   chromedriver                        0x0000000102e569e0 chromedriver + 4008416
-2   chromedriver                        0x0000000102ac9870 chromedriver + 284784
-3   chromedriver                        0x0000000102aa4064 chromedriver + 131172
-4   chromedriver                        0x0000000102b332b0 chromedriver + 717488
-5   chromedriver                        0x0000000102b4675c chromedriver + 796508
-6   chromedriver                        0x0000000102b0174c chromedriver + 513868
-7   chromedriver                        0x0000000102b02044 chromedriver + 516164
-8   chromedriver                        0x0000000102e23a04 chromedriver + 3799556
-9   chromedriver                        0x0000000102e27ee4 chromedriver + 3817188
-10  chromedriver                        0x0000000102e0c260 chromedriver + 3703392
-11  chromedriver                        0x0000000102e28a2c chromedriver + 3820076
-12  chromedriver                        0x0000000102dff01c chromedriver + 3649564
-13  chromedriver                        0x0000000102e45e3c chromedriver + 3939900
-14  chromedriver                        0x0000000102e45fb4 chromedriver + 3940276
-15  chromedriver                        0x0000000102e56660 chromedriver + 4007520
-16  libsystem_pthread.dylib             0x000000018d3db034 _pthread_start + 136
-17  libsystem_pthread.dylib             0x000000018d3d5e3c thread_start + 8
-</msg>
-<msg time="2024-01-25T10:34:49.200175" level="FAIL">NoSuchWindowException: Message: no such window: target window already closed
-from unknown error: web view not found
-  (Session info: chrome=121.0.6167.85)
-Stacktrace:
-0   chromedriver                        0x0000000102e5e7dc chromedriver + 4040668
-1   chromedriver                        0x0000000102e569e0 chromedriver + 4008416
-2   chromedriver                        0x0000000102ac9870 chromedriver + 284784
-3   chromedriver                        0x0000000102aa4064 chromedriver + 131172
-4   chromedriver                        0x0000000102b332b0 chromedriver + 717488
-5   chromedriver                        0x0000000102b4675c chromedriver + 796508
-6   chromedriver                        0x0000000102b0174c chromedriver + 513868
-7   chromedriver                        0x0000000102b02044 chromedriver + 516164
-8   chromedriver                        0x0000000102e23a04 chromedriver + 3799556
-9   chromedriver                        0x0000000102e27ee4 chromedriver + 3817188
-10  chromedriver                        0x0000000102e0c260 chromedriver + 3703392
-11  chromedriver                        0x0000000102e28a2c chromedriver + 3820076
-12  chromedriver                        0x0000000102dff01c chromedriver + 3649564
-13  chromedriver                        0x0000000102e45e3c chromedriver + 3939900
-14  chromedriver                        0x0000000102e45fb4 chromedriver + 3940276
-15  chromedriver                        0x0000000102e56660 chromedriver + 4007520
-16  libsystem_pthread.dylib             0x000000018d3db034 _pthread_start + 136
-17  libsystem_pthread.dylib             0x000000018d3d5e3c thread_start + 8
-</msg>
-<arg>${DOB_XPATH}</arg>
-<arg>${INSURANT_DATA['dob']}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="FAIL" start="2024-01-25T10:34:49.197149" elapsed="0.007010">NoSuchWindowException: Message: no such window: target window already closed
-from unknown error: web view not found
-  (Session info: chrome=121.0.6167.85)
-Stacktrace:
-0   chromedriver                        0x0000000102e5e7dc chromedriver + 4040668
-1   chromedriver                        0x0000000102e569e0 chromedriver + 4008416
-2   chromedriver                        0x0000000102ac9870 chromedriver + 284784
-3   chromedriver                        0x0000000102aa4064 chromedriver + 131172
-4   chromedriver                        0x0000000102b332b0 chromedriver + 717488
-5   chromedriver                        0x0000000102b4675c chromedriver + 796508
-6   chromedriver                        0x0000000102b0174c chromedriver + 513868
-7   chromedriver                        0x0000000102b02044 chromedriver + 516164
-8   chromedriver                        0x0000000102e23a04 chromedriver + 3799556
-9   chromedriver                        0x0000000102e27ee4 chromedriver + 3817188
-10  chromedriver                        0x0000000102e0c260 chromedriver + 3703392
-11  chromedriver                        0x0000000102e28a2c chromedriver + 3820076
-12  chromedriver                        0x0000000102dff01c chromedriver + 3649564
-13  chromedriver                        0x0000000102e45e3c chromedriver + 3939900
-14  chromedriver                        0x0000000102e45fb4 chromedriver + 3940276
-15  chromedriver                        0x0000000102e56660 chromedriver + 4007520
-16  libsystem_pthread.dylib             0x000000018d3db034 _pthread_start + 136
-17  libsystem_pthread.dylib             0x000000018d3d5e3c thread_start + 8
-</status>
-</kw>
-<kw name="Select Gender" owner="InsurantForm">
-<arg>${INSURANT_DATA['gender']}</arg>
-<status status="NOT RUN" start="2024-01-25T10:34:49.204395" elapsed="0.000074"/>
-</kw>
-<kw name="Input Text" owner="SeleniumLibrary">
-<arg>${STREET_ADDRESS_XPATH}</arg>
-<arg>${INSURANT_DATA['streetaddress']}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="NOT RUN" start="2024-01-25T10:34:49.204550" elapsed="0.000043"/>
-</kw>
-<kw name="Select From List By Value" owner="SeleniumLibrary">
-<arg>${COUNTRIES_LIST_XPATH}</arg>
-<arg>${INSURANT_DATA['country']}</arg>
-<doc>Selects options from selection list ``locator`` by ``values``.</doc>
-<status status="NOT RUN" start="2024-01-25T10:34:49.204660" elapsed="0.000038"/>
-</kw>
-<kw name="Input Text" owner="SeleniumLibrary">
-<arg>${ZIP_CODE_XPATH}</arg>
-<arg>${INSURANT_DATA['zipcode']}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="NOT RUN" start="2024-01-25T10:34:49.204757" elapsed="0.000033"/>
-</kw>
-<kw name="Input Text" owner="SeleniumLibrary">
-<arg>${CITY_XPATH}</arg>
-<arg>${INSURANT_DATA['city']}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="NOT RUN" start="2024-01-25T10:34:49.204851" elapsed="0.000036"/>
-</kw>
-<kw name="Select From List By Value" owner="SeleniumLibrary">
-<arg>${OCCUPATION_LIST_XPATH}</arg>
-<arg>${INSURANT_DATA['occupation']}</arg>
-<doc>Selects options from selection list ``locator`` by ``values``.</doc>
-<status status="NOT RUN" start="2024-01-25T10:34:49.204945" elapsed="0.000033"/>
-</kw>
-<kw name="Select Hobbies" owner="InsurantForm">
-<arg>${INSURANT_DATA['hobbies']}</arg>
-<status status="NOT RUN" start="2024-01-25T10:34:49.205080" elapsed="0.000039"/>
-</kw>
-<kw name="Input Text" owner="SeleniumLibrary">
-<arg>${WEBSITE_XPATH}</arg>
-<arg>${INSURANT_DATA['website']}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="NOT RUN" start="2024-01-25T10:34:49.205175" elapsed="0.000034"/>
-</kw>
-<kw name="Proceed To Next Page" owner="InsurantForm">
-<status status="NOT RUN" start="2024-01-25T10:34:49.205301" elapsed="0.000075"/>
-</kw>
-<status status="FAIL" start="2024-01-25T10:34:49.110026" elapsed="0.095469">NoSuchWindowException: Message: no such window: target window already closed
-from unknown error: web view not found
-  (Session info: chrome=121.0.6167.85)
-Stacktrace:
-0   chromedriver                        0x0000000102e5e7dc chromedriver + 4040668
-1   chromedriver                        0x0000000102e569e0 chromedriver + 4008416
-2   chromedriver                        0x0000000102ac9870 chromedriver + 284784
-3   chromedriver                        0x0000000102aa4064 chromedriver + 131172
-4   chromedriver                        0x0000000102b332b0 chromedriver + 717488
-5   chromedriver                        0x0000000102b4675c chromedriver + 796508
-6   chromedriver                        0x0000000102b0174c chromedriver + 513868
-7   chromedriver                        0x0000000102b02044 chromedriver + 516164
-8   chromedriver                        0x0000000102e23a04 chromedriver + 3799556
-9   chromedriver                        0x0000000102e27ee4 chromedriver + 3817188
-10  chromedriver                        0x0000000102e0c260 chromedriver + 3703392
-11  chromedriver                        0x0000000102e28a2c chromedriver + 3820076
-12  chromedriver                        0x0000000102dff01c chromedriver + 3649564
-13  chromedriver                        0x0000000102e45e3c chromedriver + 3939900
-14  chromedriver                        0x0000000102e45fb4 chromedriver + 3940276
-15  chromedriver                        0x0000000102e56660 chromedriver + 4007520
-16  libsystem_pthread.dylib             0x000000018d3db034 _pthread_start + 136
-17  libsystem_pthread.dylib             0x000000018d3d5e3c thread_start + 8
-</status>
+<kw name="Fill With Data and Proceed To Next Page" owner="ProductDataPage">
+<status status="NOT RUN" start="2024-01-25T18:19:37.543357" elapsed="0.000033"/>
 </kw>
 <arg>${Category}</arg>
-<status status="FAIL" start="2024-01-25T10:34:48.466443" elapsed="0.739208">NoSuchWindowException: Message: no such window: target window already closed
+<status status="FAIL" start="2024-01-25T18:19:37.534697" elapsed="0.008758">NoSuchWindowException: Message: no such window: target window already closed
 from unknown error: web view not found
   (Session info: chrome=121.0.6167.85)
 Stacktrace:
-0   chromedriver                        0x0000000102e5e7dc chromedriver + 4040668
-1   chromedriver                        0x0000000102e569e0 chromedriver + 4008416
-2   chromedriver                        0x0000000102ac9870 chromedriver + 284784
-3   chromedriver                        0x0000000102aa4064 chromedriver + 131172
-4   chromedriver                        0x0000000102b332b0 chromedriver + 717488
-5   chromedriver                        0x0000000102b4675c chromedriver + 796508
-6   chromedriver                        0x0000000102b0174c chromedriver + 513868
-7   chromedriver                        0x0000000102b02044 chromedriver + 516164
-8   chromedriver                        0x0000000102e23a04 chromedriver + 3799556
-9   chromedriver                        0x0000000102e27ee4 chromedriver + 3817188
-10  chromedriver                        0x0000000102e0c260 chromedriver + 3703392
-11  chromedriver                        0x0000000102e28a2c chromedriver + 3820076
-12  chromedriver                        0x0000000102dff01c chromedriver + 3649564
-13  chromedriver                        0x0000000102e45e3c chromedriver + 3939900
-14  chromedriver                        0x0000000102e45fb4 chromedriver + 3940276
-15  chromedriver                        0x0000000102e56660 chromedriver + 4007520
+0   chromedriver                        0x000000010472a7dc chromedriver + 4040668
+1   chromedriver                        0x00000001047229e0 chromedriver + 4008416
+2   chromedriver                        0x0000000104395870 chromedriver + 284784
+3   chromedriver                        0x0000000104370064 chromedriver + 131172
+4   chromedriver                        0x00000001043ff2b0 chromedriver + 717488
+5   chromedriver                        0x000000010441275c chromedriver + 796508
+6   chromedriver                        0x00000001043cd74c chromedriver + 513868
+7   chromedriver                        0x00000001043ce044 chromedriver + 516164
+8   chromedriver                        0x00000001046efa04 chromedriver + 3799556
+9   chromedriver                        0x00000001046f3ee4 chromedriver + 3817188
+10  chromedriver                        0x00000001046d8260 chromedriver + 3703392
+11  chromedriver                        0x00000001046f4a2c chromedriver + 3820076
+12  chromedriver                        0x00000001046cb01c chromedriver + 3649564
+13  chromedriver                        0x0000000104711e3c chromedriver + 3939900
+14  chromedriver                        0x0000000104711fb4 chromedriver + 3940276
+15  chromedriver                        0x0000000104722660 chromedriver + 4007520
 16  libsystem_pthread.dylib             0x000000018d3db034 _pthread_start + 136
 17  libsystem_pthread.dylib             0x000000018d3d5e3c thread_start + 8
 </status>
 </kw>
 <var name="${ROW}">2</var>
-<status status="FAIL" start="2024-01-25T10:34:48.466263" elapsed="0.739467">NoSuchWindowException: Message: no such window: target window already closed
+<status status="FAIL" start="2024-01-25T18:19:37.534418" elapsed="0.009130">NoSuchWindowException: Message: no such window: target window already closed
 from unknown error: web view not found
   (Session info: chrome=121.0.6167.85)
 Stacktrace:
-0   chromedriver                        0x0000000102e5e7dc chromedriver + 4040668
-1   chromedriver                        0x0000000102e569e0 chromedriver + 4008416
-2   chromedriver                        0x0000000102ac9870 chromedriver + 284784
-3   chromedriver                        0x0000000102aa4064 chromedriver + 131172
-4   chromedriver                        0x0000000102b332b0 chromedriver + 717488
-5   chromedriver                        0x0000000102b4675c chromedriver + 796508
-6   chromedriver                        0x0000000102b0174c chromedriver + 513868
-7   chromedriver                        0x0000000102b02044 chromedriver + 516164
-8   chromedriver                        0x0000000102e23a04 chromedriver + 3799556
-9   chromedriver                        0x0000000102e27ee4 chromedriver + 3817188
-10  chromedriver                        0x0000000102e0c260 chromedriver + 3703392
-11  chromedriver                        0x0000000102e28a2c chromedriver + 3820076
-12  chromedriver                        0x0000000102dff01c chromedriver + 3649564
-13  chromedriver                        0x0000000102e45e3c chromedriver + 3939900
-14  chromedriver                        0x0000000102e45fb4 chromedriver + 3940276
-15  chromedriver                        0x0000000102e56660 chromedriver + 4007520
+0   chromedriver                        0x000000010472a7dc chromedriver + 4040668
+1   chromedriver                        0x00000001047229e0 chromedriver + 4008416
+2   chromedriver                        0x0000000104395870 chromedriver + 284784
+3   chromedriver                        0x0000000104370064 chromedriver + 131172
+4   chromedriver                        0x00000001043ff2b0 chromedriver + 717488
+5   chromedriver                        0x000000010441275c chromedriver + 796508
+6   chromedriver                        0x00000001043cd74c chromedriver + 513868
+7   chromedriver                        0x00000001043ce044 chromedriver + 516164
+8   chromedriver                        0x00000001046efa04 chromedriver + 3799556
+9   chromedriver                        0x00000001046f3ee4 chromedriver + 3817188
+10  chromedriver                        0x00000001046d8260 chromedriver + 3703392
+11  chromedriver                        0x00000001046f4a2c chromedriver + 3820076
+12  chromedriver                        0x00000001046cb01c chromedriver + 3649564
+13  chromedriver                        0x0000000104711e3c chromedriver + 3939900
+14  chromedriver                        0x0000000104711fb4 chromedriver + 3940276
+15  chromedriver                        0x0000000104722660 chromedriver + 4007520
 16  libsystem_pthread.dylib             0x000000018d3db034 _pthread_start + 136
 17  libsystem_pthread.dylib             0x000000018d3d5e3c thread_start + 8
 </status>
@@ -1242,51 +1217,51 @@ Stacktrace:
 <var>${ROW}</var>
 <value>${ROW}</value>
 <value>${RANGE}</value>
-<status status="FAIL" start="2024-01-25T10:34:44.745669" elapsed="4.460125">NoSuchWindowException: Message: no such window: target window already closed
+<status status="FAIL" start="2024-01-25T18:19:23.897588" elapsed="13.646016">NoSuchWindowException: Message: no such window: target window already closed
 from unknown error: web view not found
   (Session info: chrome=121.0.6167.85)
 Stacktrace:
-0   chromedriver                        0x0000000102e5e7dc chromedriver + 4040668
-1   chromedriver                        0x0000000102e569e0 chromedriver + 4008416
-2   chromedriver                        0x0000000102ac9870 chromedriver + 284784
-3   chromedriver                        0x0000000102aa4064 chromedriver + 131172
-4   chromedriver                        0x0000000102b332b0 chromedriver + 717488
-5   chromedriver                        0x0000000102b4675c chromedriver + 796508
-6   chromedriver                        0x0000000102b0174c chromedriver + 513868
-7   chromedriver                        0x0000000102b02044 chromedriver + 516164
-8   chromedriver                        0x0000000102e23a04 chromedriver + 3799556
-9   chromedriver                        0x0000000102e27ee4 chromedriver + 3817188
-10  chromedriver                        0x0000000102e0c260 chromedriver + 3703392
-11  chromedriver                        0x0000000102e28a2c chromedriver + 3820076
-12  chromedriver                        0x0000000102dff01c chromedriver + 3649564
-13  chromedriver                        0x0000000102e45e3c chromedriver + 3939900
-14  chromedriver                        0x0000000102e45fb4 chromedriver + 3940276
-15  chromedriver                        0x0000000102e56660 chromedriver + 4007520
+0   chromedriver                        0x000000010472a7dc chromedriver + 4040668
+1   chromedriver                        0x00000001047229e0 chromedriver + 4008416
+2   chromedriver                        0x0000000104395870 chromedriver + 284784
+3   chromedriver                        0x0000000104370064 chromedriver + 131172
+4   chromedriver                        0x00000001043ff2b0 chromedriver + 717488
+5   chromedriver                        0x000000010441275c chromedriver + 796508
+6   chromedriver                        0x00000001043cd74c chromedriver + 513868
+7   chromedriver                        0x00000001043ce044 chromedriver + 516164
+8   chromedriver                        0x00000001046efa04 chromedriver + 3799556
+9   chromedriver                        0x00000001046f3ee4 chromedriver + 3817188
+10  chromedriver                        0x00000001046d8260 chromedriver + 3703392
+11  chromedriver                        0x00000001046f4a2c chromedriver + 3820076
+12  chromedriver                        0x00000001046cb01c chromedriver + 3649564
+13  chromedriver                        0x0000000104711e3c chromedriver + 3939900
+14  chromedriver                        0x0000000104711fb4 chromedriver + 3940276
+15  chromedriver                        0x0000000104722660 chromedriver + 4007520
 16  libsystem_pthread.dylib             0x000000018d3db034 _pthread_start + 136
 17  libsystem_pthread.dylib             0x000000018d3d5e3c thread_start + 8
 </status>
 </for>
 <arg>${CATEGORIES.ONE}</arg>
-<status status="FAIL" start="2024-01-25T10:34:44.741066" elapsed="4.464870">NoSuchWindowException: Message: no such window: target window already closed
+<status status="FAIL" start="2024-01-25T18:19:23.892728" elapsed="13.650948">NoSuchWindowException: Message: no such window: target window already closed
 from unknown error: web view not found
   (Session info: chrome=121.0.6167.85)
 Stacktrace:
-0   chromedriver                        0x0000000102e5e7dc chromedriver + 4040668
-1   chromedriver                        0x0000000102e569e0 chromedriver + 4008416
-2   chromedriver                        0x0000000102ac9870 chromedriver + 284784
-3   chromedriver                        0x0000000102aa4064 chromedriver + 131172
-4   chromedriver                        0x0000000102b332b0 chromedriver + 717488
-5   chromedriver                        0x0000000102b4675c chromedriver + 796508
-6   chromedriver                        0x0000000102b0174c chromedriver + 513868
-7   chromedriver                        0x0000000102b02044 chromedriver + 516164
-8   chromedriver                        0x0000000102e23a04 chromedriver + 3799556
-9   chromedriver                        0x0000000102e27ee4 chromedriver + 3817188
-10  chromedriver                        0x0000000102e0c260 chromedriver + 3703392
-11  chromedriver                        0x0000000102e28a2c chromedriver + 3820076
-12  chromedriver                        0x0000000102dff01c chromedriver + 3649564
-13  chromedriver                        0x0000000102e45e3c chromedriver + 3939900
-14  chromedriver                        0x0000000102e45fb4 chromedriver + 3940276
-15  chromedriver                        0x0000000102e56660 chromedriver + 4007520
+0   chromedriver                        0x000000010472a7dc chromedriver + 4040668
+1   chromedriver                        0x00000001047229e0 chromedriver + 4008416
+2   chromedriver                        0x0000000104395870 chromedriver + 284784
+3   chromedriver                        0x0000000104370064 chromedriver + 131172
+4   chromedriver                        0x00000001043ff2b0 chromedriver + 717488
+5   chromedriver                        0x000000010441275c chromedriver + 796508
+6   chromedriver                        0x00000001043cd74c chromedriver + 513868
+7   chromedriver                        0x00000001043ce044 chromedriver + 516164
+8   chromedriver                        0x00000001046efa04 chromedriver + 3799556
+9   chromedriver                        0x00000001046f3ee4 chromedriver + 3817188
+10  chromedriver                        0x00000001046d8260 chromedriver + 3703392
+11  chromedriver                        0x00000001046f4a2c chromedriver + 3820076
+12  chromedriver                        0x00000001046cb01c chromedriver + 3649564
+13  chromedriver                        0x0000000104711e3c chromedriver + 3939900
+14  chromedriver                        0x0000000104711fb4 chromedriver + 3940276
+15  chromedriver                        0x0000000104722660 chromedriver + 4007520
 16  libsystem_pthread.dylib             0x000000018d3db034 _pthread_start + 136
 17  libsystem_pthread.dylib             0x000000018d3d5e3c thread_start + 8
 </status>
@@ -1294,46 +1269,48 @@ Stacktrace:
 <kw name="End Web Test" owner="Common" type="TEARDOWN">
 <kw name="Close All Browsers" owner="SeleniumLibrary">
 <doc>Closes all open browsers and resets the browser cache.</doc>
-<status status="PASS" start="2024-01-25T10:34:49.206484" elapsed="0.074583"/>
+<status status="PASS" start="2024-01-25T18:19:37.544179" elapsed="0.081742"/>
 </kw>
-<status status="PASS" start="2024-01-25T10:34:49.206208" elapsed="0.074983"/>
+<status status="PASS" start="2024-01-25T18:19:37.543990" elapsed="0.082077"/>
 </kw>
 <doc>Reading CSV File With Cars Information And Finalizing Workflow - In Progress</doc>
-<status status="FAIL" start="2024-01-25T10:34:43.609537" elapsed="5.671740">NoSuchWindowException: Message: no such window: target window already closed
+<tag>all</tag>
+<status status="FAIL" start="2024-01-25T18:19:22.747220" elapsed="14.878947">NoSuchWindowException: Message: no such window: target window already closed
 from unknown error: web view not found
   (Session info: chrome=121.0.6167.85)
 Stacktrace:
-0   chromedriver                        0x0000000102e5e7dc chromedriver + 4040668
-1   chromedriver                        0x0000000102e569e0 chromedriver + 4008416
-2   chromedriver                        0x0000000102ac9870 chromedriver + 284784
-3   chromedriver                        0x0000000102aa4064 chromedriver + 131172
-4   chromedriver                        0x0000000102b332b0 chromedriver + 717488
-5   chromedriver                        0x0000000102b4675c chromedriver + 796508
-6   chromedriver                        0x0000000102b0174c chromedriver + 513868
-7   chromedriver                        0x0000000102b02044 chromedriver + 516164
-8   chromedriver                        0x0000000102e23a04 chromedriver + 3799556
-9   chromedriver                        0x0000000102e27ee4 chromedriver + 3817188
-10  chromedriver                        0x0000000102e0c260 chromedriver + 3703392
-11  chromedriver                        0x0000000102e28a2c chromedriver + 3820076
-12  chromedriver                        0x0000000102dff01c chromedriver + 3649564
-13  chromedriver                        0x0000000102e45e3c chromedriver + 3939900
-14  chromedriver                        0x0000000102e45fb4 chromedriver + 3940276
-15  chromedriver                        0x0000000102e56660 chromedriver + 4007520
+0   chromedriver                        0x000000010472a7dc chromedriver + 4040668
+1   chromedriver                        0x00000001047229e0 chromedriver + 4008416
+2   chromedriver                        0x0000000104395870 chromedriver + 284784
+3   chromedriver                        0x0000000104370064 chromedriver + 131172
+4   chromedriver                        0x00000001043ff2b0 chromedriver + 717488
+5   chromedriver                        0x000000010441275c chromedriver + 796508
+6   chromedriver                        0x00000001043cd74c chromedriver + 513868
+7   chromedriver                        0x00000001043ce044 chromedriver + 516164
+8   chromedriver                        0x00000001046efa04 chromedriver + 3799556
+9   chromedriver                        0x00000001046f3ee4 chromedriver + 3817188
+10  chromedriver                        0x00000001046d8260 chromedriver + 3703392
+11  chromedriver                        0x00000001046f4a2c chromedriver + 3820076
+12  chromedriver                        0x00000001046cb01c chromedriver + 3649564
+13  chromedriver                        0x0000000104711e3c chromedriver + 3939900
+14  chromedriver                        0x0000000104711fb4 chromedriver + 3940276
+15  chromedriver                        0x0000000104722660 chromedriver + 4007520
 16  libsystem_pthread.dylib             0x000000018d3db034 _pthread_start + 136
 17  libsystem_pthread.dylib             0x000000018d3d5e3c thread_start + 8
 </status>
 </test>
-<status status="FAIL" start="2024-01-25T10:34:43.554087" elapsed="5.727814"/>
+<status status="FAIL" start="2024-01-25T18:19:22.686589" elapsed="14.940189"/>
 </suite>
-<status status="FAIL" start="2024-01-25T10:34:43.553330" elapsed="5.729137"/>
+<status status="FAIL" start="2024-01-25T18:19:22.685934" elapsed="14.941261"/>
 </suite>
-<status status="FAIL" start="2024-01-25T10:34:43.546038" elapsed="5.736818"/>
+<status status="FAIL" start="2024-01-25T18:19:22.678620" elapsed="14.948996"/>
 </suite>
 <statistics>
 <total>
 <stat pass="0" fail="1" skip="0">All Tests</stat>
 </total>
 <tag>
+<stat pass="0" fail="1" skip="0">all</stat>
 </tag>
 <suite>
 <stat pass="0" fail="1" skip="0" id="s1" name="Vehicle Insurance App">Vehicle Insurance App</stat>
@@ -1342,26 +1319,26 @@ Stacktrace:
 </suite>
 </statistics>
 <errors>
-<msg time="2024-01-25T10:34:49.199354" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: no such window: target window already closed
+<msg time="2024-01-25T18:19:37.538268" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: no such window: target window already closed
 from unknown error: web view not found
   (Session info: chrome=121.0.6167.85)
 Stacktrace:
-0   chromedriver                        0x0000000102e5e7dc chromedriver + 4040668
-1   chromedriver                        0x0000000102e569e0 chromedriver + 4008416
-2   chromedriver                        0x0000000102ac9870 chromedriver + 284784
-3   chromedriver                        0x0000000102aa4064 chromedriver + 131172
-4   chromedriver                        0x0000000102b332b0 chromedriver + 717488
-5   chromedriver                        0x0000000102b4675c chromedriver + 796508
-6   chromedriver                        0x0000000102b0174c chromedriver + 513868
-7   chromedriver                        0x0000000102b02044 chromedriver + 516164
-8   chromedriver                        0x0000000102e23a04 chromedriver + 3799556
-9   chromedriver                        0x0000000102e27ee4 chromedriver + 3817188
-10  chromedriver                        0x0000000102e0c260 chromedriver + 3703392
-11  chromedriver                        0x0000000102e28a2c chromedriver + 3820076
-12  chromedriver                        0x0000000102dff01c chromedriver + 3649564
-13  chromedriver                        0x0000000102e45e3c chromedriver + 3939900
-14  chromedriver                        0x0000000102e45fb4 chromedriver + 3940276
-15  chromedriver                        0x0000000102e56660 chromedriver + 4007520
+0   chromedriver                        0x000000010472a7dc chromedriver + 4040668
+1   chromedriver                        0x00000001047229e0 chromedriver + 4008416
+2   chromedriver                        0x0000000104395870 chromedriver + 284784
+3   chromedriver                        0x0000000104370064 chromedriver + 131172
+4   chromedriver                        0x00000001043ff2b0 chromedriver + 717488
+5   chromedriver                        0x000000010441275c chromedriver + 796508
+6   chromedriver                        0x00000001043cd74c chromedriver + 513868
+7   chromedriver                        0x00000001043ce044 chromedriver + 516164
+8   chromedriver                        0x00000001046efa04 chromedriver + 3799556
+9   chromedriver                        0x00000001046f3ee4 chromedriver + 3817188
+10  chromedriver                        0x00000001046d8260 chromedriver + 3703392
+11  chromedriver                        0x00000001046f4a2c chromedriver + 3820076
+12  chromedriver                        0x00000001046cb01c chromedriver + 3649564
+13  chromedriver                        0x0000000104711e3c chromedriver + 3939900
+14  chromedriver                        0x0000000104711fb4 chromedriver + 3940276
+15  chromedriver                        0x0000000104722660 chromedriver + 4007520
 16  libsystem_pthread.dylib             0x000000018d3db034 _pthread_start + 136
 17  libsystem_pthread.dylib             0x000000018d3d5e3c thread_start + 8
 </msg>

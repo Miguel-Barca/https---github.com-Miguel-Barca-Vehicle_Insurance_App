@@ -3,6 +3,8 @@ Library   SeleniumLibrary
 Resource  ../Resources/PO/Homepage.robot
 Resource  ../Resources/PO/AutomobilePage.robot
 Resource  ../Resources/PO/InsurantForm.robot
+Resource  ../Resources/PO/ProductDataPage.robot
+Resource  ../Resources/DataManager.robot
 
 *** Variables ***
 ${RANGE}   
@@ -24,6 +26,7 @@ Fill Form Pages
     AutomobilePage.GET Single Car from List And Increment Counter   COUNTER=${COUNTER}
     AutomobilePage.Proceed To Next Page
     InsurantForm.Fill With Data and Proceed To Next Page
+    ProductDataPage.Fill With Data and Proceed To Next Page
     
 
 Process All Cars
