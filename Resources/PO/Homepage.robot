@@ -18,4 +18,5 @@ Click Category
 
     #Creating the xpath inside Keyword
     ${xpath_variable}=    Set Variable    xpath=//*[contains(@id, 'nav_${Category}')]
+    Wait Until Element Is Visible  ${xpath_variable}
     Click Element         ${xpath_variable}
