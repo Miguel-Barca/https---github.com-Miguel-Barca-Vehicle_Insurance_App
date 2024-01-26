@@ -24,11 +24,46 @@ ${HOBBIES_BUNGEE_CHECKBOX}          //form[@id="insurance-form"]//div[10]/p/labe
 ${HOBBIES_CLIFF_DIVING_CHECKBOX}    //form[@id="insurance-form"]//div[10]/p/label[3]/span
 ${HOBBIES_SKYDIVING_CHECKBOX}       //form[@id="insurance-form"]//div[10]/p/label[4]/span
 ${HOBBIES_OTHER_CHECKBOX}           //form[@id="insurance-form"]//div[10]/p/label[5]/span
+${COUNTER_INSURANT_LIST}            0
 
 ### TODO HOBBIES CHECKBOX TAG
 
 *** Keywords ***
+Get Insurant from List, Fill Form And Increment Counter
+    [Arguments]  ${COUNTER_INSURANT_LIST}
+    @{all_insurants_list}=  DataManager.Get List Of Insurants
+    
+    #Defining which car go gt from @{cars_list}
+    ${single_insurant}  Set Variable    ${all_insurants_list}[${COUNTER_INSURANT_LIST}]
+
+    # Mapping values from the CS unto the WebApp Form
+    Input Text                  ${FIRST_NAME_XPATH}                 ${single_insurant}[0]
+    Input Text                  ${LAST_NAME_XPATH}                  ${single_insurant}[1]
+    Input Text                  ${DOB_XPATH}                        ${single_insurant}[2]
+    Select Gender                                                   ${single_insurant}[3]  
+    Input Text                  ${STREET_ADDRESS_XPATH}             ${single_insurant}[4]
+    Select From List By Value   ${COUNTRIES_LIST_XPATH}             ${single_insurant}[5]
+    Input Text                  ${ZIP_CODE_XPATH}                   ${single_insurant}[6]
+    Input Text                  ${CITY_XPATH}                       ${single_insurant}[7]
+    Select From List By Value   ${OCCUPATION_LIST_XPATH}            ${single_insurant}[8]
+    Select Hobbies                                                  ${single_insurant}[9]
+    Input Text                  ${WEBSITE_XPATH}                    ${single_insurant}[10]
+    ######Add Profile picture     
+    #Sleep   3s
+    Increment Counter
+    Proceed To Next Page
+
+
+Increment Counter
+    #Working - Persistence of the data in test execution
+    #Log    Counter before increment: ${COUNTER}
+    ${COUNTER_INSURANT_LIST}   Evaluate    ${COUNTER_INSURANT_LIST} + 1
+    #Log    Counter after increment: ${COUNTER}
+    Set Global Variable    ${COUNTER_INSURANT_LIST}
+
+
 Fill With Data and Proceed To Next Page
+    #Hardcoded data - Not Using Insurant.csv
     Input Text                  ${FIRST_NAME_XPATH}                 ${INSURANT_DATA['firstname']}
     Input Text                  ${LAST_NAME_XPATH}                  ${INSURANT_DATA['lastname']}
     Input Text                  ${DOB_XPATH}                        ${INSURANT_DATA['dob']}
@@ -73,9 +108,6 @@ Add Profile picture
     ${my_locator}  Set Variable  //input[@id='picture']
     
 
-    #Log Many  ${path_to_directory}${/}${file}
-
-
     @{my_file_list}    OperatingSystem.List Files In Directory    ${path_to_directory}
 
     FOR    ${file}    IN     @{my_file_list}
@@ -85,3 +117,4 @@ Add Profile picture
 
 Proceed To Next Page
     Click Button   ${NEXT_ENTER_PRODUCT_ID} 
+

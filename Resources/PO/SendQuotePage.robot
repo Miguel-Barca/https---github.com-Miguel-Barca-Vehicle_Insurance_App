@@ -16,9 +16,9 @@ ${SUCCESS_POP_UP_XATH}       //div[@class="sweet-alert showSweetAlert visible"]
 
 *** Keywords ***
 Fill With Data and Finalize
-    Input Text  ${INPUT_EMAIL_XPATH}    ${USER_DATA['email']}
-    Input Text  ${PHONE_XPATH}    ${USER_DATA['phone']}
-    Input Text  ${USERNAME_XPATH}  ${USER_DATA['username']}
+    Input Text      ${INPUT_EMAIL_XPATH}    ${USER_DATA['email']}
+    Input Text      ${PHONE_XPATH}          ${USER_DATA['phone']}
+    Input Text      ${USERNAME_XPATH}       ${USER_DATA['username']}
     Fill Password   ${USER_DATA['password']}
     Add Comment
     Press Send And Wait Success Message
@@ -27,7 +27,6 @@ Fill With Data and Finalize
 Generate Random Password
     # TODO: implement keyword "Generate Random Password".
     ${USER_PASSWORD}  Generate Random String   length=2   chars=[UPPER]LOWER][LETTERS][NUMBERS]
-    Log To Console  ${USER_PASSWORD}
     RETURN  ${USER_PASSWORD}
 
 
@@ -50,6 +49,7 @@ Press Send And Wait Success Message
 
 Validate Pop-Up Success Message
     ${message}  Set Variable   Sending e-mail success!
+    #MANDATORY WAIT
     Wait Until Element Is Visible   ${SUCCESS_POP_UP_XATH}     timeout=10
     Wait Until Element Contains     ${SUCCESS_POP_UP_XATH}   ${message}
     

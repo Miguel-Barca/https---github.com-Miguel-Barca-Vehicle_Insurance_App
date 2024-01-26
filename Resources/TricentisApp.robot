@@ -1,7 +1,7 @@
 *** Settings ***
 Library   SeleniumLibrary
 Resource  ../Resources/PO/Homepage.robot
-Resource  ../Resources/PO/AutomobilePage.robot
+Resource  ../Resources/PO/VehicleData/AutomobilePage.robot
 Resource  ../Resources/PO/InsurantForm.robot
 Resource  ../Resources/PO/ProductDataPage.robot
 Resource  ../Resources/PO/SelectPriceOptionPage.robot
@@ -11,6 +11,7 @@ Resource  ../Resources/DataManager.robot
 *** Variables ***
 ${RANGE}   
 ${ROW}   0
+${RANGE_INSURANTS}
 
 *** Keywords ***
 Tests Multiple Categories - Nav Bar
@@ -19,7 +20,7 @@ Tests Multiple Categories - Nav Bar
     Homepage.Click Category  ${Category}
 
     
-Fill Form Pages
+Fill Form Pages (only Cars CSV)
     [Arguments]   ${Category}
     Homepage.Navigate To
     Homepage.Click Category  ${Category}
@@ -32,6 +33,18 @@ Fill Form Pages
     SelectPriceOptionPage.Select Random Price Option and Proceed To Next Page
     SendQuotePage.Fill With Data and Finalize
     
+Fill Form Pages (Cars + Insurants CSV)
+    [Arguments]   ${Category}
+    Homepage.Navigate To
+    Homepage.Click Category  ${Category}
+    AutomobilePage.Validate Correct Form
+    DataManager. Get CSV File Length
+    AutomobilePage.GET Single Car from List And Increment Counter   COUNTER=${COUNTER}
+    AutomobilePage.Proceed To Next Page
+    InsurantForm.Get Insurant from List, Fill Form And Increment Counter   COUNTER_INSURANT_LIST=${COUNTER_INSURANT_LIST}
+    ProductDataPage.Fill With Data and Proceed To Next Page
+    SelectPriceOptionPage.Select Random Price Option and Proceed To Next Page
+    SendQuotePage.Fill With Data and Finalize
 
 Process All Cars
     [Arguments]   ${Category}  
@@ -39,9 +52,32 @@ Process All Cars
     #Every Car/Row in the csv file is being selected 
     FOR   ${ROW}   IN RANGE  ${ROW}  ${RANGE}
         #Log Many  ${ROW}     ${RANGE}
-        Fill Form Pages  ${Category}
+        Fill Form Pages (only Cars CSV)  ${Category}
         #Log Many  ${COUNTER}  ${CAR_LIST_LENGTH}
     END
+
+
+
+Process All Cars - With Picture Upload
+    [Arguments]   ${Category} 
+    Defining Range Value
+    #Every Car/Row in the csv file is being selected 
+    FOR   ${ROW}   IN RANGE  ${ROW}  ${RANGE}
+        #Log Many  ${ROW}     ${RANGE}
+        Fill Form Pages (only Cars CSV)  ${Category}
+        #Log Many  ${COUNTER}  ${CAR_LIST_LENGTH}
+    END 
+
+
+Process All Cars And Insurants
+    [Arguments]   ${Category}
+    Defining Range Value - Insurants
+    #Every Car/Row in the csv file is being selected 
+    FOR   ${ROW}   IN RANGE  ${ROW}  ${RANGE_INSURANTS}
+        #Log Many  ${ROW}     ${RANGE}
+        Fill Form Pages (Cars + Insurants CSV)  ${Category}  
+        #Log Many  ${COUNTER}  ${CAR_LIST_LENGTH}
+    END 
 
 
 Defining Range Value
@@ -51,13 +87,10 @@ Defining Range Value
     Set Global Variable    ${RANGE}     
 
 
-Process All Cars - With Picture Upload
-    [Arguments]   ${Category} 
-    Defining Range Value
-    #Every Car/Row in the csv file is being selected 
-    FOR   ${ROW}   IN RANGE  ${ROW}  ${RANGE}
-        #Log Many  ${ROW}     ${RANGE}
-        Fill Form Pages  ${Category}
-        #Log Many  ${COUNTER}  ${CAR_LIST_LENGTH}
-    END 
-    
+
+Defining Range Value - Insurants
+    #Defining upper limit 
+    ${RANGE_INSURANTS}=  DataManager.Get Length List Of Insurants
+    #Log    Counter after increment: ${COUNTER}
+    Set Global Variable    ${RANGE_INSURANTS}    
+

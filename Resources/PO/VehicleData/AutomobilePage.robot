@@ -12,7 +12,7 @@ ${FUEL_TYPE_XPATH}           xpath=//select[@id='fuel']
 ${LIST_PRICE_XPATH}          xpath=//input[@id='listprice']
 ${LICENSE_PLATE_XPATH}       xpath=//input[@id='licenseplatenumber']
 ${ANNUAL_MILEAGE_XPATH}      xpath=//input[@id='annualmileage']
-${NEXT_ENTER_INSURANT_ID}            nextenterinsurantdata  
+${NEXT_ENTER_INSURANT_ID}    nextenterinsurantdata  
 ${COUNTER}                   0
 
 *** Keywords ***

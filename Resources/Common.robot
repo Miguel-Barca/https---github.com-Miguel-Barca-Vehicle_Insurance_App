@@ -1,5 +1,6 @@
 *** Settings ***
 Library  SeleniumLibrary
+Resource  ../Resources/DataManager.robot
 
 
 *** Keywords ***
