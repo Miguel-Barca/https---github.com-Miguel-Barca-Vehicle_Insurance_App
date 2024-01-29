@@ -3,6 +3,7 @@ Library  SeleniumLibrary
 Library  String
 Resource  ../Resources/DataManager.robot
 
+
 *** Variables ***
 ${INPUT_EMAIL_XPATH}         //input[@id="email"]
 ${PHONE_XPATH}               //input[@id="phone"]
@@ -13,6 +14,7 @@ ${COMMENT_AREA_XPATH}        //textarea[@id="Comments"]
 ${USER_PASSWORD}
 ${SEND_BUTTON}               //button[@id="sendemail"]
 ${SUCCESS_POP_UP_XATH}       //div[@class="sweet-alert showSweetAlert visible"]
+
 
 *** Keywords ***
 Fill With Data and Finalize

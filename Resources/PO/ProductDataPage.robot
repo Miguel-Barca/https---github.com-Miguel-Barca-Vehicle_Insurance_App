@@ -2,6 +2,7 @@
 Library  SeleniumLibrary
 Resource  ../Resources/DataManager.robot
 
+
 *** Variables ***
 ${START_DATE_XPATH}                   xpath=//input[@id='startdate']
 ${MERIT_RATING_LIST_XPATH}            xpath=//select[@id='meritrating']
@@ -12,6 +13,7 @@ ${LEGAL_DEFENSE_CHECKBOX_XPATH}       xpath=//form[@id="insurance-form"]//div[5]
 ${COURTESY_CAR_LIST_XPATH}            xpath=//select[@id='courtesycar']
 ${NEXT_SELECT_PRICE_ID}               nextselectpriceoption
 
+
 *** Keywords ***
 Fill With Data and Proceed To Next Page
     Input Text               ${START_DATE_XPATH}   ${PRODUCT_DATA['startdate']}
@@ -21,6 +23,7 @@ Fill With Data and Proceed To Next Page
     Select Optionals         ${PRODUCT_DATA['optional']}
     Select Courtesy Car      ${PRODUCT_DATA['courtesycar']}
     Proceed To Next Page
+
 
 Select Sum Dropdown
     [Arguments]  ${PRODUCT_DATA['value']}
@@ -39,14 +42,21 @@ Select Damage Insurance
 
 Select Optionals
     [Arguments]    ${PRODUCT_DATA['optional']}
-    IF   '${PRODUCT_DATA['optional']}' == 'Euro Protection'   Click Element  ${EURO_PROTECTION_CHECKBOX_XPATH} 
-    ...  ELSE IF  '${PRODUCT_DATA['optional']}' == 'Legal Defense Insurance'   Click Element  ${LEGAL_DEFENSE_CHECKBOX_XPATH}
-    ...  ELSE  Log  message=No data
+    Run Keyword    Select ${PRODUCT_DATA['optional']} - Optional
+
+
+Select Euro Protection - Optional
+     Click Element  ${EURO_PROTECTION_CHECKBOX_XPATH}
+
+
+Select Legal Defense Insurance - Optional
+     Click Element  ${LEGAL_DEFENSE_CHECKBOX_XPATH}
 
 
 Select Courtesy Car
     [Arguments]    ${arg1}
     Select From List By Value   ${COURTESY_CAR_LIST_XPATH}   ${PRODUCT_DATA['courtesycar']}
+
 
 Proceed To Next Page
     Click Button   ${NEXT_SELECT_PRICE_ID}  

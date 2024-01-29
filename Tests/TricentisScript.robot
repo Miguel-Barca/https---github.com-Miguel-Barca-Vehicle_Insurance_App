@@ -27,7 +27,7 @@ User Should Be Able To Fill Forms - Cars CSV File
 
 
 User Should Be Able To Fill Forms - Cars + Insurants CSV
-    [Tags]           all
+    [Tags]           E2E
     [Documentation]  Reading CSV File With Cars and Insurants Information
     TricentisApp.Process All Cars And Insurants  ${CATEGORIES.ONE}  
 

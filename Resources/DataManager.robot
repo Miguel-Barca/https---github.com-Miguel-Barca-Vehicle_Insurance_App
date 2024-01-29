@@ -4,9 +4,11 @@ Library          ../CustomLibs/Csv.py
 Library          OperatingSystem
 Resource         ../Data/InputData.robot
 
+
 *** Variables ***
 @{all_cars_list}   # Initialize an empty list to store all cars
 ${PICTURE_NORMALIZED_PATH}
+
 
 *** Keywords ***
 Get CSV Data

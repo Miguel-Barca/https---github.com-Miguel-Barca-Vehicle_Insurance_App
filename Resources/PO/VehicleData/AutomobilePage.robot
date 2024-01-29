@@ -43,9 +43,7 @@ GET Single Car from List And Increment Counter
 
 Increment Counter
     #Working - Persistence of the data in test execution
-    #Log    Counter before increment: ${COUNTER}
     ${COUNTER}   Evaluate    ${COUNTER} + 1
-    #Log    Counter after increment: ${COUNTER}
     Set Global Variable    ${COUNTER}
 
 Proceed To Next Page
