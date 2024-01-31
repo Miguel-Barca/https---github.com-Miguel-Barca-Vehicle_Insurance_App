@@ -1,22 +1,38 @@
 *** Settings ***
-Library  SeleniumLibrary
-Resource  ../Resources/DataManager.robot
+Library   SeleniumLibrary
+
 
 *** Variables ***
-${NAV_BAR_AUTOMOBILE_XPATH}   xpath=//*[contains(@id, 'nav_')]
-${NAV_BAR_CATEGORY_XPATH}     xpath=//*[contains(@id, 'nav_')]
+${HOMEPAGE_URL}                    https://sampleapp.tricentis.com/101/
+${AUTOMOBILE_CATEGORY_XPATH}       //*[@id="nav_automobile"]
+${TRUCK_CATEGORY_XPATH}            //*[@id="nav_truck"]
+${MOTORCYCLE_CATEGORY_XPATH}       //*[@id="nav_motorcycle"]
+${CAMPER_CATEGORY_XPATH}           //*[@id="nav_camper"]
+
 
 
 *** Keywords ***
-Navigate To
-    ${SignInUrl} =  Catenate  SEPARATOR=/  ${BASE_URL.${ENVIRONMENT}}
-    go to  ${SignInUrl}
+Navigate to
+    Go To    ${HOMEPAGE_URL} 
 
 
-Click Category
-    [Arguments]    ${Category}
+Select Category
+    [Arguments]  ${ACTIVE_CATEGORY}
+    Set Global Variable  ${ACTIVE_CATEGORY}
+    Run Keyword  Click ${ACTIVE_CATEGORY}
+     
 
-    #Creating the xpath inside Keyword
-    ${xpath_variable}=    Set Variable    xpath=//*[contains(@id, 'nav_${Category}')]
-    Wait Until Element Is Visible  ${xpath_variable}
-    Click Element         ${xpath_variable}
+Click Automobile
+    Click Element  ${AUTOMOBILE_CATEGORY_XPATH} 
+
+
+Click Truck
+    Click Element  ${TRUCK_CATEGORY_XPATH}
+
+
+Click Motorcycle
+    Click Element  ${MOTORCYCLE_CATEGORY_XPATH} 
+
+
+Click Camper
+    Click Element  ${CAMPER_CATEGORY_XPATH} 

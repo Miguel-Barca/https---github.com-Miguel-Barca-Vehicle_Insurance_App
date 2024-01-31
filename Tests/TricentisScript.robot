@@ -2,8 +2,8 @@
 Resource  ../Data/InputData.robot
 Resource  ../Resources/Common.robot
 Resource  ../Resources/TricentisApp.robot
-Test Setup     Common.Begin Web Test
-Test Teardown  Common.End Web Test
+Test Setup      Common.Begin Web Test
+Test Teardown   Common.End Web Test
 
 
 *** Test Cases ***

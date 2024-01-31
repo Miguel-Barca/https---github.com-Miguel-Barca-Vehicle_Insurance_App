@@ -5,8 +5,7 @@ ${ENVIRONMENT} =  prod
 &{BASE_URL}  dev=https://dev.cars.com/  qa=https://qa.cars.com/  prod=https://sampleapp.tricentis.com/101/index.php
 
 &{CATEGORIES}    ONE=automobile  TWO=truck  THREE=motorcycle  FOUR=camper
-${CSV_CARS_PATH}    /Users/miguelbarca/TestAutomation/Vehicle_Insurance_App/Data/Cars.csv
-${CSV_INSURANTS_PATH}    /Users/miguelbarca/TestAutomation/Vehicle_Insurance_App/Data/Insurants.csv
+
 
 ${FORM_TYPE}
 
@@ -24,3 +23,16 @@ ${FORM_TYPE}
 &{USER_DATA}    email=test@tricentis.com   phone=919999999 
 ...    username=Miguel_Barca  password=Qwerty_1
 ...    comment=Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
+
+
+${AUTOMOBILE_CATEGORY}  Automobile
+${TRUCK_CATEGORY}       Truck
+${MOTORCYCLE_CATEGORY}  Motorcycle
+${CAMPER_CATEGORY}      Camper
+${CSV_TRUCKS_PATH}      Data/CSVFiles/Trucks.csv
+${CSV_MOTORCYCLE_PATH}  Data/CSVFiles/Motorcycle.csv
+${CSV_CAMPER_PATH}      Data/CSVFiles/Camper.csv
+${CSV_CARS_PATH}        Data/CSVFiles/Cars.csv
+${CSV_INSURANTS_PATH}    Data/CSVFiles/Insurants.csv
+
+${ACTIVE_CATEGORY}

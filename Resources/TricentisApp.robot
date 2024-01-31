@@ -1,7 +1,7 @@
 *** Settings ***
 Library   SeleniumLibrary
 Resource  ../Resources/PO/Homepage.robot
-Resource  ../Resources/PO/VehicleData/AutomobilePage.robot
+Resource  ../Resources/PO/VehicleData.robot
 Resource  ../Resources/PO/InsurantForm.robot
 Resource  ../Resources/PO/ProductDataPage.robot
 Resource  ../Resources/PO/SelectPriceOptionPage.robot
@@ -19,17 +19,17 @@ ${RANGE_INSURANTS}
 Tests Multiple Categories - Nav Bar
     [Arguments]   ${Category}
     Homepage.Navigate To
-    Homepage.Click Category  ${Category}
+    Homepage.Select Category  ${Category}
 
     
 Fill Form Pages (only Cars CSV)
     [Arguments]   ${Category}
     Homepage.Navigate To
-    Homepage.Click Category  ${Category}
-    AutomobilePage.Validate Correct Form
+    Homepage.Select Category  ${Category}
+    VehicleData.Validate Correct Form
     DataManager. Get CSV File Length
-    AutomobilePage.GET Single Car from List And Increment Counter   COUNTER=${COUNTER}
-    AutomobilePage.Proceed To Next Page
+    VehicleData.GET Single Car from List And Increment Counter   COUNTER=${COUNTER}
+    VehicleData.Proceed To Next Page
     InsurantForm.Get Insurant from List, Fill Form And Increment Counter  COUNTER_INSURANT_LIST=${COUNTER_INSURANT_LIST}
     ProductDataPage.Fill With Data and Proceed To Next Page
     SelectPriceOptionPage.Select Random Price Option and Proceed To Next Page
@@ -39,11 +39,11 @@ Fill Form Pages (only Cars CSV)
 Fill Form Pages (Cars + Insurants CSV)
     [Arguments]   ${Category}
     Homepage.Navigate To
-    Homepage.Click Category  ${Category}
-    AutomobilePage.Validate Correct Form
+    Homepage.Select Category  ${Category}
+    VehicleData.Validate Correct Form
     DataManager. Get CSV File Length
-    AutomobilePage.GET Single Car from List And Increment Counter   COUNTER=${COUNTER}
-    AutomobilePage.Proceed To Next Page
+    VehicleData.GET Single Car from List And Increment Counter   COUNTER=${COUNTER}
+    VehicleData.Proceed To Next Page
     InsurantForm.Get Insurant from List, Fill Form And Increment Counter   COUNTER_INSURANT_LIST=${COUNTER_INSURANT_LIST}
     ProductDataPage.Fill With Data and Proceed To Next Page
     SelectPriceOptionPage.Select Random Price Option and Proceed To Next Page
