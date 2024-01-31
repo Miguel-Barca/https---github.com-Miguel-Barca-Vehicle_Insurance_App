@@ -16,7 +16,7 @@ ${RANGE_INSURANTS}
 
 *** Keywords ***
 Vehicle Data Page Object - Input Data
-    [Arguments]  ${ACTIVE_CATEGORY}
+    [Arguments]      ${ACTIVE_CATEGORY}
     Homepage.Navigate to
     Homepage.Select Category  ${ACTIVE_CATEGORY}
     VehicleData.Get ${ACTIVE_CATEGORY} From CSV File And Fill Form  ${ACTIVE_CATEGORY}
