@@ -7,29 +7,19 @@ Test Teardown   Common.End Web Test
 
 
 *** Test Cases ***
-Categories - Nav Bar - Template Test Cases
-    [Template]   Tests Multiple Categories - Nav Bar
-    ${CATEGORIES.ONE}
-    ${CATEGORIES.TWO}
-    ${CATEGORIES.THREE}
-    ${CATEGORIES.FOUR}
+User Should Be Able To Fill Form - All Categories
+    [Tags]       VehicleForm
+    [Template]   TricentisApp.Vehicle Data Page Object - Input Data
+    Automobile
+    Truck
+    Camper
+    Motorcycle
 
 
-User Should Be Able To Fill Forms - Single Car
-    [Documentation]  Fill Vehicle Data and Insurant Data Forms - In Progress
-    TricentisApp.Fill Form Pages (only Cars CSV)  ${CATEGORIES.ONE}
-
-
-User Should Be Able To Fill Forms - Cars CSV File
-    [Tags]           all
-    [Documentation]  Reading CSV File With Cars Information And Finalizing Workflow - In Progress
-    TricentisApp.Process All Cars  ${CATEGORIES.ONE}  
-
-
-User Should Be Able To Fill Forms - Cars + Insurants CSV
-    [Tags]           E2E
-    [Documentation]  Reading CSV File With Cars and Insurants Information
-    TricentisApp.Process All Cars And Insurants  ${CATEGORIES.ONE}  
-
-
-
+User Should Be Able To Complete Flow
+    [Tags]       E2E
+    [Template]   TricentisApp.E2E Test Case
+    Automobile
+    #Truck
+   # Camper
+   # Motorcycle

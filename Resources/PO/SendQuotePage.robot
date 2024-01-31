@@ -17,7 +17,7 @@ ${SUCCESS_POP_UP_XATH}       //div[@class="sweet-alert showSweetAlert visible"]
 
 
 *** Keywords ***
-Fill With Data and Finalize
+E2E
     Input Text      ${INPUT_EMAIL_XPATH}    ${USER_DATA['email']}
     Input Text      ${PHONE_XPATH}          ${USER_DATA['phone']}
     Input Text      ${USERNAME_XPATH}       ${USER_DATA['username']}

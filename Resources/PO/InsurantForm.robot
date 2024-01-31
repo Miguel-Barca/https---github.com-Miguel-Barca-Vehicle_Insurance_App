@@ -23,16 +23,16 @@ ${HOBBIES_BUNGEE_CHECKBOX}          //form[@id="insurance-form"]//div[10]/p/labe
 ${HOBBIES_CLIFF_DIVING_CHECKBOX}    //form[@id="insurance-form"]//div[10]/p/label[3]/span
 ${HOBBIES_SKYDIVING_CHECKBOX}       //form[@id="insurance-form"]//div[10]/p/label[4]/span
 ${HOBBIES_OTHER_CHECKBOX}           //form[@id="insurance-form"]//div[10]/p/label[5]/span
-${COUNTER_INSURANT_LIST}            0
+${COUNTER_INSURANT_COUNTER}            0
 
 
 *** Keywords ***
-Get Insurant from List, Fill Form And Increment Counter
-    [Arguments]  ${COUNTER_INSURANT_LIST}
+E2E
+    [Arguments]  ${COUNTER_INSURANT_COUNTER}
     @{all_insurants_list}=  DataManager.Get List Of Insurants
     
     #Defining which car go gt from @{cars_list}
-    ${single_insurant}  Set Variable    ${all_insurants_list}[${COUNTER_INSURANT_LIST}]
+    ${single_insurant}  Set Variable    ${all_insurants_list}[${COUNTER_INSURANT_COUNTER}]
 
     # Mapping values from the CS unto the WebApp Form
     Input Text                  ${FIRST_NAME_XPATH}                 ${single_insurant}[0]
@@ -53,8 +53,8 @@ Get Insurant from List, Fill Form And Increment Counter
 
 Increment Counter
     #Persistence of the data in test execution
-    ${COUNTER_INSURANT_LIST}   Evaluate    ${COUNTER_INSURANT_LIST} + 1
-    Set Global Variable    ${COUNTER_INSURANT_LIST}
+    ${COUNTER_INSURANT_COUNTER}    Evaluate    ${COUNTER_INSURANT_COUNTER} + 1
+    Set Global Variable    ${COUNTER_INSURANT_COUNTER} 
 
     
 Select Gender

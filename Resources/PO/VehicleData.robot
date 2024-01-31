@@ -33,24 +33,24 @@ Validate Correct Form
 
 # Reusable and can iterate over every car.
 #
-GET Single Car from List And Increment Counter
-    [Arguments]  @{cars_list}  ${COUNTER}
-    @{cars_list}=  DataManager.Get Automobile CSV File - List
+E2E
+    [Arguments]  @{list}  ${COUNTER}
+    @{list}=  Run Keyword  DataManager.Get ${ACTIVE_CATEGORY} CSV File - List
 
-    #Defining which car go gt from @{cars_list}
-    ${single_car}  Set Variable    ${cars_list}[${COUNTER}]
+    #Defining which vehicle to go get from @{list}
+    ${single_vehicle}  Set Variable    ${list}[${COUNTER}]
     
     # Mapping values from the CS unto the WebApp Form
-    Select From List By Value  ${MAKE_XPATH}                 ${single_car}[0]
-    Input Text                 ${ENGINE_PERFORMANCE_XPATH}   ${single_car}[1]
-    Input Text                 ${MANUFACTURE_DATE_XPATH}     ${single_car}[2]
-    Select From List By Value  ${NUMBER_OF_SEATS_XPATH}      ${single_car}[3]
-    Select From List By Value  ${FUEL_TYPE_XPATH}            ${single_car}[4]
-    Input Text                 ${LIST_PRICE_XPATH}           ${single_car}[5]
-    Input Text                 ${LICENSE_PLATE_XPATH}        ${single_car}[6]
-    Input Text                 ${ANNUAL_MILEAGE_XPATH}       ${single_car}[7]
+    Select From List By Value  ${MAKE_XPATH}                 ${single_vehicle}[0]
+    Input Text                 ${ENGINE_PERFORMANCE_XPATH}   ${single_vehicle}[1]
+    Input Text                 ${MANUFACTURE_DATE_XPATH}     ${single_vehicle}[2]
+    Select From List By Value  ${NUMBER_OF_SEATS_XPATH}      ${single_vehicle}[3]
+    Select From List By Value  ${FUEL_TYPE_XPATH}            ${single_vehicle}[4]
+    Input Text                 ${LIST_PRICE_XPATH}           ${single_vehicle}[5]
+    Input Text                 ${LICENSE_PLATE_XPATH}        ${single_vehicle}[6]
+    Input Text                 ${ANNUAL_MILEAGE_XPATH}       ${single_vehicle}[7]
     Increment Counter
-
+    Proceed To Next Page
 
 Increment Counter
     #Working - Persistence of the data in test execution
@@ -60,8 +60,7 @@ Increment Counter
 Proceed To Next Page
     Click Button   ${NEXT_ENTER_INSURANT_ID}             
 
-Fill Automobile Form Data
-    GET Single Car from List And Increment Counter   COUNTER=${COUNTER}
+
 
 Get ${ACTIVE_CATEGORY} From CSV File And Fill Form
     [Arguments]  ${ACTIVE_CATEGORY}
@@ -74,6 +73,18 @@ Get ${ACTIVE_CATEGORY} From CSV File And Fill Form
         DataManager.Increment Counter
 
     END
+
+
+Fill Automobile Form Data
+    [Arguments]  ${automobile}
+    Select From List By Value  ${MAKE_XPATH}                 ${automobile}[0]
+    Input Text                 ${ENGINE_PERFORMANCE_XPATH}   ${automobile}[1]
+    Input Text                 ${MANUFACTURE_DATE_XPATH}     ${automobile}[2]
+    Select From List By Value  ${NUMBER_OF_SEATS_XPATH}      ${automobile}[3]
+    Select From List By Value  ${FUEL_TYPE_XPATH}            ${automobile}[4]
+    Input Text                 ${LIST_PRICE_XPATH}           ${automobile}[5]
+    Input Text                 ${LICENSE_PLATE_XPATH}        ${automobile}[6]
+    Input Text                 ${ANNUAL_MILEAGE_XPATH}       ${automobile}[7]
 
 
 Fill Truck Form Data

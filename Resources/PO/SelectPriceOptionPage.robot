@@ -12,7 +12,7 @@ ${NEXT_SEND_QUOTE_ID}                 nextsendquote
 
 
 *** Keywords ***
-Select Random Price Option and Proceed To Next Page
+E2E
     ${random_option}    Evaluate    random.choice(["SILVER", "GOLD", "PLATINUM", "ULTIMATE"])
     Run Keyword   Select ${random_option} Option
     Proceed To Next Page

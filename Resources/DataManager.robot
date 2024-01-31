@@ -13,12 +13,12 @@ ${COUNTER}   0
 
 
 *** Keywords ***
-Get CSV Data
+Get Automobile CSV Data
     ${csv_data}=    Read CSV File    ${CSV_CARS_PATH}
     RETURN        ${csv_data}
 
 Get Automobile CSV File - List
-    @{all_cars_list} =  Get CSV Data
+    @{all_cars_list} =  Get Automobile CSV Data
     RETURN  @{all_cars_list}
 
 
@@ -74,6 +74,13 @@ Increment Counter
     #Working - Persistence of the data in test execution
     ${COUNTER}   Evaluate    ${COUNTER} + 1
     Set Global Variable    ${COUNTER}
+
+
+Defining Automobile CSV File Range Value
+    #Defining upper limit 
+    @{AUTOMOBILE_LIST}=  Get Automobile CSV File - List
+    ${RANGE}=  Get Length  ${AUTOMOBILE_LIST}
+    Set Global Variable  ${RANGE}
 
 
 Defining Truck CSV File Range Value

@@ -15,7 +15,7 @@ ${NEXT_SELECT_PRICE_ID}               nextselectpriceoption
 
 
 *** Keywords ***
-Fill With Data and Proceed To Next Page
+E2E
     Input Text               ${START_DATE_XPATH}   ${PRODUCT_DATA['startdate']}
     Select Sum Dropdown      ${PRODUCT_DATA['value']}
     Select Merit Rating      ${PRODUCT_DATA['bonus']}
