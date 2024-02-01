@@ -24,7 +24,7 @@ ${RIGHT_HAND_YES_RADIO_XPATH}     xpath=//*[@id="insurance-form"]//div[5]/p/labe
 ${RIGHT_HAND_NO_RADIO_XPATH}      xpath=//*[@id="insurance-form"]//div[5]/p/label[2]/span
 
 ${NEXT_ENTER_INSURANT_ID}    nextenterinsurantdata  
-${COUNTER}                   0
+${COUNTER_VEHICLE}      0
 
 *** Keywords ***
 Validate Correct Form
@@ -34,11 +34,12 @@ Validate Correct Form
 # Reusable and can iterate over every car.
 #
 E2E
-    [Arguments]  @{list}  ${COUNTER}
+    [Arguments]  @{list}  ${COUNTER_VEHICLE} 
     @{list}=  Run Keyword  DataManager.Get ${ACTIVE_CATEGORY} CSV File - List
 
     #Defining which vehicle to go get from @{list}
-    ${single_vehicle}  Set Variable    ${list}[${COUNTER}]
+    Log To Console   ${COUNTER_VEHICLE} 
+    ${single_vehicle}  Set Variable    ${list}[${COUNTER_VEHICLE} ]
     
     # Mapping values from the CS unto the WebApp Form
     Select From List By Value  ${MAKE_XPATH}                 ${single_vehicle}[0]
@@ -52,10 +53,26 @@ E2E
     Increment Counter
     Proceed To Next Page
 
+E2E - ${ACTIVE_CATEGORY}
+    [Arguments]  ${ACTIVE_CATEGORY}  ${COUNTER_VEHICLE} 
+    @{list}=  Run Keyword  DataManager.Get ${ACTIVE_CATEGORY} CSV File - List
+    Log Many  ${COUNTER_VEHICLE} ${ACTIVE_CATEGORY}
+    #Defining which vehicle to go get from @{list}
+    ${single_vehicle}  Set Variable    ${list}[${COUNTER_VEHICLE} ]
+    
+    Run Keyword  Fill ${ACTIVE_CATEGORY} Form Data  ${single_vehicle}
+
+    Increment Counter
+
+    Proceed To Next Page
+
+
+
 Increment Counter
     #Working - Persistence of the data in test execution
-    ${COUNTER}   Evaluate    ${COUNTER} + 1
-    Set Global Variable    ${COUNTER}
+    ${COUNTER_VEHICLE}     Evaluate    ${COUNTER_VEHICLE}+ 1
+    Set Global Variable    ${COUNTER_VEHICLE} 
+
 
 Proceed To Next Page
     Click Button   ${NEXT_ENTER_INSURANT_ID}             
@@ -68,8 +85,8 @@ Get ${ACTIVE_CATEGORY} From CSV File And Fill Form
     ${LIST}=  Run Keyword  DataManager.Get ${ACTIVE_CATEGORY} CSV File - List
 
     #Processing each vehicle in the chosen category csv file
-    FOR  ${ROW}  IN RANGE  ${COUNTER}  ${RANGE}
-        Run Keyword   VehicleData.Fill ${ACTIVE_CATEGORY} Form Data  ${LIST}[${COUNTER}]
+    FOR  ${ROW}  IN RANGE  ${COUNTER_VEHICLE}    ${RANGE}
+        Run Keyword   VehicleData.Fill ${ACTIVE_CATEGORY} Form Data  ${LIST}[${COUNTER_VEHICLE} ]
         DataManager.Increment Counter
 
     END

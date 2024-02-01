@@ -23,5 +23,5 @@ User Should Be Able To Complete Flow
     [Template]   TricentisApp.E2E Test Case
     Automobile
     #Truck
-   # Camper
-   # Motorcycle
+    #Camper
+  # Motorcycle

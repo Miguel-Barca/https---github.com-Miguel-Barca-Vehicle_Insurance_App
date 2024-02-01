@@ -28,8 +28,8 @@ E2E Test Case
     FOR  ${START}  IN RANGE    ${COUNTER}   ${END}
         Homepage.Navigate to
         Homepage.Select Category  ${ACTIVE_CATEGORY}
-        VehicleData.E2E    COUNTER=${COUNTER}
-        InsurantForm.E2E   ${COUNTER_INSURANT_COUNTER} 
+        VehicleData.E2E - ${ACTIVE_CATEGORY}  ${ACTIVE_CATEGORY}  ${COUNTER_VEHICLE}  
+        InsurantForm.E2E    ${COUNTER_INSURANT_COUNTER} 
         ProductDataPage.E2E
         SelectPriceOptionPage.E2E
         SendQuotePage.E2E
