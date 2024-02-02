@@ -56,7 +56,7 @@ E2E
 E2E - ${ACTIVE_CATEGORY}
     [Arguments]  ${ACTIVE_CATEGORY}  ${COUNTER_VEHICLE} 
     @{list}=  Run Keyword  DataManager.Get ${ACTIVE_CATEGORY} CSV File - List
-    Log Many  ${COUNTER_VEHICLE} ${ACTIVE_CATEGORY}
+
     #Defining which vehicle to go get from @{list}
     ${single_vehicle}  Set Variable    ${list}[${COUNTER_VEHICLE} ]
     
@@ -67,16 +67,17 @@ E2E - ${ACTIVE_CATEGORY}
     Proceed To Next Page
 
 
-
 Increment Counter
     #Working - Persistence of the data in test execution
     ${COUNTER_VEHICLE}     Evaluate    ${COUNTER_VEHICLE}+ 1
     Set Global Variable    ${COUNTER_VEHICLE} 
 
+Reset Counter Vehicle
+    ${COUNTER_VEHICLE}     Evaluate    0
+    Set Global Variable    ${COUNTER_VEHICLE} 
 
 Proceed To Next Page
     Click Button   ${NEXT_ENTER_INSURANT_ID}             
-
 
 
 Get ${ACTIVE_CATEGORY} From CSV File And Fill Form

@@ -56,6 +56,12 @@ Increment Counter
     ${COUNTER_INSURANT_COUNTER}    Evaluate    ${COUNTER_INSURANT_COUNTER} + 1
     Set Global Variable    ${COUNTER_INSURANT_COUNTER} 
 
+
+Reset Counter
+    #Persistence of the data in test execution
+    ${COUNTER_INSURANT_COUNTER}    Evaluate    0
+    Set Global Variable    ${COUNTER_INSURANT_COUNTER} 
+
     
 Select Gender
     [Arguments]  ${INSURANT_DATA['gender']}

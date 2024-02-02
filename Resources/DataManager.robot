@@ -102,3 +102,4 @@ Defining Camper CSV File Range Value
     @{CAMPER_LIST}=  Get Camper CSV File - List
     ${RANGE}=  Get Length  ${CAMPER_LIST}
     Set Global Variable  ${RANGE}
+

@@ -23,7 +23,8 @@ Vehicle Data Page Object - Input Data
 
 E2E Test Case
     [Arguments]  ${ACTIVE_CATEGORY}
-    
+    VehicleData.Reset Counter Vehicle
+    InsurantForm.Reset Counter
     
     FOR  ${START}  IN RANGE    ${COUNTER}   ${END}
         Homepage.Navigate to
@@ -33,5 +34,6 @@ E2E Test Case
         ProductDataPage.E2E
         SelectPriceOptionPage.E2E
         SendQuotePage.E2E
-
     END
+
+   
